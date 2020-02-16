@@ -25,7 +25,7 @@ class RegistrationController extends ApiController
             // The mail is sent with the saved information
             RegistrationWasStored::dispatch($res);
 
-            return $this->successResponse($res, trans('messages.successful_registration'), 200);
+            return $this->successResponse(trans('messages.successful_registration'), 200);
         } catch (QueryException $ex) {
             if (!config('app.debug')) {
                 return $this->errorResponse(trans('messages.unexpected_problem'), 500);

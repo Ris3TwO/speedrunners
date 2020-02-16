@@ -29,13 +29,12 @@ trait ApiResponser
         return $this;
     }
 
-    protected function successResponse($data, $message = '¡Registro exitoso!', $code)
+    protected function successResponse($message = '¡Registro exitoso!', $code)
     {
         return $this->respond([
             'status' => 'success',
             'status_code' => $code,
             'message' => $message,
-            'data' => $data,
         ]);
     }
 
