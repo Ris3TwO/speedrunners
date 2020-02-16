@@ -26,7 +26,7 @@ return [
     'age' => 'Edad',
     'email' => 'Correo',
     'city' => 'Ciudad',
-    'genre' => 'Género',
+    'gender' => 'Género',
     'shoes' => 'Zapatillas',
     'team' => 'Equipo',
     'distance' => 'Distancia',

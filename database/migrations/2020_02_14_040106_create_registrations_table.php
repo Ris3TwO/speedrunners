@@ -20,7 +20,7 @@ class CreateRegistrationsTable extends Migration
             $table->string('age', 8);
             $table->string('email')->unique();
             $table->string('city', 20);
-            $table->string('genre', 6);
+            $table->string('gender', 6);
             $table->string('shoes', 10);
             $table->string('team', 40);
             $table->string('distance', 6);

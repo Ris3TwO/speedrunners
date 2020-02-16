@@ -12,7 +12,7 @@
 |<b>@lang('messages.names'):</b>| {{ $data['names'] }} | <img class="img" src="{{asset('/img/adidas_runner.jpg')}}" alt=""> |
 |<b>@lang('messages.last_names'):</b>| {{ $data['last_names'] }} |
 |<b>@lang('messages.email'):</b>| {{ $data['email'] }} |
-|<b>@lang('messages.genre'):</b>| {{ $data['genre'] }} |
+|<b>@lang('messages.gender'):</b>| {{ $data['gender'] }} |
 |<b>@lang('messages.age'):</b>| {{ $data['age'] }} |
 |<b>@lang('messages.shoes'):</b>| {{ $data['shoes'] }} |
 |<b>@lang('messages.team'):</b>| {{ $data['team'] }} |

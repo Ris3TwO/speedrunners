@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Registration extends Model
 {
     protected $fillable = [
-        'names', 'last_names', 'age', 'email', 'city', 'genre', 'shoes', 'team', 'distance','best_time'
+        'names', 'last_names', 'age', 'email', 'city', 'gender', 'shoes', 'team', 'distance','best_time'
     ];
 
     public function setEmailAttribute($valor)
