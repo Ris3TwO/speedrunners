@@ -27,7 +27,7 @@ class Registration extends Model
 
     public function setLastnamesAttribute($valor)
     {
-        $this->attributes['lastnames'] = ucwords(strtolower($valor));
+        $this->attributes['last_names'] = ucwords(strtolower($valor));
     }
 
     public function setCityAttribute($valor)
