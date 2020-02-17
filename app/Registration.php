@@ -49,4 +49,9 @@ class Registration extends Model
     {
         $this->attributes['team'] = ucwords(mb_strtolower($valor, 'UTF-8'));
     }
+
+    public function setBesttimeAttribute($valor)
+    {
+        $this->attributes['best_time'] = strtoupper($valor);
+    }
 }
