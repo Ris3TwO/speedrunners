@@ -22,31 +22,31 @@ class Registration extends Model
 
     public function setNamesAttribute($valor)
     {
-        $this->attributes['names'] = ucwords(strtolower($valor));
+        $this->attributes['names'] = ucwords(mb_strtolower($valor, 'UTF-8'));
     }
 
     public function setLastnamesAttribute($valor)
     {
-        $this->attributes['last_names'] = ucwords(strtolower($valor));
+        $this->attributes['last_names'] = ucwords(mb_strtolower($valor, 'UTF-8'));
     }
 
     public function setCityAttribute($valor)
     {
-        $this->attributes['city'] = ucwords(strtolower($valor));
+        $this->attributes['city'] = ucwords(mb_strtolower($valor, 'UTF-8'));
     }
 
     public function setGenderAttribute($valor)
     {
-        $this->attributes['gender'] = ucwords(strtolower($valor));
+        $this->attributes['gender'] = ucwords(mb_strtolower($valor, 'UTF-8'));
     }
 
     public function setShoesAttribute($valor)
     {
-        $this->attributes['shoes'] = ucwords(strtolower($valor));
+        $this->attributes['shoes'] = ucwords(mb_strtolower($valor, 'UTF-8'));
     }
 
     public function setTeamAttribute($valor)
     {
-        $this->attributes['team'] = ucwords(strtolower($valor));
+        $this->attributes['team'] = ucwords(mb_strtolower($valor, 'UTF-8'));
     }
 }
