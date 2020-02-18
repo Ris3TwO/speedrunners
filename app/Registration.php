@@ -9,11 +9,11 @@ class Registration extends Model
 {
     use Translatable;
     protected $translatable = [
-        'names', 'last_names', 'age', 'email', 'city', 'gender', 'shoes', 'team', 'distance', 'best_time'
+        'names', 'last_names', 'age', 'email', 'city', 'gender', 'shoes', 'team', 'distance', 'best_time', 'email_notices'
     ];
 
     protected $fillable = [
-        'names', 'last_names', 'age', 'email', 'city', 'gender', 'shoes', 'team', 'distance', 'best_time'
+        'names', 'last_names', 'age', 'email', 'city', 'gender', 'shoes', 'team', 'distance', 'best_time', 'email_notices'
     ];
 
     public function setEmailAttribute($valor)

@@ -40,6 +40,7 @@ class StoreRegistrationRequest extends FormRequest
             'team' => 'required|string|min:3|max:40',
             'distance' => 'required|string|min:2',
             'best_time' => 'required|string|min:3|max:10',
+            'email_notices' => 'boolean',
         ];
     }
 

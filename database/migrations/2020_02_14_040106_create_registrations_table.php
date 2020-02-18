@@ -25,6 +25,7 @@ class CreateRegistrationsTable extends Migration
             $table->string('team', 40);
             $table->string('distance', 6);
             $table->string('best_time', 10);
+            $table->boolean('email_notices')->nullable()->default(false);
             $table->timestamps();
         });
     }
