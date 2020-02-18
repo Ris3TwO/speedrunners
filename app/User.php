@@ -2,13 +2,14 @@
 
 namespace App;
 
+use TCG\Voyager\Traits\Translatable;
+use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
 
-class User extends Authenticatable
+class User extends \TCG\Voyager\Models\User
 {
-    use Notifiable;
+    use Notifiable, Translatable;
 
     /**
      * The attributes that are mass assignable.

@@ -2,12 +2,18 @@
 
 namespace App;
 
+use TCG\Voyager\Traits\Translatable;
 use Illuminate\Database\Eloquent\Model;
 
 class Registration extends Model
 {
+    use Translatable;
+    protected $translatable = [
+        'names', 'last_names', 'age', 'email', 'city', 'gender', 'shoes', 'team', 'distance', 'best_time'
+    ];
+
     protected $fillable = [
-        'names', 'last_names', 'age', 'email', 'city', 'gender', 'shoes', 'team', 'distance','best_time'
+        'names', 'last_names', 'age', 'email', 'city', 'gender', 'shoes', 'team', 'distance', 'best_time'
     ];
 
     public function setEmailAttribute($valor)

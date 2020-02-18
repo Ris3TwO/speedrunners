@@ -18,12 +18,12 @@ return [
 
     // Mail Information
     'hello' => 'Olá',
-    'information' => 'Abaixo você encontrará as informações cadastradas para',
+    'information' => 'Abaixo você encontrará as informações registradas para',
 
     // Mail Data
     'names' => 'Nomes',
     'last_names' => 'Sobrenomes',
-    'age' => 'Idade',
+    'age' => 'Edade',
     'email' => 'E-mail',
     'city' => 'Cidade',
     'gender' => 'Gênero',

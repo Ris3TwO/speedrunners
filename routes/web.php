@@ -33,3 +33,8 @@ Route::get('email', function () {
     );
     return new App\Mail\RegisteredData($data);
 });
+
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});
