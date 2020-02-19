@@ -35,7 +35,7 @@ trait ApiResponser
             'status' => 'success',
             'status_code' => $code,
             'message' => $message,
-        ]);
+        ], $code);
     }
 
     protected function errorResponse($message = '¡Ups! Parece que algo no anda bien', $code)
@@ -44,7 +44,7 @@ trait ApiResponser
             'status' => 'error',
             'status_code' => $code,
             'message' => $message,
-        ]);
+        ], $code);
     }
 
     protected function errorResponseWithErrors($errors, $message = '¡Ups! Parece que algo no anda bien', $code)
@@ -54,11 +54,11 @@ trait ApiResponser
             'status_code' => $code,
             'message' => $message,
             'errors' => $errors,
-        ]);
+        ], $code);
     }
 
-    public function respond($data, $headers = [])
+    public function respond($data, $code, $headers = [])
     {
-        return response()->json($data, $this->getStatusCode(), $headers);
+        return response()->json($data, $code, $headers);
     }
 }
