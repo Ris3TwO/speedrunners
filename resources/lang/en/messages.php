@@ -13,6 +13,10 @@ return [
     'url_not_found' => 'The specified URL was not found.',
     'method_not_allowed' => 'The method specified in the request is not valid.',
 
+    // Model Accesor
+    'no' => 'No',
+    'yes' => 'Yes',
+
     // Mail subject
     'subject' => 'Information registered in Speed Runners',
 

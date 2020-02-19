@@ -13,6 +13,10 @@ return [
     'url_not_found' => 'O URL especificado não foi encontrado.',
     'method_not_allowed' => 'O método especificado no pedido não é válido.',
 
+    // Model Accesor
+    'no' => 'Não',
+    'yes' => 'Sim',
+
     // Mail subject
     'subject' => 'Informação registada em Speed Runners',
 
