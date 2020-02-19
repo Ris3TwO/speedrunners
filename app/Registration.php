@@ -63,6 +63,6 @@ class Registration extends Model
 
     public function getEmailnoticesBrowseAttribute()
     {
-        return ($this->email_notice === true ? 'Si' : 'No');
+        return ($this->email_notice !== 0 ? 'Si' : 'No');
     }
 }
