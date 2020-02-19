@@ -60,4 +60,9 @@ class Registration extends Model
     {
         $this->attributes['best_time'] = strtoupper($valor);
     }
+
+    public function getEmailnoticeBrowseAttribute()
+    {
+        return ($this->email_notice === '1' ? 'Si' : 'No');
+    }
 }
