@@ -161,6 +161,7 @@ return [
         'description'           => 'descripción',
         'distance'              => 'distancia',
         'email'                 => 'correo electrónico',
+        'email_notices'         => 'avisos por correo electrónico',
         'excerpt'               => 'extracto',
         'first_name'            => 'nombre',
         'gender'                => 'género',

@@ -156,6 +156,7 @@ return [
         'day'                   => 'dia',
         'description'           => 'descrição',
         'distance'              => 'distância',
+        'email_notices'         => 'avisos por e-mail',
         'excerpt'               => 'resumo',
         'first_name'            => 'primeiro nome',
         'gender'                => 'gênero',
