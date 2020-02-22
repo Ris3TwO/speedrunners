@@ -44,11 +44,11 @@
                     </div>
                 </div>
             </div>
-        </div><a  href="#bazinga">
-        <div  class="d-flex flex-row-reverse">
-            <div   class="arrow ml-auto"></div>
-        </div>
-    </a>
+        </div><a href="#bazinga">
+            <div class="d-flex flex-row-reverse">
+                <div class="arrow ml-auto"></div>
+            </div>
+        </a>
     </header>
 
     <!-- Description grid -->

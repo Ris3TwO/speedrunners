@@ -142,7 +142,6 @@ app.controller("controlador", function($scope, $http, $location) {
         objetive1.classList.remove("filter");
     }
 
-    console.log(document.getElementById("imageMove").scrollIntoView);
     document.getElementById("header").clientHeight
     var t = 0;
     window.onscroll = function() {
