@@ -34,7 +34,6 @@ class StoreRegistrationRequest extends FormRequest
             'last_names' => 'required|string|min:3|max:45',
             'age' => 'required|string|min:3|max:8',
             'email' => 'required|string|min:3|unique:registrations',
-            'city' => 'required|string|min:3|max:20',
             'gender' => 'required|string|min:3|max:6',
             'shoes' => 'required|string|min:3|max:10',
             'team' => 'required|string|min:3|max:40',

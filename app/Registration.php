@@ -9,11 +9,11 @@ class Registration extends Model
 {
     use Translatable;
     protected $translatable = [
-        'names', 'last_names', 'age', 'email', 'city', 'gender', 'shoes', 'team', 'distance', 'best_time', 'email_notices'
+        'names', 'last_names', 'age', 'email', 'gender', 'shoes', 'team', 'distance', 'best_time', 'email_notices'
     ];
 
     protected $fillable = [
-        'names', 'last_names', 'age', 'email', 'city', 'gender', 'shoes', 'team', 'distance', 'best_time', 'email_notices'
+        'names', 'last_names', 'age', 'email', 'gender', 'shoes', 'team', 'distance', 'best_time', 'email_notices'
     ];
 
     public function setEmailAttribute($valor)
@@ -34,11 +34,6 @@ class Registration extends Model
     public function setLastnamesAttribute($valor)
     {
         $this->attributes['last_names'] = ucwords(mb_strtolower($valor, 'UTF-8'));
-    }
-
-    public function setCityAttribute($valor)
-    {
-        $this->attributes['city'] = ucwords(mb_strtolower($valor, 'UTF-8'));
     }
 
     public function setGenderAttribute($valor)

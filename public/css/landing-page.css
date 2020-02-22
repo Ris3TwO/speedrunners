@@ -1,0 +1,1809 @@
+/*
+ * Adidas Speed Runners 2020 - Landing Page v1.0.0
+ * Copyright 2020 Ris3TwO
+ */
+
+@font-face {
+    font-family: 'AdihausDIN-Cn';
+    src: url('../fonts/AdihausDIN-Cn.woff') format('woff'), url('../fonts/AdihausDIN-Cn.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'AdihausDIN-CondMedium';
+    src: url('../fonts/AdihausDIN-CondMedium.woff') format('woff'), url('../fonts/AdihausDIN-CondMedium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'FasterThanStencil';
+    src: url('../fonts/SS20_BBFT_TYPEFONT_STENCIL.woff') format('woff'), url('../fonts/SS20_BBFT_TYPEFONT_STENCIL.ttf') format('truetype');
+}
+
+body {
+    font-family: 'AdihausDIN-Cn', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #fafafa;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 700;
+}
+
+
+/* Bootstrap base elements */
+
+.btn {
+    border-radius: 0 !important;
+}
+
+.btn-dark {
+    height: 45px;
+    font-size: 22px;
+    background-color: #101010;
+    text-transform: uppercase;
+}
+
+.btn-dark:hover,
+.btn-dark:focus,
+.btn-light:hover,
+.btn-light:focus {
+    background-color: #f26b32;
+}
+
+.btn-light {
+    background-color: #f8f9fa6e !important;
+    padding: 0.55rem;
+    margin: auto;
+}
+
+.btn-light:not(:disabled):not(.disabled).active {
+    color: #101010 !important;
+    border-color: transparent;
+}
+
+.form .container .inputs .btn-group>.btn-group:not(:first-child)>.btn,
+.btn-group>.btn:not(:first-child) {
+    border: 0;
+}
+
+.btn-light.focus {
+    box-shadow: none;
+}
+
+.form-row-space {
+    padding-bottom: 1rem;
+}
+
+.form-control {
+    border: 1px solid #101010;
+    border-radius: 0;
+    font-size: 16px;
+    text-transform: uppercase;
+    height: calc(1.5em + .75rem + 10px);
+    -webkit-transition: all .2s ease-in;
+    -moz-transition: all .2s ease-in;
+    -ms-transition: all .2s ease-in;
+    -o-transition: all .2s ease-in;
+    transition: all .2s ease-in;
+}
+
+.form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #101010;
+    /* border: 2px solid #101010; */
+    border-width: 2px;
+    outline: 0;
+    /* box-shadow: 0 0 0 0.2rem rgba(8, 8, 8, 0.25); */
+    box-shadow: none;
+}
+
+.form-control.error {
+    border: solid 2px #f26b32;
+}
+
+.form-group>label {
+    font-size: 16px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    color: #101010;
+}
+
+.form-group>.float-label {
+    position: absolute;
+    top: -0.6rem;
+    left: 1rem;
+    background-color: white;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.form-group>.float-label-2 {
+    transform: translate(1rem, 0.6rem);
+}
+
+.form-group small {
+    padding-left: 1.5rem;
+    font-size: 14px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.71;
+    letter-spacing: normal;
+    color: #101010 !important;
+}
+
+.form-group.col-inactive {
+    display: none;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+.span_pseudo,
+.form-check span:before,
+.form-check span:after {
+    content: "";
+    display: inline-block;
+    background: #fff;
+    width: 0;
+    height: 0.2rem;
+    position: absolute;
+    transform-origin: 0% 0%;
+}
+
+.form-check {
+    position: relative;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.form-check input:checked~span {
+    background: #101010;
+    border-color: #101010;
+}
+
+.form-check input:checked~span:before {
+    width: 1rem;
+    height: 0.15rem;
+    transition: width 0.1s;
+    transition-delay: 0.3s;
+}
+
+.form-check input:checked~span:after {
+    width: 0.4rem;
+    height: 0.15rem;
+    transition: width 0.1s;
+    transition-delay: 0.2s;
+}
+
+.form-check input:disabled~span {
+    background: #ececec;
+    border-color: #dcdcdc;
+}
+
+.form-check input:disabled~label {
+    color: #dcdcdc;
+}
+
+.form-check input:disabled~label:hover {
+    cursor: default;
+}
+
+.form-check label {
+    padding-left: 2rem;
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.14;
+    letter-spacing: normal;
+    color: #101010;
+}
+
+.form-check span {
+    display: inline-block;
+    width: 1.2rem;
+    height: 1.2rem;
+    border: 2px solid #101010;
+    position: absolute;
+    transition: all 0.2s;
+    z-index: 1;
+    box-sizing: content-box;
+}
+
+.form-check span:before {
+    transform: rotate(-55deg);
+    top: 1rem;
+    left: 0.37rem;
+}
+
+.form-check span:after {
+    transform: rotate(35deg);
+    bottom: 0.35rem;
+    left: 0.2rem;
+}
+
+.form-check a {
+    color: #101010;
+    text-decoration: underline;
+}
+
+.form-check a:hover {
+    color: #212529;
+    text-decoration: none;
+}
+
+
+/* Header */
+
+header.masthead {
+    position: relative;
+    width: 100%;
+    background-color: #ffffff !important;
+}
+
+header.masthead .aviones {
+    background-image: url("../img/aviones.svg");
+    background-repeat: no-repeat;
+    padding: 0;
+    top: -1.5rem;
+    left: -2rem;
+    width: 100%;
+    height: 152px;
+    position: absolute;
+}
+
+
+/* header.masthead .overlay {
+    position: absolute;
+    background-color: #212529;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.3;
+} */
+
+header.masthead h1 {
+    font-size: 2rem;
+}
+
+header.masthead .col-xl-3 {
+    padding-top: 7rem;
+    padding-right: 4rem;
+    text-align: center;
+    vertical-align: middle;
+    padding-left: 4rem;
+}
+
+header.masthead .col-xl-3 .container .btn-dark {
+    margin-top: 4.5rem;
+}
+
+header.masthead .col-xl-7 {
+    padding-top: 4rem;
+    padding-right: 0;
+    transform: none;
+}
+
+header.masthead .video-thumbnail {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* IE6 workaround*/
+    height: 0;
+    overflow: hidden;
+    border: solid 3px #fafafa;
+}
+
+header.masthead .video-thumbnail .youtube {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+
+header.masthead .video-thumbnail .youtube .play {
+    position: relative;
+    background: none;
+}
+
+header.masthead .video-thumbnail .youtube .play:before {
+    position: absolute;
+    content: "\25b6";
+    font-size: 38px;
+    color: #000;
+    opacity: 0.8;
+    width: 65px;
+    height: 65px;
+    margin: 0 auto;
+    padding: 0.1em 0.4em;
+    border-style: solid;
+    border-radius: 50%;
+    background-color: rgba(216, 216, 216, 0.55);
+}
+
+header.masthead .video-thumbnail .youtube .play:hover::before {
+    opacity: 1;
+}
+
+header.masthead .video-thumbnail iframe,
+header.masthead .video-thumbnail object,
+header.masthead .video-thumbnail embed {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+header.masthead .arrow {
+    background-image: url("../img/arrow.png");
+    background-repeat: no-repeat;
+    right: 6.5rem;
+    bottom: 0;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    z-index: 200;
+    transform: translate(0, 50%);
+    cursor: pointer;
+}
+
+.description {
+    padding-top: 4rem;
+    position: relative;
+}
+
+.description:before {
+    position: absolute;
+    opacity: 0.05;
+    font-family: AdihausDIN-Cn;
+    font-size: 35px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: justify;
+    color: #101010;
+    top: 0;
+    left: 0;
+}
+
+.description .description-item {
+    max-width: 50rem;
+}
+
+.description .description-item h1 {
+    font-family: 'FasterThanStencil';
+    font-size: 70px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #f26b32;
+}
+
+.description .description-item p {
+    font-size: 30px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #101010;
+    text-transform: uppercase;
+}
+
+.description .container-fluid .last-description {
+    margin-bottom: -418px;
+}
+
+.description .container-fluid .last-description .col-lg-6 {
+    max-width: 100%;
+}
+
+.description .container-fluid .last-description .description-text {
+    margin-left: 3em;
+}
+
+.description .col-description {
+    padding: 3rem;
+    padding-left: 7rem;
+    padding-right: 7rem;
+}
+
+.description .col-description.col-description-2 {
+    transform: translate(0, -220px);
+}
+
+.description .col-description.col-description-3 {
+    transform: translate(0, -420px);
+}
+
+.description .description-text {
+    /* padding: 3rem; */
+    text-align: justify;
+    color: #101010;
+    text-transform: uppercase;
+}
+
+.description .description-text h1 {
+    font-family: 'AdihausDIN-CondMedium';
+    padding-top: 1rem;
+    font-size: 35px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+}
+
+.description .description-text .col-md-12 {
+    padding-left: 2em;
+}
+
+.description .description-text .col-md-12 h1 {
+    padding-top: 0;
+}
+
+.description .description-text p {
+    font-size: 22px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+}
+
+.description .description-img {
+    position: relative;
+}
+
+.description .description-img.objetives {
+    padding-top: 18rem;
+}
+
+.description .description-img .tryouts {
+    max-width: 550px;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    -ms-transform: matrix(1, 0, 0, 1, 0, 0);
+    -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+.description .description-img .city {
+    width: 100%;
+    height: 8em;
+    position: absolute;
+    top: 0.20rem;
+    left: 0;
+}
+
+.description .description-img .training {
+    max-width: 550px;
+}
+
+.description .description-img .k {
+    position: absolute;
+    top: 0.80rem;
+    left: 1.6rem;
+}
+
+.description .description-img .objetive-1 {
+    bottom: 0;
+    left: 2em;
+    z-index: 3;
+    max-width: 305px;
+}
+
+.description .description-img .objetive-2 {
+    position: absolute;
+    top: 0;
+    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 2;
+}
+
+.description .description-img .objetive-3 {
+    position: absolute;
+    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    border: 4px solid white;
+}
+
+@media (min-width: 1280px) {
+    .description .description-img .objetive-1 {
+        height: 18em;
+        margin-bottom: 0.2em;
+    }
+    .description .description-img .objetive-2 {
+        left: 17em;
+    }
+}
+
+.map {
+    width: 100%;
+    background-color: #f26b32;
+    padding-top: 2.5rem;
+    position: relative;
+}
+
+.map .container {
+    padding-bottom: 2rem;
+}
+
+.map .container h1 {
+    font-family: 'FasterThanStencil';
+    font-size: 65px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 3rem;
+    letter-spacing: normal;
+    text-align: center;
+    color: #fafafa;
+}
+
+.map .map-image {
+    width: 100%;
+    height: 18em;
+    background-image: url("../img/mapa.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+.map .map-image .container-fluid {
+    padding-right: 0;
+    padding-left: 0;
+    overflow: hidden;
+}
+
+.map .map-image .container-fluid .col-lg-12 {
+    padding-top: 3rem;
+}
+
+.map .map-image .timeline {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    border-top: 3px solid #f26b32;
+    padding-left: 3em;
+    padding-right: 3em;
+}
+
+.map .map-image .li {
+    transition: all 200ms ease-in;
+}
+
+.map .map-image .li.full {
+    padding-bottom: 2rem;
+}
+
+.map .map-image .status {
+    padding: 0px 6em;
+    display: flex;
+    position: relative;
+    transition: all 200ms ease-in;
+}
+
+.map .map-image .info {
+    padding-top: 0.5rem;
+}
+
+.map .map-image .info p {
+    font-size: 24px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #101010;
+    text-transform: uppercase;
+}
+
+.map .map-image .info.space {
+    justify-content: space-between;
+}
+
+.map .map-image .info .site {
+    text-transform: none;
+}
+
+.map .map-image .status h1 {
+    font-family: 'FasterThanStencil';
+    font-size: 46px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.52;
+    letter-spacing: normal;
+    text-align: center;
+    color: #101010;
+    padding-top: 1rem;
+}
+
+.map .map-image .status h1:before {
+    content: '\A';
+    white-space: pre;
+    display: block;
+}
+
+.map .map-image .status:before {
+    content: "";
+    width: 26px;
+    height: 26px;
+    background-color: white;
+    border-radius: 25px;
+    border: 0.2rem solid #f26b32;
+    position: absolute;
+    top: -16px;
+    left: 45%;
+    transition: all 200ms ease-in;
+}
+
+.map .map-image .li.complete .status:before {
+    background-color: #fff;
+    border: 0.2rem solid #f26b32;
+    transition: all 200ms ease-in;
+}
+
+.map .map-image .li.complete .status h2 {
+    color: #101010;
+}
+
+@media only screen and (min-width: 360px) and (max-width: 700px) {
+    .map .map-image .timeline {
+        list-style-type: none;
+        display: block;
+    }
+    .map .map-image .li {
+        transition: all 200ms ease-in;
+        display: inline;
+    }
+    .map .map-image .status:before {
+        left: -8%;
+        top: 30%;
+        transition: all 200ms ease-in;
+    }
+}
+
+.form {
+    width: 100%;
+    background-color: #fafafa;
+    padding-top: 4rem;
+    padding-bottom: 5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.form:before {
+    content: "";
+    width: 53em;
+    height: 50em;
+    background-image: url("../img/aviones.png");
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: contain;
+    position: absolute;
+    top: -6em;
+    left: -9.2em;
+    opacity: 0.3;
+}
+
+.form .container.container-incription:before,
+.form .container.container-success:before {
+    content: "";
+    width: 34em;
+    height: 87em;
+    background-image: url("../img/formulario-bg-ripped.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    right: -6em;
+}
+
+.form .container h1 {
+    height: 68px;
+    font-family: 'FasterThanStencil';
+    font-size: 65px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #101010;
+}
+
+.form .container .title {
+    border-bottom: 1px solid #f26b32;
+    margin-bottom: 1em;
+}
+
+.form .container .inputs {
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+.form .container .inputs .btn-group {
+    display: flex;
+    border: solid 1px #101010;
+}
+
+.form .container .inputs .btn-group .btn {
+    flex: 1;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: center;
+    color: #999999;
+}
+
+.form .container .inputs .btn-group>.btn-group:not(:first-child)>.btn,
+.btn-group>.btn:not(:first-child) {
+    border-left: solid 1px #101010 !important;
+}
+
+.form .container .inputs .btn-group>.btn-group:not(:last-child)>.btn,
+.btn-group>.btn:not(:last-child):not(.dropdown-toggle) {
+    border-right: solid 1px #101010 !important;
+}
+
+.form .container .terms {
+    padding-left: 3em;
+    padding-right: 3em;
+    padding-bottom: 3em;
+}
+
+.form .container .submit {
+    padding-top: 2rem;
+}
+
+.form .container .submit .btn-dark {
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: center;
+    color: #fafafa;
+}
+
+.form .container .data {
+    padding-top: 2rem;
+}
+
+.form .container .data .datatable .form-title {
+    font-size: 18px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.33;
+    letter-spacing: normal;
+    color: #101010;
+    text-transform: uppercase;
+}
+
+.form .container .data .datatable .form-data {
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.form .container .data .row.datatable {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #212529;
+}
+
+.form .container .data .row.datatable .col-sm-6 {
+    padding: .75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+}
+
+.form .container .data .row.datatable .col-md-5,
+.form .container .data .row.datatable .col-md-11 {
+    padding-left: 1rem;
+}
+
+.form .container .data .row.datatable .col-sm-6.form-last {
+    border-bottom: 1px solid #dee2e6;
+    margin-bottom: 2rem;
+}
+
+.form .container .data .row .col-sm-6.form-title {
+    width: 30% !important;
+}
+
+.form .container .data .row .col-sm-6.form-data {
+    width: 70% !important;
+}
+
+.form .container .data .table td {
+    text-transform: uppercase;
+}
+
+.form .container .data .table .form-title {
+    font-size: 18px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.33;
+    letter-spacing: normal;
+    color: #101010;
+    width: 10%;
+}
+
+.form .container .data-table .title-data {
+    border-bottom: 1px solid #f26b32;
+}
+
+.form .container .data .btn-dark,
+.form .container .data .btn-light {
+    font-size: 24px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    text-align: center;
+    color: #fafafa;
+    text-transform: uppercase;
+}
+
+.form .container .data .btn-light {
+    color: #101010;
+    border: solid 1px #101010;
+}
+
+.form .container-success {
+    padding: 6em;
+    padding-top: 2em;
+}
+
+.form .container-success .d-flex {
+    position: relative;
+}
+
+.form .container-success .d-flex h1 {
+    height: 44px;
+    text-align: left;
+}
+
+.form .container-success .d-flex .success-title {
+    font-family: 'AdihausDIN-Cn';
+    font-size: 44px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.55;
+    letter-spacing: normal;
+    color: #101010;
+    text-transform: uppercase;
+    margin-top: unset;
+}
+
+.form .container-success .d-flex .success-message {
+    font-size: 44px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #101010;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+
+.slide-left {
+    -webkit-animation: slide-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slide-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+
+/* Small devices (landscape phones, 360px and up) */
+
+@media only screen and (min-width: 360px) {
+    /* Header */
+    header.masthead {
+        background: url("../img/bg-textura-mobile.png") center center no-repeat;
+        background-size: cover;
+        padding-bottom: 4rem;
+    }
+    header.masthead .aviones {
+        display: none;
+    }
+    header.masthead .arrow {
+        right: .2rem;
+        transform: translate(0, 80%);
+    }
+    header.masthead .col-xl-3 {
+        padding-top: 3rem;
+        padding-right: 0;
+        text-align: center;
+        vertical-align: middle;
+        padding-left: 0;
+    }
+    header.masthead .logo {
+        width: 100%;
+        height: 67px;
+        background-image: url("../img/logos-speed-runner.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    header.masthead .col-xl-3 .container {
+        transform: translateY(280px);
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+    header.masthead .col-xl-3 .container .btn-dark {
+        margin-top: 1rem;
+    }
+    header.masthead .col-xl-7 {
+        padding-top: 4rem;
+        padding-right: 0;
+        padding-left: 0;
+        transform: translateY(-80px);
+    }
+    header.masthead .video-thumbnail {
+        border: none;
+    }
+    header.masthead .video-thumbnail .youtube .play {
+        margin-left: -68px;
+        margin-top: -36px;
+    }
+    header.masthead .video-thumbnail iframe,
+    header.masthead .video-thumbnail object,
+    header.masthead .video-thumbnail embed {
+        max-width: 100%;
+        display: block;
+        height: inherit;
+    }
+    /* Description */
+    .description::before {
+        content: "LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA/ / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA/ / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA/ / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA/ / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA/ / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO";
+        font-size: 30px;
+    }
+    .description .description-item h1 {
+        font-size: 48px;
+    }
+    .description .description-item p {
+        font-size: 20px;
+    }
+    .description .description-img .tryouts,
+    .description .description-img .training {
+        max-width: 550px;
+    }
+    .description .description-img .city {
+        max-width: 251px;
+        left: 2rem;
+    }
+    .description .description-img .city img {
+        max-width: 100%;
+    }
+    .description .description-img .tryouts img,
+    .description .description-img .training img {
+        max-width: 100%;
+    }
+    .description .description-text {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        padding-bottom: 1rem;
+    }
+    .description .description-text h1 {
+        font-size: 30px;
+    }
+    .description .description-text p {
+        font-size: 18px;
+    }
+    .description .col-description {
+        padding: 0;
+        padding-top: 1rem;
+    }
+    .description .col-description.col-description-2 {
+        transform: none;
+    }
+    .description .description-img .training img {
+        height: 360px;
+    }
+    .description .description-img .k {
+        max-width: 136px;
+        top: 1rem;
+        left: 2rem;
+    }
+    .description .description-img .k img {
+        max-width: 100%;
+    }
+    .description .container-fluid .last-description {
+        margin-bottom: 0;
+        padding-bottom: 2em;
+    }
+    .description .col-description-2 .description-text p {
+        font-size: 22px;
+    }
+    .description .col-description.col-description-3 {
+        transform: none;
+    }
+    .description .description-img.objetives {
+        padding-top: 9rem;
+    }
+    .description .description-img .objetive-1 {
+        position: absolute;
+        left: initial;
+        margin: auto;
+        border: solid 3px #fafafa;
+        box-sizing: border-box;
+        position: relative;
+    }
+    .description .description-img .objetive-1 img {
+        max-width: 100%;
+        display: block;
+    }
+    .description .description-img .objetive-2 {
+        max-width: 193px;
+        right: 0;
+        margin-right: 30px;
+        top: 10px;
+    }
+    .description .description-img .objetive-2 img {
+        max-width: 100%;
+        display: block;
+    }
+    .description .description-img .objetive-3 {
+        max-width: 113px;
+        top: 0;
+        left: 33px;
+    }
+    .description .description-img .objetive-3 img {
+        max-width: 100%;
+        display: block;
+    }
+    .description .container-fluid .last-description .description-text {
+        margin-left: 0;
+    }
+    .description .col-description-3 .description-text .container {
+        padding-right: 0;
+        padding-left: 0;
+    }
+    .description .description-text .col-md-12 {
+        padding-left: 1em;
+        padding-top: 1em;
+    }
+    .map {
+        padding-top: 1.5rem;
+    }
+    .map .container {
+        padding-bottom: 1.5rem;
+    }
+    .map .container h1 {
+        font-size: 28px;
+        line-height: 0.9;
+    }
+    .map .map-image {
+        height: 560px;
+    }
+    .map .map-image .timeline {
+        border-top: none;
+        padding-left: 5rem;
+    }
+    .map .map-image .li {
+        float: left;
+        /* padding-top: 4em;
+        margin-bottom: 2em;
+        margin-top: -90px; */
+        border-left: 3px solid #f26b32;
+    }
+    .map .map-image .li:first-child {
+        padding-top: 4em;
+        margin-top: -90px;
+    }
+    .map .map-image .li:nth-last-child(1) {
+        padding-bottom: 4em !important;
+    }
+    .map .map-image .li.full {
+        padding-bottom: 0;
+    }
+    .map .map-image .status {
+        padding: 0px 3em;
+        padding-left: 2em;
+    }
+    .map .map-image .status h1 {
+        font-size: 38px;
+    }
+    .map .map-image .status::before {
+        top: 48%;
+        left: -11%;
+        width: 30px;
+        height: 30px;
+    }
+    .map .map-image .status.status-last::before {
+        top: 48%;
+        left: -16px;
+        width: 30px;
+        height: 30px;
+    }
+    .map .map-image .info {
+        text-align: left;
+        padding-left: 2rem;
+    }
+    .map .map-image .info.space .px-3 {
+        padding-left: 0 !important;
+    }
+    /* Form */
+    .form {
+        padding-top: 11rem;
+    }
+    .form::before {
+        width: 730px;
+        top: 7em;
+        left: -17.5em;
+        background-image: url("../img/aviones-form.png");
+        opacity: 1;
+    }
+    .form .container.container-incription::before,
+    .form .container.container-success::before {
+        content: "";
+        width: 100%;
+        height: 184px;
+        background-image: url("../img/bg-formulario.png");
+        background-repeat: no-repeat;
+        background-position: right;
+        background-size: contain;
+        position: absolute;
+        top: 5px;
+        right: 0;
+    }
+    .form .container .inputs {
+        padding: 2em;
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+    .form .container h1 {
+        font-size: 46px;
+    }
+    .form .container .title {
+        margin-left: 1.6rem;
+        margin-right: 1.6rem;
+    }
+    .form .form-row-space {
+        padding-bottom: 0rem;
+    }
+    .form .form-group {
+        margin-bottom: 2.5rem;
+    }
+    .form .form-group.form-radio {
+        margin-top: -2rem;
+    }
+    .form .form-group>.float-label-2 {
+        transform: translate(1.2rem, 0.6rem);
+    }
+    .form .container .terms {
+        margin-top: -50px;
+    }
+    .form .terms .form-group {
+        margin-bottom: 0rem;
+    }
+    .form .terms .form-check {
+        padding-left: 0rem;
+        height: 5rem;
+    }
+    .form .terms .form-check label.newsletter a {
+        text-align: right;
+    }
+    .form .data-table {
+        padding-top: 2rem;
+    }
+    .form .container .title.title-data {
+        margin: 0;
+    }
+    .form .container .title.title-data h1 {
+        height: initial;
+        padding-bottom: 0.2rem;
+        line-height: 2.5rem;
+    }
+    .form .information .data .container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .form .information .data .container .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .form .information .data .container .col-sm-3 {
+        width: 50%;
+    }
+    .form .information .data .container .col-sm-3 .btn-block {
+        max-width: 130px;
+    }
+    .form .information .data .container .col-sm-3 .btn {
+        padding-top: 0.60rem;
+    }
+    .form .information .data .row.datatable .col-sm-6 {
+        padding-bottom: .20rem;
+        padding-top: .40rem;
+    }
+    .form .container-success {
+        padding: 2em;
+        margin-top: -3em;
+    }
+    .form .container-success .logo-bottom {
+        width: 100%;
+        height: 109px;
+        background-image: url("../img/logos-speed-runner.png");
+        background-repeat: no-repeat;
+        background-position: right;
+        background-size: contain;
+        position: relative;
+    }
+    .form .container-success .d-flex {
+        padding-top: 3em;
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+    .form .container-success .d-flex .success-title,
+    .form .container-success .d-flex .success-message {
+        font-size: 28px;
+    }
+    @-webkit-keyframes slide-left {
+        0% {
+            -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+        }
+        100% {
+            -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+        }
+    }
+    @keyframes slide-left {
+        0% {
+            -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+        }
+        100% {
+            -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+        }
+    }
+}
+
+@media only screen and (min-width: 414px) {
+    .description .description-img .objetive-3 {
+        max-width: 140px;
+    }
+    .form .container.container-incription::before,
+    .form .container.container-success::before {
+        height: 200px;
+        top: 6px;
+    }
+}
+
+
+/* Medium devices (tablets, 768px and up) */
+
+@media only screen and (min-width: 768px) {
+    header.masthead {
+        background: url("../img/bg-textura.png") center center no-repeat;
+        background-size: cover;
+        padding-bottom: 4rem;
+    }
+    header.masthead h1 {
+        font-size: 3rem;
+    }
+    header.masthead .logo {
+        width: 100%;
+        height: 234px;
+        background-image: url("../img/logo.png");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        overflow: hidden;
+    }
+    header.masthead .col-md-12 {
+        padding-right: 0;
+    }
+    header.masthead .col-xl-3 .row {
+        margin-right: 0;
+    }
+    header.masthead .col-xl-3 .container {
+        transform: translateY(510px);
+    }
+    header.masthead .col-xl-3 .container .btn-dark {
+        margin-top: 4.5rem;
+        height: 50px;
+    }
+    header.masthead .arrow {
+        right: 1.2rem;
+        transform: translate(0, 50%);
+    }
+    .description::before {
+        content: "LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA/ / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA/ / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA/ / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA/ / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA/ / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA/ / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA/ / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA/ / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA/ / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD";
+        font-size: 32px;
+    }
+    .description .description-item h1 {
+        font-size: 58px;
+    }
+    .description .description-item p {
+        font-size: 30px;
+    }
+    .description .description-text h1 {
+        font-size: 38px;
+    }
+    .description .description-text p {
+        font-size: 22px;
+    }
+    .description .description-img .tryouts,
+    .description .description-img .training {
+        max-width: 100%;
+    }
+    .description .description-img .training img {
+        height: auto;
+    }
+    .description .description-img.objetives {
+        padding-top: 14rem;
+    }
+    .description .description-img .objetive-1 {
+        max-width: 450px;
+    }
+    .description .description-img .objetive-2 {
+        max-width: 322px;
+    }
+    .description .description-img .objetive-3 {
+        max-width: 240px;
+        z-index: 4;
+    }
+    .map .map-image {
+        height: 360px;
+    }
+    .map .container h1 {
+        font-size: 45px;
+        line-height: 0.9;
+    }
+    .map .map-image .timeline {
+        border-top: 3px solid #f26b32;
+        padding-left: 5rem;
+    }
+    .map .map-image .li {
+        float: left;
+        border-left: none;
+    }
+    .map .map-image .li:first-child {
+        padding-top: 0;
+        margin-top: -28px;
+    }
+    .map .map-image .li:nth-last-child(2) {
+        margin-top: -28px;
+    }
+    .map .map-image .li:nth-last-child(1) {
+        margin-top: -44px;
+        padding-bottom: 0 !important;
+    }
+    .map .map-image .li.full {
+        padding-bottom: 0;
+    }
+    .map .map-image .status {
+        padding: 0px 3em;
+        padding-left: 2em;
+    }
+    .map .map-image .status h1 {
+        font-size: 38px;
+    }
+    .map .map-image .status::before {
+        top: -28%;
+        left: 34%;
+    }
+    .map .map-image .full .status::before {
+        top: -28%;
+        left: 34%;
+    }
+    .map .map-image .status.status-last::before {
+        top: -28%;
+        left: 34%;
+    }
+    .map .map-image .info {
+        text-align: left;
+        padding-left: 2rem;
+    }
+    .map .map-image .info p {
+        font-size: 22px;
+    }
+    .map .map-image .info.space .px-3 {
+        padding-left: 0 !important;
+    }
+    .form {
+        padding-top: 24rem;
+    }
+    .form::before {
+        background-image: url("../img/aviones.png");
+        top: 18em;
+        left: -8.6em;
+        opacity: 0.3;
+    }
+    .form .container.container-incription::before,
+    .form .container.container-success::before {
+        height: 370px;
+        top: 8px;
+    }
+    .form .information .data .container .col-sm-3 .btn-block {
+        max-width: 100%;
+    }
+    .form .information .data .container .col-sm-3 .btn {
+        padding-top: 0.55rem;
+    }
+    .form .information .data .container .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .form .container .data .row.datatable .col-md-5,
+    .form .container .data .row.datatable .col-md-11 {
+        padding-left: 3rem;
+    }
+    @-webkit-keyframes slide-left {
+        0% {
+            -webkit-transform: translateY(360px);
+            transform: translateY(360px);
+        }
+        100% {
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+        }
+    }
+    @keyframes slide-left {
+        0% {
+            -webkit-transform: translateY(360px);
+            transform: translateY(360px);
+        }
+        100% {
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+        }
+    }
+}
+
+
+/* Large devices (desktops, 992px and up) */
+
+@media only screen and (min-width: 992px) {
+    .row {
+        margin-right: -15px;
+    }
+    header.masthead .logo {
+        margin-left: 700px;
+    }
+    .description .description-img .k {
+        max-width: 188px;
+        top: 1rem;
+        left: 2rem;
+    }
+    .map .container h1 {
+        font-size: 65px;
+        line-height: 0.9;
+    }
+    .form::before {
+        width: 53em;
+        background-image: url("../img/aviones.png");
+        top: -6em;
+        left: -9.2em;
+        opacity: 0.2;
+    }
+    .form .container.container-incription::before,
+    .form .container.container-success::before {
+        content: "";
+        width: 34em;
+        height: 87em;
+        background-image: url("../img/formulario-bg-ripped.png");
+        background-repeat: no-repeat;
+        background-position: right;
+        background-size: contain;
+        position: absolute;
+        top: 0;
+        right: -6em;
+    }
+    @-webkit-keyframes slide-left {
+        0% {
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+        }
+        100% {
+            -webkit-transform: translateX(-700px);
+            transform: translateX(-700px);
+        }
+    }
+    @keyframes slide-left {
+        0% {
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+        }
+        100% {
+            -webkit-transform: translateX(-700px);
+            transform: translateX(-700px);
+        }
+    }
+}
+
+
+/* Extra large devices (large desktops, 1200px and up) */
+
+@media only screen and (min-width: 1200px) {
+    /* Header */
+    header.masthead {
+        padding-top: 6rem;
+    }
+    header.masthead .aviones {
+        display: initial;
+    }
+    header.masthead .col-xl-3 {
+        padding-top: 0;
+    }
+    header.masthead .col-xl-3 .container {
+        transform: none;
+        padding: 0;
+        width: 286px;
+    }
+    header.masthead .col-xl-3 .container .btn-dark {
+        margin-top: 6rem;
+    }
+    header.masthead .col-xl-7 {
+        padding-top: 0;
+        padding-right: 0;
+        margin-top: -2rem;
+        transform: none;
+    }
+    header.masthead .video-thumbnail {
+        height: 424px;
+        max-width: 100%;
+        border: solid 5px #fafafa;
+        border-right: none;
+        box-sizing: border-box;
+    }
+    header.masthead .video-thumbnail iframe,
+    header.masthead .video-thumbnail object,
+    header.masthead .video-thumbnail embed {
+        height: inherit;
+        max-width: 100%;
+        display: block;
+    }
+    header.masthead .arrow {
+        right: 4.7rem;
+        transform: translate(0, 50%);
+    }
+    /* Description */
+    .description {
+        padding-top: 3rem;
+    }
+    .description::before {
+        content: "LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA/ / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA/ / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA/ / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA/ / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA/ / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA/ / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA/ / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA/ / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA/ / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD";
+        font-size: 35px;
+    }
+    .description .description-item h1 {
+        font-size: 70px;
+    }
+    .description .description-item p {
+        font-size: 30px;
+    }
+    .description .description-img .objetive-2 {
+        left: initial;
+    }
+    .description .container-fluid .row {
+        margin-right: 0;
+        margin-left: 0;
+    }
+    .description .col-description {
+        padding-top: 3rem;
+        padding-left: 6rem;
+        padding-right: 3rem;
+    }
+    .description .description-img .city {
+        max-width: 437px;
+        left: 1.6rem;
+    }
+    .description .description-text {
+        padding: 0;
+        padding-right: 3rem;
+    }
+    .description .description-text h1 {
+        font-size: 35px;
+    }
+    .description .description-text p {
+        font-size: 22px;
+    }
+    .description .col-description.col-description-2 {
+        transform: translate(-50px, -180px);
+    }
+    .description .col-description.col-description-3 {
+        padding-top: 10rem;
+    }
+    .description .description-img .training img {
+        height: auto;
+    }
+    .map .map-image .row {
+        margin-right: 0;
+    }
+    .description .description-img .k {
+        left: 1.5rem;
+    }
+    .description .description-img .k img {
+        max-width: 100%;
+        height: auto
+    }
+    .description .container-fluid .last-description {
+        transform: translateY(-200px);
+        margin-bottom: -172px;
+    }
+    .description .description-img.objetives {
+        padding-top: 0rem;
+    }
+    .description .description-img .objetive-1 {
+        height: auto;
+        max-width: 457px;
+        margin-bottom: 0.2em;
+        z-index: 2;
+        border: none;
+        left: 0;
+    }
+    .description .description-img .objetive-2 {
+        max-width: 317px;
+        right: 0;
+        margin-right: 30px;
+        top: 0;
+        transform: translate(80px, -224px);
+    }
+    .description .description-img .objetive-3 {
+        max-width: 220px;
+        top: 0;
+        left: 10px;
+        transform: translate(-25px, -276px);
+        z-index: 4;
+    }
+    .map {
+        padding-top: 2.5rem;
+    }
+    .map .container {
+        padding-bottom: 2.5rem;
+    }
+    .map .map-image {
+        height: 307px;
+    }
+    .map .map-image .timeline {
+        border-top: 3px solid #f26b32;
+        padding-left: 3em;
+        margin-right: -2rem;
+    }
+    .map .map-image .li {
+        border-left: none;
+        float: none;
+    }
+    .map .map-image .li.full {
+        padding-bottom: 2rem;
+    }
+    .map .map-image .li:first-child {
+        padding-top: initial;
+        margin-top: 0;
+    }
+    .map .map-image .status {
+        padding: 0px 6em;
+    }
+    .map .map-image .status::before {
+        top: -34%;
+        left: 45%;
+        width: 26px;
+        height: 26px;
+    }
+    .map .map-image .status.status-last::before {
+        top: -22%;
+        left: 45%;
+        width: 26px;
+        height: 26px;
+    }
+    .map .map-image .info {
+        padding-left: 6rem;
+    }
+    .form {
+        padding-top: 4rem;
+    }
+    .form .form-row-space {
+        padding-bottom: 1rem;
+    }
+    .form .container .inputs {
+        padding-top: 2em;
+        padding-bottom: 2em;
+    }
+    .form .container h1 {
+        font-size: 65px;
+    }
+    .form .container .title {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .form .container .terms {
+        margin-top: -10px;
+    }
+    .form .form-group {
+        margin-bottom: 2.5rem;
+    }
+    .form .form-row.break {
+        margin-bottom: 1rem;
+    }
+    .form .container .inputs {
+        padding: 0rem;
+        padding-top: 2rem;
+    }
+    .form .terms .form-check {
+        padding-left: 0rem;
+        height: 2rem;
+    }
+    .form .container-success {
+        padding: 6em;
+        padding-top: 2em;
+    }
+    .form .container-success .logo-bottom {
+        width: 100%;
+        height: 15.2rem;
+        background-image: url("../img/logo.png");
+        background-repeat: no-repeat;
+        background-position: right;
+        background-size: contain;
+        position: absolute;
+    }
+    .form .container-success .d-flex .success-title {
+        font-size: 44px;
+    }
+}
+
+
+/* HD devices (large desktops, 1440px and up) */
+
+@media only screen and (min-width: 1440px) {
+    header.masthead .col-xl-3 .container .btn-dark {
+        margin-top: 10rem;
+    }
+    header.masthead .arrow {
+        right: 5.7rem;
+    }
+    .description .col-description {
+        padding-left: 5rem;
+    }
+    .description .col-description.col-description-2 {
+        transform: translate(0, -180px);
+    }
+    .description .description-img .objetive-3 {
+        transform: translate(-54px, -343px);
+        max-width: 295px;
+    }
+    .description .description-img.objetives {
+        padding-top: 1rem;
+    }
+    .description .description-img .objetive-2 {
+        max-width: 356px;
+        transform: translate(68px, -232px);
+    }
+    .form .container.container-incription::before,
+    .form .container.container-success::before {
+        height: 90em;
+    }
+}

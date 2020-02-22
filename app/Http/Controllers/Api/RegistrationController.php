@@ -23,7 +23,7 @@ class RegistrationController extends ApiController
             $res = $registration->create($request->all());
 
             // The mail is sent with the saved information
-            RegistrationWasStored::dispatch($res);
+            // RegistrationWasStored::dispatch($res);
 
             return $this->successResponse(trans('messages.successful_registration'), 200);
         } catch (QueryException $ex) {

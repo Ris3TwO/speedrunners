@@ -11,29 +11,23 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::group(['domain' => Config::get('app.url')], function () {
+    Route::get('/', 'LandingController@index')->name('landing.home');
 });
 
-Route::get('email', function () {
-    $data = array(
-        "names" => "Manuel José",
-        "last_names" => "Ron Bustos",
-        "age" => "18 - 25",
-        "email" => "ris3two3@gmail.com",
-        "city" => "Bogotá",
-        "genre" => "Hombre",
-        "shoes" => "Adidas",
-        "team" => "Provilas Team",
-        "distance" => "10K",
-        "best_time" => "60 MIN",
-        "updated_at" => "2020-02-14 17:56:17",
-        "created_at" => "2020-02-14 17:56:17",
-        "id" => 3,
-    );
-    return new App\Mail\RegisteredData($data);
+
+Route::group(['domain' => Config::get('app.url'), 'middleware' => 'colombia.database'], function () {
+    Route::get('colombia', 'LandingController@colombia')->name('landing.colombia');
 });
 
+Route::group(['domain' => 'cp.' . Config::get('app.url')], function () {
+    Route::get('/', function () {
+        return redirect()->route('landing.colombia');
+    });
+    Route::group(['prefix' => 'admin', 'middleware' => 'colombia.database'], function () {
+    Voyager::routes();
+    });
+});
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
