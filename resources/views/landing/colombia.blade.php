@@ -33,7 +33,7 @@
                 <div class="col-xl-3 col-md-12 offset-xl-1">
                     <div class="logo img-fluid slide-left"></div>
                     <div class="row justify-content-center">
-                        <div href="#bazinga" class="container align-middle">
+                        <div class="container align-middle">
                             <a href="#bazinga" class="btn btn-block btn-dark">INSCRIBIRME</a>
                         </div>
                     </div>
@@ -44,11 +44,13 @@
                     </div>
                 </div>
             </div>
-        </div><a  href="#bazinga">
-        <div  class="d-flex flex-row-reverse">
-            <div   class="arrow ml-auto"></div>
         </div>
-    </a>
+        <div class="d-flex flex-row-reverse">
+            <a href="#bazinga">
+                <div class="arrow ml-auto"></div>
+            </a>
+        </div>
+        </a>
     </header>
 
     <!-- Description grid -->
