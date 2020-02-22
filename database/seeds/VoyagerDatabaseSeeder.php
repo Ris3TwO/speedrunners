@@ -1,6 +1,8 @@
 <?php
 
+use App\User;
 use Illuminate\Database\Seeder;
+use TCG\Voyager\Models\Role;
 use TCG\Voyager\Traits\Seedable;
 
 class VoyagerDatabaseSeeder extends Seeder
