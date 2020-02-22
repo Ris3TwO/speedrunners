@@ -8,20 +8,22 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Adidas Speed Runners</title>
+    <title>{{ setting('site.title') }}</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom fonts for this template -->
-    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="./vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="css/landing-page.css" rel="stylesheet">
+    <link href="./css/landing-page.css" rel="stylesheet">
+
+    <script src="./vendor/smooth-scroll.js"></script>
 
 </head>
 
-<body>
+<body ng-app="app" ng-controller="controlador">
 
     <!-- Masthead -->
     <header class="masthead text-white text-center">
@@ -143,34 +145,37 @@
                         @if($section3_3->count() > 0)
                         @foreach ($section3_3 as $section)
                         <div class="objetive-1">
-                            <img src="{{ asset('/storage/'.$section->image) }}" alt="">
+                            <img ng-click="objetive1()" id="objetive1" src="{{ asset('/storage/'.$section->image) }}"
+                                alt="">
                         </div>
                         @endforeach
                         @else
                         <div class="objetive-1">
-                            <img src="../img/group-10.png" alt="">
+                            <img ng-click="objetive1()" id="objetive1" src="../img/group-10.png" alt="">
                         </div>
                         @endif
                         @if($section3_2->count() > 0)
                         @foreach ($section3_2 as $section)
                         <div class="objetive-2">
-                            <img src="{{ asset('/storage/'.$section->image) }}" alt="">
+                            <img ng-click="objetive2()" id="objetive2" src="{{ asset('/storage/'.$section->image) }}"
+                                alt="">
                         </div>
                         @endforeach
                         @else
                         <div class="objetive-2">
-                            <img src="../img/group-11.png" alt="">
+                            <img ng-click="objetive2()" id="objetive2" src="../img/group-11.png" alt="">
                         </div>
                         @endif
                         @if($section3_1->count() > 0)
                         @foreach ($section3_1 as $section)
                         <div class="objetive-3">
-                            <img src="{{ asset('/storage/'.$section->image) }}" alt="">
+                            <img ng-click="objetive3()" id="objetive3" src="{{ asset('/storage/'.$section->image) }}"
+                                alt="">
                         </div>
                         @endforeach
                         @else
                         <div class="objetive-3">
-                            <img src="../img/group-12.png" alt="">
+                            <img ng-click="objetive3()" id="objetive3" src="../img/group-12.png" alt="">
                         </div>
                         @endif
                     </div>
@@ -221,30 +226,6 @@
                         </div>
                     </div>
                 </div>
-
-                {{--  <div class="col-description col-description-3 col-lg-6 align-self-end my-auto ">
-                        <div class="description-img objetives">
-                            <div class="objetive-1">
-                                <img src="../img/group-10.png" alt="">
-                            </div>
-                            <div class="objetive-2">
-                                <img src="../img/group-11.png" alt="">
-                            </div>
-                            <div class="objetive-3">
-                                <img src="../img/group-12.png" alt="">
-                            </div>
-                        </div>
-                        <div class="description-text">
-                            <div class="container">
-                                <div class="row justify-content-md-center">
-                                    <div class="col-md-12 align-self-end">
-                                        <h1>OBJETIVOS</h1>
-                                        <p class="lead mb-0">LOS GANADORES VIAJARÁN A LAS MEJORES CARRERAS DEL MUNDO.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>  --}}
             </div>
         </div>
     </section>
@@ -302,268 +283,286 @@
 
     <!-- Form -->
     <section class="form">
-        <div class="container container-incription">
-            <div class="row justify-content-center">
-                <div class="col-lg-8 title">
-                    <h1>Inscripción</h1>
-                </div>
+        <form name="adidasForm">
+            <div class="container container-incription" ng-if="!dataSend">
                 <div class="row justify-content-center">
-                    <div class="col-lg-9 inputs">
-                        <div class="form-row form-row-space justify-content-around">
-                            <div class="form-group col-md-6">
-                                <label class="float-label" for="inputNames">NOMBRES</label>
-                                <input type="text" class="form-control" id="inputNames" aria-describedby="namesHelp"
-                                    placeholder="escriba sus nombres">
-                                <div class="invalid-feedback">
-                                    <small id="namesHelp" class="form-text">Falta registrar los nombres *</small>
+                    <div class="col-lg-8 title">
+                        <h1>Inscripción</h1>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-lg-9 inputs">
+                            <div class="form-row form-row-space justify-content-around">
+                                <div class="form-group col-md-6">
+                                    <label class="float-label" for="inputNames">NOMBRES</label>
+                                    <input type="text" ng-model="names" class="form-control" name="inputNames"
+                                        id="inputNames" aria-describedby="namesHelp" placeholder="escriba sus nombres">
+                                    <div ng-show="namesErr" class="invalid-feedback">
+                                        <small id="namesHelp" class="form-text">Falta registrar los nombres *</small>
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label class="float-label" for="inputLastnames">APELLIDOS</label>
+                                    <input type="text" ng-model="lastnames" class="form-control" name="inputLastnames"
+                                        id="inputLastnames" aria-describedby="lastnamesHelp"
+                                        placeholder="escriba sus apellidos">
+                                    <div ng-show="lastErr" class="invalid-feedback">
+                                        <small id="lastnamesHelp" class="form-text">Falta registrar los apellidos
+                                            *</small>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="form-group col-md-6">
-                                <label class="float-label" for="inputLastnames">APELLIDOS</label>
-                                <input type="text" class="form-control" id="inputLastnames"
-                                    aria-describedby="lastnamesHelp" placeholder="escriba sus apellidos">
-                                <div class="invalid-feedback">
-                                    <small id="lastnamesHelp" class="form-text">Falta registrar los apellidos *</small>
+                            <div class="form-row justify-content-around break">
+                                <div class="form-group col-md-6">
+                                    <label class="float-label" for="inputEmail">EMAIL</label>
+                                    <input type="email" ng-model="email" class="form-control" name="inputEmail"
+                                        id="inputEmail" aria-describedby="emailHelp" placeholder="escriba su email">
+                                    <div ng-if="emailErr" class="invalid-feedback">
+                                        <small id="emailHelp" class="form-text">Falta registrar el email *</small>
+                                    </div>
+                                </div>
+                                <div class="form-group form-radio col-md-6">
+                                    <label class="float-label-2">GÉNERO</label>
+                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn btn-light active" ng-click="selectGender('MASCULINO')">
+                                            <input type="radio" name="options" id="male" checked> MASCULINO
+                                        </label>
+                                        <label class="btn btn-light" ng-click="selectGender('FEMENINO')">
+                                            <input type="radio" name="options" id="female"> FEMENINO
+                                        </label>
+                                        <label class="btn btn-light" ng-click="selectGender('OTRO')">
+                                            <input type="radio" name="options" id="other"> OTRO
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row justify-content-around break">
+                                <div class="form-group form-radio col-md-6">
+                                    <label class="float-label-2">EDAD</label>
+                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn btn-light active" ng-click="selectAge('18 - 25')">
+                                            <input type="radio" name="options" id="18-25"> 18 - 25
+                                        </label>
+                                        <label class="btn btn-light" ng-click="selectAge('24 - 34')">
+                                            <input type="radio" name="options" id="24-34"> 24 - 34
+                                        </label>
+                                        <label class="btn btn-light" ng-click="selectAge('35 - 40')">
+                                            <input type="radio" name="options" id="35-40" checked> 35 - 40
+                                        </label>
+                                        <label class="btn btn-light" ng-click="selectAge('41 - 45')">
+                                            <input type="radio" name="options" id="41-45"> 41 - 45
+                                        </label>
+                                        <label class="btn btn-light" ng-click="selectAge('46 +')">
+                                            <input type="radio" name="options" id="46+"> 46 +
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-group form-radio col-md-6">
+                                    <label class="float-label-2">ZAPATILLAS</label>
+                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn btn-light active" ng-click="selectShoes('ADIDAS')">
+                                            <input type="radio" name="options" id="shoes1" checked> ADIDAS
+                                        </label>
+                                        <label class="btn btn-light" ng-click="selectShoes('REEBOK')">
+                                            <input type="radio" name="options" id="shoes2"> REEBOK
+                                        </label>
+                                        <label class="btn btn-light" ng-click="selectShoes('OTRAS')">
+                                            <input type="radio" name="options" id="shoes3"> OTRAS
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row justify-content-around break">
+                                <div class="form-group form-radio col-md-6">
+                                    <label class="float-label-2">TEAM</label>
+                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn btn-light active" ng-click="selectTeam('ADIDAS RUNNERS')">
+                                            <input type="radio" name="options" id="team1" checked> ADIDAS RUNNERS
+                                        </label>
+                                        <label class="btn btn-light" ng-click="selectTeam('OTRO')">
+                                            <input type="radio" name="options" id="team2"> OTRO
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-group form-radio col-md-6 mt-auto col-inactive">
+                                    <label class="float-label" for="inputTeam">TEAM</label>
+                                    <input type="text" class="form-control" id="inputTeam"
+                                        placeholder="escriba a que equipo pertenece">
+                                </div>
+                                <div class="form-group form-radio col-md-6">
+                                    <label class="float-label-2">DISTANCIA</label>
+                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn btn-light active" ng-click="selectDistance('10 K')">
+                                            <input type="radio" name="options" id="distance1" checked> 10 K
+                                        </label>
+                                        <label class="btn btn-light" ng-click="selectDistance('21 K')">
+                                            <input type="radio" name="options" id="distance2"> 21 K
+                                        </label>
+                                        <label class="btn btn-light" ng-click="selectDistance('42 K')">
+                                            <input type="radio" name="options" id="distance3"> 42 K
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row justify-content-around">
+                                <div class="form-group form-radio col-md-12">
+                                    <label class="float-label-2">MI MEJOR TIEMPO</label>
+                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn btn-light active" ng-click="selectTime('30 MIN')">
+                                            <input type="radio" name="options" id="time1"> 30 MIN
+                                        </label>
+                                        <label class="btn btn-light" ng-click="selectTime('60 MIN')">
+                                            <input type="radio" name="options" id="time2"> 60 MIN
+                                        </label>
+                                        <label class="btn btn-light" ng-click="selectTime('90 MIN')">
+                                            <input type="radio" name="options" id="time3"> 90 MIN
+                                        </label>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="form-row justify-content-around break">
-                            <div class="form-group col-md-6">
-                                <label class="float-label" for="inputEmail">EMAIL</label>
-                                <input type="email" class="form-control error" id="inputEmail"
-                                    aria-describedby="emailHelp" placeholder="escriba su email">
-                                <div class="invalid-feedback">
-                                    <small id="emailHelp" class="form-text">Falta registrar el email *</small>
+                        <div class="col-lg-10 terms">
+                            <div class="form-row">
+                                <div class="form-group col-md-12">
+                                    <div class="form-check">
+                                        <input id="terms" type="checkbox">
+                                        <label class="terms_conditions" for="terms">Acepto <a href="#">términos</a> y <a
+                                                href="#">condiciones</a>.</label>
+                                        <span></span>
+                                    </div>
+                                    <div class="form-check">
+                                        <input id="newsletter" type="checkbox">
+                                        <label for="newsletter">Quiero recibir noticias sobre productos y servicios de
+                                            adidas. <a href="#">¿Qué significa esto?</a></label>
+                                        <span></span>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="form-group form-radio col-md-6">
-                                <label class="float-label-2">GÉNERO</label>
-                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                                    <label class="btn btn-light active">
-                                        <input type="radio" name="options" id="male" checked> MASCULINO
-                                    </label>
-                                    <label class="btn btn-light">
-                                        <input type="radio" name="options" id="female"> FEMENINO
-                                    </label>
-                                    <label class="btn btn-light">
-                                        <input type="radio" name="options" id="other"> OTRO
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-row justify-content-around break">
-                            <div class="form-group form-radio col-md-6">
-                                <label class="float-label-2">EDAD</label>
-                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                                    <label class="btn btn-light active">
-                                        <input type="radio" name="options" id="18-25"> 18 - 25
-                                    </label>
-                                    <label class="btn btn-light">
-                                        <input type="radio" name="options" id="24-34"> 24 - 34
-                                    </label>
-                                    <label class="btn btn-light">
-                                        <input type="radio" name="options" id="35-40" checked> 35 - 40
-                                    </label>
-                                    <label class="btn btn-light">
-                                        <input type="radio" name="options" id="41-45"> 41 - 45
-                                    </label>
-                                    <label class="btn btn-light">
-                                        <input type="radio" name="options" id="46+"> 46 +
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="form-group form-radio col-md-6">
-                                <label class="float-label-2">ZAPATILLAS</label>
-                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                                    <label class="btn btn-light active">
-                                        <input type="radio" name="options" id="shoes1" checked> ADIDAS
-                                    </label>
-                                    <label class="btn btn-light">
-                                        <input type="radio" name="options" id="shoes2"> REEBOK
-                                    </label>
-                                    <label class="btn btn-light">
-                                        <input type="radio" name="options" id="shoes3"> OTRAS
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-row justify-content-around break">
-                            <div class="form-group form-radio col-md-6">
-                                <label class="float-label-2">TEAM</label>
-                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                                    <label class="btn btn-light active">
-                                        <input type="radio" name="options" id="team1" checked> ADIDAS RUNNERS
-                                    </label>
-                                    <label class="btn btn-light">
-                                        <input type="radio" name="options" id="team2"> OTRO
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="form-group form-radio col-md-6 mt-auto col-inactive">
-                                <label class="float-label" for="inputTeam">TEAM</label>
-                                <input type="text" class="form-control" id="inputTeam"
-                                    placeholder="escriba a que equipo pertenece">
-                            </div>
-                            <div class="form-group form-radio col-md-6">
-                                <label class="float-label-2">DISTANCIA</label>
-                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                                    <label class="btn btn-light active">
-                                        <input type="radio" name="options" id="distance1" checked> 10 K
-                                    </label>
-                                    <label class="btn btn-light">
-                                        <input type="radio" name="options" id="distance2"> 21 K
-                                    </label>
-                                    <label class="btn btn-light">
-                                        <input type="radio" name="options" id="distance3"> 42 K
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-row justify-content-around">
-                            <div class="form-group form-radio col-md-12">
-                                <label class="float-label-2">MI MEJOR TIEMPO</label>
-                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                                    <label class="btn btn-light active">
-                                        <input type="radio" name="options" id="time1"> 30 MIN
-                                    </label>
-                                    <label class="btn btn-light">
-                                        <input type="radio" name="options" id="time2"> 60 MIN
-                                    </label>
-                                    <label class="btn btn-light">
-                                        <input type="radio" name="options" id="time3"> 90 MIN
-                                    </label>
+                            <div class="col-lg-12 submit">
+                                <div class="col-md-8 offset-md-2">
+                                    <a type="button" ng-click="verify(true)" href="#info"
+                                        class="btn btn-dark btn-lg btn-block">INSCRIBIRME</a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-10 terms">
-                        <div class="form-row">
-                            <div class="form-group col-md-12">
-                                <div class="form-check">
-                                    <input id="terms" type="checkbox">
-                                    <label class="terms_conditions" for="terms">Acepto <a href="#">términos</a> y <a
-                                            href="#">condiciones</a>.</label>
-                                    <span></span>
-                                </div>
-                                <div class="form-check">
-                                    <input id="newsletter" type="checkbox">
-                                    <label for="newsletter">Quiero recibir noticias sobre productos y servicios de
-                                        adidas. <a href="#">¿Qué significa esto?</a></label>
-                                    <span></span>
-                                </div>
+                    <div class="col-lg-8 data-table" ng-if="dataCheck == true">
+                        <div class="col-lg-12 information">
+                            <div class="col-lg-12 title title-data">
+                                <h1>Información registrada</h1>
                             </div>
-                        </div>
-                        <div class="col-lg-12 submit">
-                            <div class="col-md-8 offset-md-2">
-                                <button type="button" class="btn btn-dark btn-lg btn-block">INSCRIBIRME</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-8 data-table">
-                    <div class="col-lg-12 information">
-                        <div class="col-lg-12 title title-data">
-                            <h1>Información registrada</h1>
-                        </div>
-                        <div class="col-lg-12 data">
-                            <div class="container">
-                                <div class="row datatable">
-                                    <div class="col-sm-6 col-md-1 form-title">
-                                        Nombres:
-                                    </div>
-                                    <div class="col-sm-6 col-md-5 form-data">
-                                        Juan Carlos
-                                    </div>
-                                    <div class="col-sm-6 col-md-1 form-title">
-                                        Apellidos:
-                                    </div>
-                                    <div class="col-sm-6 col-md-5 form-data">
-                                        Ortiz Andrade
-                                    </div>
-                                    <div class="col-sm-6 col-md-1 form-title">
-                                        Email:
-                                    </div>
-                                    <div class="col-sm-6 col-md-5 form-data">
-                                        jcortiz@gmail.com
-                                    </div>
-                                    <div class="col-sm-6 col-md-1 form-title">
-                                        Género:
-                                    </div>
-                                    <div class="col-sm-6 col-md-5 form-data">
-                                        Hombre
-                                    </div>
-                                    <div class="col-sm-6 col-md-1 form-title">
-                                        Edad:
-                                    </div>
-                                    <div class="col-sm-6 col-md-5 form-data">
-                                        35 - 40
-                                    </div>
-                                    <div class="col-sm-6 col-md-1 form-title">
-                                        Zapatillas:
-                                    </div>
-                                    <div class="col-sm-6 col-md-5 form-data">
-                                        Adidas
-                                    </div>
-                                    <div class="col-sm-6 col-md-1 form-title">
-                                        Team:
-                                    </div>
-                                    <div class="col-sm-6 col-md-5 form-data">
-                                        Pretoria Survivors
-                                    </div>
-                                    <div class="col-sm-6 col-md-1 form-title">
-                                        Distancia:
-                                    </div>
-                                    <div class="col-sm-6 col-md-5 form-data">
-                                        10K
-                                    </div>
-                                    <div class="col-sm-6 col-md-1 form-title form-last">
-                                        Tiempo:
-                                    </div>
-                                    <div class="col-sm-6 col-md-11 form-data form-last">
-                                        90 MIN
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="container">
-                                <div class="row justify-content-center">
-                                    <div class="col-sm-3 col-md-5">
-                                        <button type="button" class="btn btn-light btn-lg btn-block">Modificar</button>
-                                    </div>
-                                    <div class="col-sm-3 col-md-5">
-                                        <button type="button" class="btn btn-dark btn-lg btn-block">Guardar</button>
-                                    </div>
-                                </div>
-                            </div>
+                            <div class="col-lg-12 data">
+                                <div class="container">
+                                    <div class="row datatable">
+                                        <div class="col-sm-6 col-md-1 form-title">
+                                            Nombres:
+                                        </div>
+                                        <div class="col-sm-6 col-md-5 form-data"
+                                            ng-bind="adidasForm.inputNames.$viewValue">
+                                        </div>
+                                        <div class="col-sm-6 col-md-1 form-title">
+                                            Apellidos:
+                                        </div>
+                                        <div class="col-sm-6 col-md-5 form-data"
+                                            ng-bind="adidasForm.inputLastnames.$viewValue">
 
-                        </div>
-                    </div>
-                </div>
+                                        </div>
+                                        <div class="col-sm-6 col-md-1 form-title">
+                                            Email:
+                                        </div>
+                                        <div class="col-sm-6 col-md-5 form-data"
+                                            ng-bind="adidasForm.inputEmail.$viewValue">
 
-            </div>
-        </div>
-        <div class="container container-success" style="display: none;">
-            <div class="row justify-content-center">
-                <div class="col-lg-12">
-                    <div class="row justify-content-center text-left">
-                        <div class="col-lg-4">
-                            <div class="logo-bottom"></div>
-                        </div>
-                        <div class="col-lg-8 d-flex align-items-center">
-                            <div>
-                                <h1 class="success-title">Hola Juan Carlos</h1>
-                                <p class="success-message">
-                                    Pronto estaremos enviando más información al email registrado.
-                                </p>
+                                        </div>
+                                        <div class="col-sm-6 col-md-1 form-title">
+                                            Género:
+                                        </div>
+                                        <div class="col-sm-6 col-md-5 form-data" ng-bind="gender">
+
+                                        </div>
+                                        <div class="col-sm-6 col-md-1 form-title">
+                                            Edad:
+                                        </div>
+                                        <div class="col-sm-6 col-md-5 form-data" ng-bind="age">
+
+                                        </div>
+                                        <div class="col-sm-6 col-md-1 form-title">
+                                            Zapatillas:
+                                        </div>
+                                        <div class="col-sm-6 col-md-5 form-data" ng-bind="shoes">
+
+                                        </div>
+                                        <div class="col-sm-6 col-md-1 form-title">
+                                            Team:
+                                        </div>
+                                        <div class="col-sm-6 col-md-5 form-data" ng-bind="team">
+
+                                        </div>
+                                        <div class="col-sm-6 col-md-1 form-title">
+                                            Distancia:
+                                        </div>
+                                        <div class="col-sm-6 col-md-5 form-data" ng-bind="distance">
+
+                                        </div>
+                                        <div class="col-sm-6 col-md-1 form-title form-last">
+                                            Tiempo:
+                                        </div>
+                                        <div class="col-sm-6 col-md-11 form-data form-last" ng-bind="time">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container">
+                                    <div class="row justify-content-center">
+                                        <div class="col-sm-3 col-md-5">
+                                            <button type="button" href="#bazinga" ng-click="verify(false)"
+                                                class="btn btn-light btn-lg btn-block">Modificar</button>
+                                        </div>
+                                        <div class="col-sm-3 col-md-5">
+                                            <button type="button" ng-click="sendData()"
+                                                class="btn btn-dark btn-lg btn-block">Guardar</button>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
-        </div>
+            <div class="container container-success" ng-if="dataSend">
+                <div class="row justify-content-center">
+                    <div class="col-lg-12">
+                        <div class="row justify-content-center text-left">
+                            <div class="col-lg-4">
+                                <div class="logo-bottom"></div>
+                            </div>
+                            <div class="col-lg-8 d-flex align-items-center">
+                                <div>
+                                    <h1 class="success-title">Hola <p ng-bind="adidasForm.inputNames.$viewValue"></p>
+                                    </h1>
+                                    <p class="success-message">
+                                        Pronto estaremos enviando más información al email registrado.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
     </section>
 
     <script src="./vendor/jquery/jquery.min.js "></script>
     <script src="./vendor/bootstrap/js/bootstrap.bundle.min.js "></script>
+
+    <script src="<?= asset('angular.min.js') ?>"></script>
+    <script src="<?= asset('app.js') ?>"></script>
+    <script src="<?= asset('angular-route.min.js') ?>"></script>
+
+    <script>
+        var scroll = new SmoothScroll('a[href*="#"]');
+    </script>
 
     <script>
         var i, c, y, v, s, n;
