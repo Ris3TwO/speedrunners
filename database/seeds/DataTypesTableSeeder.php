@@ -75,7 +75,7 @@ class DataTypesTableSeeder extends Seeder
                 'display_name_singular' => 'Description',
                 'display_name_plural'   => 'Descriptions',
                 'icon'                  => 'voyager-documentation',
-                'model_name'            => 'App\Registration',
+                'model_name'            => 'App\Description',
                 'controller'            => '',
                 'generate_permissions'  => 1,
                 'description'           => '',
