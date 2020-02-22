@@ -26,7 +26,7 @@
 <body ng-app="app" ng-controller="controlador">
 
     <!-- Masthead -->
-    <header class="masthead text-white text-center">
+    <header id="header" class="masthead text-white text-center">
         <div class="aviones"></div>
         <div class="container-fluid">
             <div class="row">
@@ -34,7 +34,7 @@
                     <div class="logo img-fluid slide-left"></div>
                     <div class="row justify-content-center">
                         <div class="container align-middle">
-                            <button class="btn btn-block btn-dark">INSCRIBIRME</button>
+                            <button href="#bazinga" class="btn btn-block btn-dark">INSCRIBIRME</button>
                         </div>
                     </div>
                 </div>
@@ -45,7 +45,7 @@
                 </div>
             </div>
         </div>
-        <div class="d-flex flex-row-reverse">
+        <div href="#bazinga" class="d-flex flex-row-reverse">
             <div class="arrow ml-auto"></div>
         </div>
     </header>
@@ -150,19 +150,19 @@
                         </div>
                         @endforeach
                         @else
-                        <div class="objetive-1">
+                        <div id="objetive1" class="objetive-1">
                             <img ng-click="objetive1()" id="objetive1" src="../img/group-10.png" alt="">
                         </div>
                         @endif
                         @if($section3_2->count() > 0)
                         @foreach ($section3_2 as $section)
-                        <div class="objetive-2">
+                        <div id="objetive2" class="objetive-2">
                             <img ng-click="objetive2()" id="objetive2" src="{{ asset('/storage/'.$section->image) }}"
                                 alt="">
                         </div>
                         @endforeach
                         @else
-                        <div class="objetive-2">
+                        <div id="objetive3" class="objetive-2">
                             <img ng-click="objetive2()" id="objetive2" src="../img/group-11.png" alt="">
                         </div>
                         @endif
@@ -294,16 +294,17 @@
                             <div class="form-row form-row-space justify-content-around">
                                 <div class="form-group col-md-6">
                                     <label class="float-label" for="inputNames">NOMBRES</label>
-                                    <input type="text" ng-model="names" class="form-control" name="inputNames" id="inputNames"
-                                        aria-describedby="namesHelp" placeholder="escriba sus nombres">
+                                    <input type="text" ng-model="names" class="form-control" name="inputNames"
+                                        id="inputNames" aria-describedby="namesHelp" placeholder="escriba sus nombres">
                                     <div ng-show="namesErr" class="invalid-feedback">
                                         <small id="namesHelp" class="form-text">Falta registrar los nombres *</small>
                                     </div>
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label class="float-label" for="inputLastnames">APELLIDOS</label>
-                                    <input type="text" ng-model="lastnames" class="form-control" name="inputLastnames" id="inputLastnames"
-                                        aria-describedby="lastnamesHelp" placeholder="escriba sus apellidos">
+                                    <input type="text" ng-model="lastnames" class="form-control" name="inputLastnames"
+                                        id="inputLastnames" aria-describedby="lastnamesHelp"
+                                        placeholder="escriba sus apellidos">
                                     <div ng-show="lastErr" class="invalid-feedback">
                                         <small id="lastnamesHelp" class="form-text">Falta registrar los apellidos
                                             *</small>
@@ -313,8 +314,8 @@
                             <div class="form-row justify-content-around break">
                                 <div class="form-group col-md-6">
                                     <label class="float-label" for="inputEmail">EMAIL</label>
-                                    <input type="email" ng-model="email" class="form-control" name="inputEmail" id="inputEmail"
-                                        aria-describedby="emailHelp" placeholder="escriba su email">
+                                    <input type="email" ng-model="email" class="form-control" name="inputEmail"
+                                        id="inputEmail" aria-describedby="emailHelp" placeholder="escriba su email">
                                     <div ng-if="emailErr" class="invalid-feedback">
                                         <small id="emailHelp" class="form-text">Falta registrar el email *</small>
                                     </div>
@@ -455,18 +456,21 @@
                                         <div class="col-sm-6 col-md-1 form-title">
                                             Nombres:
                                         </div>
-                                        <div class="col-sm-6 col-md-5 form-data" ng-bind="adidasForm.inputNames.$viewValue">
+                                        <div class="col-sm-6 col-md-5 form-data"
+                                            ng-bind="adidasForm.inputNames.$viewValue">
                                         </div>
                                         <div class="col-sm-6 col-md-1 form-title">
                                             Apellidos:
                                         </div>
-                                        <div class="col-sm-6 col-md-5 form-data" ng-bind="adidasForm.inputLastnames.$viewValue">
+                                        <div class="col-sm-6 col-md-5 form-data"
+                                            ng-bind="adidasForm.inputLastnames.$viewValue">
 
                                         </div>
                                         <div class="col-sm-6 col-md-1 form-title">
                                             Email:
                                         </div>
-                                        <div class="col-sm-6 col-md-5 form-data" ng-bind="adidasForm.inputEmail.$viewValue">
+                                        <div class="col-sm-6 col-md-5 form-data"
+                                            ng-bind="adidasForm.inputEmail.$viewValue">
 
                                         </div>
                                         <div class="col-sm-6 col-md-1 form-title">
@@ -535,7 +539,8 @@
                             </div>
                             <div class="col-lg-8 d-flex align-items-center">
                                 <div>
-                                    <h1 class="success-title">Hola <p ng-bind="adidasForm.inputNames.$viewValue"></p></h1>
+                                    <h1 class="success-title">Hola <p ng-bind="adidasForm.inputNames.$viewValue"></p>
+                                    </h1>
                                     <p class="success-message">
                                         Pronto estaremos enviando más información al email registrado.
                                     </p>

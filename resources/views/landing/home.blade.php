@@ -26,7 +26,7 @@
 <body ng-app="app" ng-controller="controlador">
 
     <!-- Masthead -->
-    <header class="masthead text-white text-center">
+    <header id="header" class="masthead text-white text-center">
         <div class="aviones"></div>
         <div class="container-fluid">
             <div class="row">
@@ -34,7 +34,7 @@
                     <div class="logo img-fluid slide-left"></div>
                     <div class="row justify-content-center">
                         <div class="container align-middle">
-                            <button class="btn btn-block btn-dark">INSCRIBIRME</button>
+                            <button href="#bazinga" class="btn btn-block btn-dark">INSCRIBIRME</button>
                         </div>
                     </div>
                 </div>
@@ -45,7 +45,7 @@
                 </div>
             </div>
         </div>
-        <div class="d-flex flex-row-reverse">
+        <div href="#bazinga" class="d-flex flex-row-reverse">
             <div class="arrow ml-auto"></div>
         </div>
     </header>
@@ -150,19 +150,19 @@
                         </div>
                         @endforeach
                         @else
-                        <div class="objetive-1">
+                        <div id="objetive1" class="objetive-1">
                             <img ng-click="objetive1()" id="objetive1" src="../img/group-10.png" alt="">
                         </div>
                         @endif
                         @if($section3_2->count() > 0)
                         @foreach ($section3_2 as $section)
-                        <div class="objetive-2">
+                        <div id="objetive2" class="objetive-2">
                             <img ng-click="objetive2()" id="objetive2" src="{{ asset('/storage/'.$section->image) }}"
                                 alt="">
                         </div>
                         @endforeach
                         @else
-                        <div class="objetive-2">
+                        <div id="objetive3" class="objetive-2">
                             <img ng-click="objetive2()" id="objetive2" src="../img/group-11.png" alt="">
                         </div>
                         @endif
