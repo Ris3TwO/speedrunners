@@ -33,8 +33,8 @@
                 <div class="col-xl-3 col-md-12 offset-xl-1">
                     <div class="logo img-fluid slide-left"></div>
                     <div class="row justify-content-center">
-                        <div class="container align-middle">
-                            <button href="#bazinga" class="btn btn-block btn-dark">INSCRIBIRME</button>
+                        <div href="#bazinga" class="container align-middle">
+                            <a href="#bazinga" class="btn btn-block btn-dark">INSCRIBIRME</a>
                         </div>
                     </div>
                 </div>
@@ -44,10 +44,11 @@
                     </div>
                 </div>
             </div>
+        </div><a  href="#bazinga">
+        <div  class="d-flex flex-row-reverse">
+            <div   class="arrow ml-auto"></div>
         </div>
-        <div href="#bazinga" class="d-flex flex-row-reverse">
-            <div class="arrow ml-auto"></div>
-        </div>
+    </a>
     </header>
 
     <!-- Description grid -->
@@ -287,7 +288,7 @@
             <div class="container container-incription" ng-if="!dataSend">
                 <div class="row justify-content-center">
                     <div class="col-lg-8 title">
-                        <h1>Inscripción</h1>
+                        <h1 id="bazinga">Inscripción</h1>
                     </div>
                     <div class="row justify-content-center">
                         <div class="col-lg-9 inputs">
@@ -556,9 +557,9 @@
     <script src="./vendor/jquery/jquery.min.js "></script>
     <script src="./vendor/bootstrap/js/bootstrap.bundle.min.js "></script>
 
-    <script src="<?= asset('angular.min.js') ?>"></script>
-    <script src="<?= asset('app.js') ?>"></script>
-    <script src="<?= asset('angular-route.min.js') ?>"></script>
+    <script src="angular.min.js"></script>
+    <script src="angular-route.min.js"></script>
+    <script src="app.js"></script>
 
     <script>
         var scroll = new SmoothScroll('a[href*="#"]');
