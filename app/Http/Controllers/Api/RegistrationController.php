@@ -21,7 +21,6 @@ class RegistrationController extends ApiController
     {
         try {
             $url_parts = parse_url($request->url, PHP_URL_PATH);
-            dd($url_parts);
             // The data provided are saved.
             $registration->create($request->all());
 
