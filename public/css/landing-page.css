@@ -998,7 +998,7 @@ header.masthead .arrow {
     }
     .description .description-img .tryouts,
     .description .description-img .training {
-        max-width: 550px;
+        max-width: 378px;
     }
     .description .description-img .city {
         max-width: 251px;
@@ -1272,22 +1272,22 @@ header.masthead .arrow {
     }
     @-webkit-keyframes slide-left {
         0% {
-            -webkit-transform: translateY(100px);
-            transform: translateY(100px);
+            -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
         }
         100% {
-            -webkit-transform: translateY(0px);
-            transform: translateY(0px);
+            -webkit-transform: translateX(0px);
+            transform: translateX(0px);
         }
     }
     @keyframes slide-left {
         0% {
-            -webkit-transform: translateY(100px);
-            transform: translateY(100px);
+            -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
         }
         100% {
-            -webkit-transform: translateY(0px);
-            transform: translateY(0px);
+            -webkit-transform: translateX(0px);
+            transform: translateX(0px);
         }
     }
 }
@@ -1465,22 +1465,22 @@ header.masthead .arrow {
     }
     @-webkit-keyframes slide-left {
         0% {
-            -webkit-transform: translateY(360px);
-            transform: translateY(360px);
+            -webkit-transform: translateX(-360px);
+            transform: translateX(-360px);
         }
         100% {
-            -webkit-transform: translateY(0);
-            transform: translateY(0);
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
         }
     }
     @keyframes slide-left {
         0% {
-            -webkit-transform: translateY(360px);
-            transform: translateY(360px);
+            -webkit-transform: translateX(-360px);
+            transform: translateX(-360px);
         }
         100% {
-            -webkit-transform: translateY(0);
-            transform: translateY(0);
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
         }
     }
 }
@@ -1491,9 +1491,6 @@ header.masthead .arrow {
 @media only screen and (min-width: 992px) {
     .row {
         margin-right: -15px;
-    }
-    header.masthead .logo {
-        margin-left: 700px;
     }
     .description .description-img .k {
         max-width: 188px;
@@ -1526,22 +1523,22 @@ header.masthead .arrow {
     }
     @-webkit-keyframes slide-left {
         0% {
-            -webkit-transform: translateX(0);
-            transform: translateX(0);
-        }
-        100% {
             -webkit-transform: translateX(-700px);
             transform: translateX(-700px);
+        }
+        100% {
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
         }
     }
     @keyframes slide-left {
         0% {
-            -webkit-transform: translateX(0);
-            transform: translateX(0);
-        }
-        100% {
             -webkit-transform: translateX(-700px);
             transform: translateX(-700px);
+        }
+        100% {
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
         }
     }
 }
