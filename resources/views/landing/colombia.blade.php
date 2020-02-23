@@ -245,7 +245,7 @@
                 </div>
             </div>
         </div>
-    </section>-->
+    </section>
 
     <!-- Map -->
     <section class="map text-center">
