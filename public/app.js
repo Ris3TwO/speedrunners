@@ -144,9 +144,10 @@ app.controller("controlador", function($scope, $http, $location) {
         objetive3.classList.remove("active-img")
         if (width >= 360 && width <= 400) {
             objetive1.classList.add("active-img");
-            objetive1.style.transform = "translate(-12px, 133px)"
-            objetive2.style.maxWidth = "194px"
-            objetive1.style.maxWidth = "305px"
+            objetive2.style.transform = "translate(-12px, 133px)"
+            objetive1.style.transform = "translate(68px, -132px)"
+            objetive1.style.maxWidth = "194px"
+            objetive2.style.maxWidth = "305px"
         }
         obj2.removeAttribute("style");
 
