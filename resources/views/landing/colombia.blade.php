@@ -25,7 +25,7 @@
         .filter{
             -webkit-filter: grayscale(100%);
             filter: grayscale(100%);
-            z-index: 5 !important;
+            z-index: 1 !important;
         }
         .active-img {
             z-index: 6 !important;
@@ -182,13 +182,13 @@
                         @endif
                         @if($section3_1->count() > 0)
                         @foreach ($section3_1 as $section)
-                        <div class="objetive-3">
+                        <div class="objetive-3 active-img">
                             <img ng-click="objetive3()" id="objetive3" src="{{ asset('/storage/'.$section->image) }}"
                                 alt="">
                         </div>
                         @endforeach
                         @else
-                        <div class="objetive-3">
+                        <div class="objetive-3 active-img">
                             <img ng-click="objetive3()" id="objetive3" src="../img/group-12.png" alt="">
                         </div>
                         @endif
