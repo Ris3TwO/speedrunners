@@ -87,10 +87,10 @@
                     @foreach ($section1 as $section)
                     <div class="description-img">
                         <div class="tryouts">
-                            <img src="'/storage/'.$section->imag" alt="">
+                            <img src="{{ asset('/storage/'.$section->image) }}" alt="">
                         </div>
                         <div class="city">
-                            <img src="'/storage/'.$section->image_ove" alt="">
+                            <img src="{{ asset('/storage/'.$section->image_over) }}" alt="">
                         </div>
                     </div>
                     @endforeach
@@ -123,10 +123,10 @@
                 <div class="col-description col-description-2 col-lg-6 offset-lg-6">
                     <div class="description-img">
                         <div class="training">
-                            <img src="'/storage/'.$section->imag" alt="">
+                            <img src="{{ asset('/storage/'.$section->image) }}" alt="">
                         </div>
                         <div class="k">
-                            <img src="'/storage/'.$section->image_ove" alt="">
+                            <img src="{{ asset('/storage/'.$section->image_over) }}" alt="">
                         </div>
                     </div>
                     <div class="description-text">
@@ -162,7 +162,7 @@
                         @if($section3_3->count() > 0)
                         @foreach ($section3_3 as $section)
                         <div id="objetive1" class="objetive-1">
-                            <img ng-click="objetive1()" id="objetive1" src="'/storage/'.$section->imag" alt="">
+                            <img ng-click="objetive1()" id="objetive1" src="{{ asset('/storage/'.$section->image) }}" alt="">
                         </div>
                         @endforeach
                         @else
@@ -173,7 +173,7 @@
                         @if($section3_2->count() > 0)
                         @foreach ($section3_2 as $section)
                         <div id="objetive2" class="objetive-2">
-                            <img ng-click="objetive2()" id="objetive2" src="'/storage/'.$section->imag" alt="">
+                            <img ng-click="objetive2()" id="objetive2" src="{{ asset('/storage/'.$section->image) }}" alt="">
                         </div>
                         @endforeach
                         @else
@@ -184,7 +184,7 @@
                         @if($section3_1->count() > 0)
                         @foreach ($section3_1 as $section)
                         <div id="objetive3" class="objetive-3 active-img">
-                            <img ng-click="objetive3()" id="objetive3" src="'/storage/'.$section->imag" alt="">
+                            <img ng-click="objetive3()" id="objetive3" src="{{ asset('/storage/'.$section->image) }}" alt="">
                         </div>
                         @endforeach
                         @else
