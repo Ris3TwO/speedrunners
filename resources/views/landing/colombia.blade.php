@@ -182,13 +182,13 @@
                         @endif
                         @if($section3_1->count() > 0)
                         @foreach ($section3_1 as $section)
-                        <div class="objetive-3 active-img">
+                        <div id="objetive3" class="objetive-3 active-img">
                             <img ng-click="objetive3()" id="objetive3" src="{{ asset('/storage/'.$section->image) }}"
                                 alt="">
                         </div>
                         @endforeach
                         @else
-                        <div class="objetive-3 active-img">
+                        <div id="objetive3" class="objetive-3 active-img">
                             <img ng-click="objetive3()" id="objetive3" src="../img/group-12.png" alt="">
                         </div>
                         @endif
