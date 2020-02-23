@@ -2,8 +2,9 @@ var app = angular.module("app", []);
 
 app.controller("controlador", function($scope, $http, $location) {
     var json = {};
-
-    $scope.dataCheck = false;
+    var height = screen.height;
+    var width = screen.width;
+     $scope.dataCheck = false;
     $scope.dataSend = false;
     $scope.gender = "HOMBRE";
     $scope.age = "18 - 25";
@@ -17,13 +18,18 @@ app.controller("controlador", function($scope, $http, $location) {
     $scope.lastErr = false;
     $scope.cityErr = false;
     $scope.verify = function(value) {
+
+
         $scope.dataCheck = value;
         console.log($scope.adidasForm.inputNames.$viewValue);
     }
 
+
     $scope.selectGender = function(value) {
         $scope.gender = value;
     }
+
+
 
     $scope.selectShoes = function(value) {
         $scope.shoes = value;
@@ -105,12 +111,17 @@ app.controller("controlador", function($scope, $http, $location) {
     var obj1 = document.getElementById("obj1");
     var obj2 = document.getElementById("obj2");
     var obj3 = document.getElementById("obj3");
-    var absUrl = $location.absUrl();;
+    var absUrl = "test";
     console.log(absUrl);
     $scope.objetive1 = function() {
         console.log("testting");
         objetive1.classList.remove("filter")
-        objetive1.style.transform = "translate(30px,-235px)"
+        if (width >= 360 && width <= 400 && height >= 640 && height <= 640 ) {
+            objetive1.style.transform = "translate(-1px, -48px);"
+            objetive2.style.transform = "translate(-22px, 2px);"
+
+        }
+        
         objetive1.style.height = objetive1.clientHeigh + 100;
         obj1.removeAttribute("style");
 
@@ -125,7 +136,10 @@ app.controller("controlador", function($scope, $http, $location) {
     $scope.objetive2 = function() {
         console.log("testting");
         objetive2.classList.remove("filter", )
-        objetive2.style.transform = "translate(-103px, -206px)"
+        if (width >= 360 && width <= 400 && height >= 640 && height <= 640 ) {
+
+        objetive2.style.transform = "translate(-64px, 46px)"
+        }
         obj2.removeAttribute("style");
 
         objetive1.classList.add("filter");
@@ -145,21 +159,15 @@ app.controller("controlador", function($scope, $http, $location) {
         objetive1.removeAttribute("style")
         objetive2.removeAttribute("style")
         objetive1.classList.add("filter");
-        obj1.style.display = "none";
+      / obj1.style.display = "none";
         obj2.style.display = "none"
     }
 
-    document.getElementById("header").clientHeight
     var t = 0;
     window.onscroll = function() {
         // Obtenemos la posicion del scroll en pantall
         var scroll = document.documentElement.scrollTop || document.body.scrollTop;
-        var scrollHeader = document.getElementById("header").clientHeight
-
-        if (scroll > scrollHeader && scroll < scrollHeader / 2 + scrollHeader) {
-            t = t + 0.02;
-            console.log(t);
-        }
+       
         // Realizamos alguna accion cuando el scroll este entre la posicion 300 y 400
         if (scroll > 1600 && scroll < 1800) {
             console.log("Pasaste la posicion 300 del scroll");

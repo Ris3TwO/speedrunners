@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\ChileRegistration;
 use App\Events\RegistrationWasStored;
 use App\Registration;
 use App\ColombiaRegistration;
@@ -28,6 +29,8 @@ class RegistrationController extends ApiController
                 ColombiaRegistration::create($request->all());
             }elseif($url_parts === '/brasil') {
                 BrasilRegistration::create($request->all());
+            } elseif ($url_parts === '/chile') {
+                ChileRegistration::create($request->all());
             }
 
             // The mail is sent with the saved information
