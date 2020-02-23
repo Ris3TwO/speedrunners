@@ -7,7 +7,7 @@ app.controller("controlador", function($scope, $http, $location) {
     $scope.dataCheck = false;
     $scope.dataSend = false;
     $scope.gender = "HOMBRE";
-    $scope.age = "18 - 25";
+    $scope.accept = false;
     $scope.shoes = "ADIDAS";
     $scope.distance = "10 K";
     $scope.team = "ADIDAS RUNNERS";
@@ -15,6 +15,7 @@ app.controller("controlador", function($scope, $http, $location) {
     $scope.emailErr = false;
     $scope.namesErr = false;
     $scope.emailrErr = false;
+    $scope.ageErr = false;
     $scope.lastErr = false;
     $scope.cityErr = false;
     $scope.verify = function(value) {
@@ -52,7 +53,10 @@ app.controller("controlador", function($scope, $http, $location) {
     }
 
     $scope.sendData = function() {
-        console.log("SendData");
+        if (!$scope.adidasForm.inputEmail.$viewValue) {
+            alert("Acepta los terminos y condiciones")
+        }
+
         var data = {
             names: $scope.adidasForm.inputNames.$viewValue,
             last_names: $scope.adidasForm.inputLastnames.$viewValue,
@@ -69,18 +73,15 @@ app.controller("controlador", function($scope, $http, $location) {
 
 
         $http.post("http://www.speedrunners.ml/api/v1/registration", JSON.stringify(data)).then((result) => {
-            console.log(result);
+            console.log(result, "Resuto 72");
+            console.log("Aja");
             $scope.dataSend = true;
         }).catch((err) => {
             let a = err;
             console.log(document.getElementById('bazinga').scrollIntoView(), "leonardo");
 
-            console.log(a.status);
-            if (a.status) {
-                document.getElementById('bazinga').scrollIntoView()
-                $scope.dataSend = true;
+            console.log(a);
 
-            }
             try {
                 if (a.data.errors.email) {
                     console.log("activo el error");
@@ -96,11 +97,14 @@ app.controller("controlador", function($scope, $http, $location) {
             if ($scope.adidasForm.inputEmail.$error.required) {
                 $scope.emailrErr = true
             }
+            if ($scope.adidasForm.inputAge.$error.required) {
+                $scope.ageErr = true
+            }
             if ($scope.adidasForm.inputLastnames.$error.required) {
                 $scope.lastErr = true
             }
 
-            console.log($scope.adidasForm.inputNames.$error.required);
+            console.log($scope.adidasForm);
             console.log(err);
         });
 
@@ -141,7 +145,7 @@ app.controller("controlador", function($scope, $http, $location) {
         objetive3.classList.remove("active-img")
         if (width >= 360 && width <= 414) {
             objetive2.classList.add("active-img");
-            objetive1.style.transform = "translate(68px, -132px)"
+            objetive1.style.transform = "translate(69px, -95px)"
             objetive1.style.maxWidth = "194px"
             objetive2.style.transform = "translate(-12px, 133px)"
             objetive2.style.maxWidth = "305px"
@@ -214,7 +218,6 @@ app.controller("controlador", function($scope, $http, $location) {
         var scroll = document.documentElement.scrollTop || document.body.scrollTop;
         var x = document.getElementById("header").clientHeight;
         var y = document.getElementById("descrip").clientHeight;
-        console.log((x + y));
         if (scroll > (x + y) - 400) {
             $scope.animacion();
         }

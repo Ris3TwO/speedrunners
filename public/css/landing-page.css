@@ -38,6 +38,8 @@ h6 {
 
 .btn {
     border-radius: 0 !important;
+    padding: .50rem .75rem;
+    -webkit-appearance: none;
 }
 
 .btn-dark {
@@ -928,7 +930,13 @@ header.masthead .arrow {
 /* Small devices (landscape phones, 360px and up) */
 
 @media only screen and (min-width: 360px) {
+    .btn {
+        padding: .375rem .75rem;
+    }
     /* Header */
+    .youtube .play {
+        opacity: 1;
+    }
     header.masthead {
         background: url("../img/bg-textura-mobile.png") center center no-repeat;
         background-size: cover;
@@ -997,7 +1005,7 @@ header.masthead .arrow {
     }
     .description .description-img .tryouts,
     .description .description-img .training {
-        max-width: 378px;
+        max-width: 550px;
     }
     .description .description-img .city {
         max-width: 251px;
@@ -1027,9 +1035,6 @@ header.masthead .arrow {
     }
     .description .col-description.col-description-2 {
         transform: none;
-    }
-    .description .description-img .training img {
-        height: 360px;
     }
     .description .description-img .k {
         max-width: 136px;
@@ -1067,7 +1072,7 @@ header.masthead .arrow {
         max-width: 193px;
         right: 0;
         margin-right: 30px;
-        top: 10px;
+        top: 50px;
     }
     .description .description-img .objetive-2 img {
         max-width: 100%;
@@ -1075,8 +1080,8 @@ header.masthead .arrow {
     }
     .description .description-img .objetive-3 {
         max-width: 113px;
-        top: 0;
-        left: 33px;
+        top: 24px;
+        left: 26px;
     }
     .description .description-img .objetive-3 img {
         max-width: 100%;
@@ -1305,6 +1310,9 @@ header.masthead .arrow {
 /* Medium devices (tablets, 768px and up) */
 
 @media only screen and (min-width: 768px) {
+    .youtube .play {
+        opacity: 0.8;
+    }
     header.masthead {
         background: url("../img/bg-textura.png") center center no-repeat;
         background-size: cover;
@@ -1487,6 +1495,9 @@ header.masthead .arrow {
 /* Large devices (desktops, 992px and up) */
 
 @media only screen and (min-width: 1024px) {
+    .btn {
+        padding: .50rem .75rem;
+    }
     .description .description-img .k {
         max-width: 188px;
         top: 1rem;
@@ -1704,13 +1715,20 @@ header.masthead .arrow {
         padding: 0px 6em;
     }
     .map .map-image .status::before {
-        top: -34%;
+        top: -26%;
         left: 45%;
         width: 26px;
         height: 26px;
     }
+    .map .map-image .li:nth-last-child(2) {
+        margin-top: initial;
+    }
+    .map .map-image .full .status::before {
+        top: -25%;
+        left: 45%;
+    }
     .map .map-image .status.status-last::before {
-        top: -22%;
+        top: -28%;
         left: 45%;
         width: 26px;
         height: 26px;
