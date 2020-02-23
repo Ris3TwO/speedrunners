@@ -115,42 +115,42 @@ app.controller("controlador", function($scope, $http, $location) {
     console.log(absUrl);
     $scope.objetive1 = function() {
         console.log("testting");
-        objetive1.classList.add("filter")
+        objetive1.classList.remove("filter")
         objetive1.style.transform = "translate(30px,-235px)"
         objetive1.style.height = objetive1.clientHeigh + 100;
         obj1.removeAttribute("style");
 
-        objetive2.classList.remove("filter");
+        objetive2.classList.add("filter");
         objetive2.style.transform = "translate(-22px, 30px)"
-       obj2.style.display = "none";
-       obj3.style.display = "none"
-        objetive3.classList.remove("filter");
+        obj2.style.display = "none";
+        obj3.style.display = "none"
+        objetive3.classList.add("filter");
 
     }
 
     $scope.objetive2 = function() {
         console.log("testting");
-        objetive2.classList.add("filter", )
+        objetive2.classList.remove("filter", )
         objetive2.style.transform = "translate(-103px, -206px)"
         obj2.removeAttribute("style");
 
-        objetive1.classList.remove("filter");
+        objetive1.classList.add("filter");
         objetive1.removeAttribute("style")
         objetive3.removeAttribute("style")
         obj1.style.display = "none";
         obj3.style.display = "none"
-        objetive3.classList.remove("filter");
+        objetive3.classList.add("filter");
     }
 
     $scope.objetive3 = function() {
         console.log("testting");
-        objetive3.classList.add("filter")
+        objetive3.classList.remove("filter")
         obj3.removeAttribute("style");
 
-        objetive2.classList.remove("filter");
+        objetive2.classList.add("filter");
         objetive1.removeAttribute("style")
         objetive2.removeAttribute("style")
-        objetive1.classList.remove("filter");
+        objetive1.classList.add("filter");
         obj1.style.display = "none";
         obj2.style.display = "none"
     }

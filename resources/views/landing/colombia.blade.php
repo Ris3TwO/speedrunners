@@ -21,6 +21,14 @@
 
     <script src="./vendor/smooth-scroll.js"></script>
 
+    <style>
+        .filter{
+            -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
+            z-index: 5 !important;
+        }
+    </style>
+
 </head>
 
 <body ng-app="app" ng-controller="controlador">
@@ -187,26 +195,26 @@
                             <div class="row justify-content-md-center">
                                 @if($section3_1->count() > 0)
                                 @foreach ($section3_1 as $section)
-                                <div id="obj1" style="display: none;" class="col-md-12 align-self-end">
+                                <div id="obj1" style="display: none;" class="col-md-12 align-self-end filter">
                                     <h1>{{ $section->title }}</h1>
                                     <p class="lead mb-0">{{ $section->content }}</p>
                                 </div>
                                 @endforeach
                                 @else
-                                <div id="obj1" style="display: none;" class="col-md-12 align-self-end">
+                                <div id="obj1" style="display: none;" class="col-md-12 align-self-end filter">
                                     <h1>OBJETIVOS</h1>
                                     <p class="lead mb-0">LOS GANADORES VIAJARÁN A LAS MEJORES CARRERAS DEL MUNDO.</p>
                                 </div>
                                 @endif
                                 @if($section3_2->count() > 0)
                                 @foreach ($section3_2 as $section)
-                                <div id="obj2" style="display: none;" class="col-md-12 align-self-end">
+                                <div id="obj2" style="display: none;" class="col-md-12 align-self-end filter">
                                     <h1>{{ $section->title }}</h1>
                                     <p class="lead mb-0">{{ $section->content }}</p>
                                 </div>
                                 @endforeach
                                 @else
-                                <div id="obj2" style="display: none;" class="col-md-12 align-self-end">
+                                <div id="obj2" style="display: none;" class="col-md-12 align-self-end filter">
                                     <h1>OBJETIVOS</h1>
                                     <p class="lead mb-0">LOS GANADORES VIAJARÁN A LAS MEJORES CARRERAS DEL MUNDO.</p>
                                 </div>
