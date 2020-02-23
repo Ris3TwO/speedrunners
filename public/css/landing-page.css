@@ -1488,10 +1488,7 @@ header.masthead .arrow {
 
 /* Large devices (desktops, 992px and up) */
 
-@media only screen and (min-width: 992px) {
-    .row {
-        margin-right: -15px;
-    }
+@media only screen and (min-width: 1024px) {
     .description .description-img .k {
         max-width: 188px;
         top: 1rem;
@@ -1628,6 +1625,9 @@ header.masthead .arrow {
     }
     .description .description-text p {
         font-size: 22px;
+    }
+    .description .description-text .col-md-12 {
+        padding-left: 3em;
     }
     .description .col-description.col-description-2 {
         transform: translate(-50px, -180px);

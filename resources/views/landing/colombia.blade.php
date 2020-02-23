@@ -27,6 +27,9 @@
             filter: grayscale(100%);
             z-index: 5 !important;
         }
+        .active-img {
+            z-index: 6 !important;
+        }
     </style>
 
 </head>

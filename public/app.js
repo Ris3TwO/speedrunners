@@ -4,7 +4,7 @@ app.controller("controlador", function($scope, $http, $location) {
     var json = {};
     var height = screen.height;
     var width = screen.width;
-     $scope.dataCheck = false;
+    $scope.dataCheck = false;
     $scope.dataSend = false;
     $scope.gender = "HOMBRE";
     $scope.age = "18 - 25";
@@ -116,12 +116,13 @@ app.controller("controlador", function($scope, $http, $location) {
     $scope.objetive1 = function() {
         console.log("testting");
         objetive1.classList.remove("filter")
-        if (width >= 360 && width <= 400 && height >= 640 && height <= 640 ) {
+        if (width >= 360 && width <= 400 && height >= 640 && height <= 640) {
+            objetive1.classList.add("active-img");
             objetive1.style.transform = "translate(-1px, -48px);"
             objetive2.style.transform = "translate(-22px, 2px);"
             console.log("mobile");
         }
-        
+
         objetive1.style.height = objetive1.clientHeigh + 100;
         obj1.removeAttribute("style");
 
@@ -135,9 +136,9 @@ app.controller("controlador", function($scope, $http, $location) {
     $scope.objetive2 = function() {
         console.log("testting");
         objetive2.classList.remove("filter", )
-        if (width >= 360 && width <= 400 && height >= 640 && height <= 640 ) {
-
-        objetive2.style.transform = "translate(-64px, 46px)"
+        if (width >= 360 && width <= 400 && height >= 640 && height <= 640) {
+            objetive2.classList.add("active-img");
+            objetive2.style.transform = "translate(-64px, 46px)"
         }
         obj2.removeAttribute("style");
 
@@ -158,7 +159,7 @@ app.controller("controlador", function($scope, $http, $location) {
         objetive1.removeAttribute("style")
         objetive2.removeAttribute("style")
         objetive1.classList.add("filter");
-       obj1.style.display = "none";
+        obj1.style.display = "none";
         obj2.style.display = "none"
     }
 
@@ -166,7 +167,7 @@ app.controller("controlador", function($scope, $http, $location) {
     window.onscroll = function() {
         // Obtenemos la posicion del scroll en pantall
         var scroll = document.documentElement.scrollTop || document.body.scrollTop;
-       
+
         // Realizamos alguna accion cuando el scroll este entre la posicion 300 y 400
         if (scroll > 1600 && scroll < 1800) {
             console.log("Pasaste la posicion 300 del scroll");
