@@ -116,7 +116,7 @@ app.controller("controlador", function($scope, $http, $location) {
     $scope.objetive1 = function() {
         console.log("testting");
         objetive1.classList.remove("filter")
-        objetive2.classList.remove("active-img")
+        objetive1.classList.remove("active-img")
         if (width >= 360 && width <= 400) {
             objetive2.classList.add("active-img");
             objetive2.style.transform = "translate(-12px, 133px)"
@@ -139,13 +139,13 @@ app.controller("controlador", function($scope, $http, $location) {
     $scope.objetive2 = function() {
         console.log("testting");
         objetive2.classList.remove("filter")
-        objetive1.classList.remove("active-img")
+        objetive2.classList.remove("active-img")
         if (width >= 360 && width <= 400) {
             objetive1.classList.add("active-img");
-            objetive2.style.transform = "translate(-12px, 133px)"
-            objetive1.style.transform = "translate(68px, -132px)"
-            objetive1.style.maxWidth = "194px"
-            objetive2.style.maxWidth = "305px"
+            objetive1.style.transform = "translate(-12px, 133px)"
+            objetive2.style.transform = "translate(68px, -132px)"
+            objetive2.style.maxWidth = "194px"
+            objetive1.style.maxWidth = "305px"
         }
         obj2.removeAttribute("style");
 
