@@ -1,9 +1,7 @@
 var app = angular.module("app", [], function($interpolateProvider, $) {
     $interpolateProvider.startSymbol('<%');
     $interpolateProvider.endSymbol('%>');
-}).config(['$locationProvider', function($locationProvider) {
-    $locationProvider.html5Mode(true);
-}]);
+});
 
 app.controller("controlador", function($scope, $http, $location) {
     var json = {};
