@@ -111,7 +111,7 @@ app.controller("controlador", function($scope, $http, $location) {
     var obj1 = document.getElementById("obj1");
     var obj2 = document.getElementById("obj2");
     var obj3 = document.getElementById("obj3");
-    var absUrl = "test";
+    var absUrl = $location.absUrl();
     console.log(absUrl);
     $scope.objetive1 = function() {
         console.log("testting");
