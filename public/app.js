@@ -166,8 +166,8 @@ app.controller("controlador", function($scope, $http, $location) {
         obj3.removeAttribute("style");
 
         objetive2.classList.add("filter");
-        objetive1.removeAttribute("style")
-        objetive2.removeAttribute("style")
+        // objetive1.removeAttribute("style")
+        // objetive2.removeAttribute("style")
         objetive1.classList.add("filter");
         obj1.style.display = "none";
         obj2.style.display = "none"
