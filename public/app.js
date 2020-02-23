@@ -1,7 +1,4 @@
-var app = angular.module("app", [], function($interpolateProvider, $) {
-    $interpolateProvider.startSymbol('<%');
-    $interpolateProvider.endSymbol('%>');
-});
+var app = angular.module("app", []);
 
 app.controller("controlador", function($scope, $http, $location) {
     var json = {};
@@ -56,14 +53,14 @@ app.controller("controlador", function($scope, $http, $location) {
     }
 
     $scope.sendData = function() {
-        if (!$scope.adidasForm.inputEmail.$viewValue) {
-            alert("Acepta los terminos y condiciones")
-        }
-
+      if (!$scope.adidasForm.inputEmail.$viewValue) {
+          alert("Acepta los terminos y condiciones")
+      }
+        
         var data = {
             names: $scope.adidasForm.inputNames.$viewValue,
             last_names: $scope.adidasForm.inputLastnames.$viewValue,
-            age: $scope.age,
+            age: $scope.adidasForm.inputAge.$viewValue,
             email: $scope.adidasForm.inputEmail.$viewValue,
             gender: $scope.gender,
             shoes: $scope.shoes,
@@ -76,7 +73,7 @@ app.controller("controlador", function($scope, $http, $location) {
 
 
         $http.post("http://www.speedrunners.ml/api/v1/registration", JSON.stringify(data)).then((result) => {
-            console.log(result, "Resuto 72");
+            console.log(result,"Resuto 72");
             console.log("Aja");
             $scope.dataSend = true;
         }).catch((err) => {
@@ -84,7 +81,7 @@ app.controller("controlador", function($scope, $http, $location) {
             console.log(document.getElementById('bazinga').scrollIntoView(), "leonardo");
 
             console.log(a);
-
+           
             try {
                 if (a.data.errors.email) {
                     console.log("activo el error");
@@ -148,7 +145,7 @@ app.controller("controlador", function($scope, $http, $location) {
         objetive3.classList.remove("active-img")
         if (width >= 360 && width <= 414) {
             objetive2.classList.add("active-img");
-            objetive1.style.transform = "translate(69px, -95px)"
+            objetive1.style.transform = "translate(68px, -132px)"
             objetive1.style.maxWidth = "194px"
             objetive2.style.transform = "translate(-12px, 133px)"
             objetive2.style.maxWidth = "305px"
