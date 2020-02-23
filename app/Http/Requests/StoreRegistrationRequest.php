@@ -32,7 +32,7 @@ class StoreRegistrationRequest extends FormRequest
         return [
             'names' => 'required|string|min:3|max:35',
             'last_names' => 'required|string|min:3|max:45',
-            'age' => 'required|string|min:3|max:8',
+            'age' => 'required|string|min:3|max:10',
             'email' => 'required|string|min:3|unique:registrations',
             'gender' => 'required|string|min:3|max:10',
             'shoes' => 'required|string|min:3|max:10',

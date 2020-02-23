@@ -17,7 +17,7 @@ class CreateChileRegistrationsTable extends Migration
             $table->bigIncrements('id');
             $table->string('names', 35);
             $table->string('last_names', 45);
-            $table->string('age', 8);
+            $table->string('age', 10);
             $table->string('email')->unique();
             $table->string('gender', 10);
             $table->string('shoes', 10);
