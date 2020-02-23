@@ -163,6 +163,7 @@ app.controller("controlador", function($scope, $http, $location) {
         objetive1.classList.remove("active-img")
         objetive2.classList.remove("active-img")
         objetive3.classList.add("active-img")
+        obj3.removeAttribute("style");
         obj3.style.paddingTop = "5.5rem";
 
         objetive2.classList.add("filter");
