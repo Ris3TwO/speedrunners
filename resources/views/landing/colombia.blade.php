@@ -158,7 +158,7 @@
                     <div class="description-img objetives">
                         @if($section3_3->count() > 0)
                         @foreach ($section3_3 as $section)
-                        <div class="objetive-1">
+                        <div id="objetive1" class="objetive-1">
                             <img ng-click="objetive1()" id="objetive1" src="{{ asset('/storage/'.$section->image) }}"
                                 alt="">
                         </div>
