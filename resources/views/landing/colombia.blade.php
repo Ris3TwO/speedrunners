@@ -11,15 +11,15 @@
     <title>{{ setting('site.title') }}</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
 
     <!-- Custom fonts for this template -->
-    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="{{ asset('vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="css/landing-page.css" rel="stylesheet">
+    <link href="{{ asset('css/landing-page.css') }}" rel="stylesheet">
 
-    <script src="vendor/smooth-scroll.js"></script>
+    <script src="{{ asset('vendor/smooth-scroll.js') }}"></script>
 
     <style>
         .filter {
@@ -565,12 +565,12 @@
         </form>
     </section>
 
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ asset('vendor/jquery/jquery.min.js') }}"></script>
+    <script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 
-    <script src="angular.min.js"></script>
-    <script src="app.js"></script>
-    <script src="angular-route.min.js"></script>
+    <script src="<?= asset('angular.min.js') ?>"></script>
+    <script src="<?= asset('app.js') ?>"></script>
+    <script src="<?= asset('angular-route.min.js') ?>"></script>
 
     <script>
         var scroll = new SmoothScroll('a[href*="#"]');
