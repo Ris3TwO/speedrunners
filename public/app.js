@@ -119,14 +119,13 @@ app.controller("controlador", function($scope, $http, $location) {
         if (width >= 360 && width <= 400 && height >= 640 && height <= 640 ) {
             objetive1.style.transform = "translate(-1px, -48px);"
             objetive2.style.transform = "translate(-22px, 2px);"
-
+            console.log("mobile");
         }
         
         objetive1.style.height = objetive1.clientHeigh + 100;
         obj1.removeAttribute("style");
 
         objetive2.classList.add("filter");
-        objetive2.style.transform = "translate(-22px, 30px)"
         objetive3.classList.add("filter");
         obj2.style.display = "none";
         obj3.style.display = "none"
