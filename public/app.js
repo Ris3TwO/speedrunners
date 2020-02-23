@@ -116,10 +116,12 @@ app.controller("controlador", function($scope, $http, $location) {
     $scope.objetive1 = function() {
         console.log("testting");
         objetive1.classList.remove("filter")
-        if (width >= 360 && width <= 400 && height >= 640 && height <= 640) {
+        if (width >= 360 && width <= 400) {
             objetive1.classList.add("active-img");
-            objetive1.style.transform = "translate(-1px, -48px);"
-            objetive2.style.transform = "translate(-22px, 2px);"
+            objetive1.style.transform = "translate(-12px, 133px)"
+            objetive2.style.transform = "translate(68px, -132px)"
+            objetive1.style.maxWidth = "305px"
+            objetive2.style.maxWidth = "194px"
             console.log("mobile");
         }
 
