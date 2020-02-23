@@ -169,12 +169,36 @@ app.controller("controlador", function($scope, $http, $location) {
         obj1.style.display = "none";
         obj2.style.display = "none"
     }
+$scope.animacion = function() {
+        document.getElementById("timeline").classList.add("slidelerlu");
+        document.getElementById("statuc").classList.add("tracking-in-expand");
+        document.getElementById("statud").classList.add("tracking-in-expand"); 
+        document.getElementById("statuf").classList.add("tracking-in-expand"); 
+        document.getElementById("statug").classList.add("tracking-in-expand2");
+        document.getElementById("statuh").classList.add("tracking-in-expand2");/*
+        document.getElementById("statu4").classList.add("tracking-in-expand4");*/
+        document.getElementById("statu1").classList.add("tracking-in-expand");
+        document.getElementById("statu2").classList.add("tracking-in-expand3");
+        document.getElementById("statu3").classList.add("tracking-in-expand3");
+        document.getElementById("statu4").classList.add("tracking-in-expand");
+        document.getElementById("final1").classList.add("tracking-in-expand4");
+        document.getElementById("final2").classList.add("tracking-in-expand4");
+        document.getElementById("final3").classList.add("tracking-in-expand4");
+        document.getElementById("final4").classList.add("tracking-in-expand4");
+        
 
+        console.log("Test");
+
+    }
     var t = 0;
     window.onscroll = function() {
         // Obtenemos la posicion del scroll en pantall
         var scroll = document.documentElement.scrollTop || document.body.scrollTop;
-
+                var x = document.getElementById("header").clientHeight; var y = document.getElementById("descrip").clientHeight;
+           console.log((x+y));
+            if (scroll > (x+y) -400) {
+               $scope.animacion();
+            }
         // Realizamos alguna accion cuando el scroll este entre la posicion 300 y 400
         if (scroll > 1600 && scroll < 1800) {
             console.log("Pasaste la posicion 300 del scroll");

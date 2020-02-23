@@ -65,7 +65,7 @@
     </header>
 
     <!-- Description grid -->
-    <section class="description bg-light text-center">
+    <section id="descrip" class="description bg-light text-center">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-7">
@@ -246,46 +246,46 @@
 
     <!-- Map -->
     <section class="map text-center">
-        <div class="container">
+        <div  class="container">
             <h1>SPEED RUNNERS 2020, una carrera para romper marcas, hecha para los que entrenan duro y corren mas</h1>
         </div>
         <div class="map-image">
             <div class="container-fluid h-100">
-                <div class="row h-100 justify-content-center align-items-center">
-                    <div class="col-lg-12 col-md-12">
-                        <ul class="timeline" id="timeline">
-                            <li class="li complete full">
-                                <div class="status">
-                                    <h1>Ciudad</h1>
+                <div class="row h-100 justify-content-center align-items-center ">
+                    <div class="col-lg-12 col-md-12 ">
+                        <ul  class="timeline"  id="timeline">
+                            <li class="li complete full ">
+                                <div id="statuc" class="status ">
+                                    <h1 class="">Ciudad</h1>
                                 </div>
                                 <div class="info">
-                                    <p>Bogotá</p>
+                                    <p id="statud" class="">Bogotá</p>
                                 </div>
                             </li>
-                            <li class="li complete">
-                                <div class="status">
-                                    <h1>Lugar</h1>
+                            <li  class="li complete ">
+                                <div id="statuf" class="status  ">
+                                    <h1 id="statug" class="">Lugar</h1>
+                                </div>
+                                <div class="info ">
+                                    <p id="statuh" class="site  ">Parque el virrey<br> Cra 15 #86a-50</p>
+                                </div>
+                            </li>
+                            <li  class="li complete full ">
+                                <div id="statu1" class="status ">
+                                    <h1 id="statu2"  >Fecha</h1>
                                 </div>
                                 <div class="info">
-                                    <p class="site">Parque el virrey<br> Cra 15 #86a-50</p>
+                                    <p id="statu3">10/02/2020</p>
                                 </div>
                             </li>
-                            <li class="li complete full">
-                                <div class="status">
-                                    <h1>Fecha</h1>
-                                </div>
-                                <div class="info">
-                                    <p>10/02/2020</p>
-                                </div>
-                            </li>
-                            <li class="li complete full">
-                                <div class="status status-last">
-                                    <h1>Kilometros</h1>
+                            <li  class="li complete full ">
+                                <div  id="statu4" class="status  status-last">
+                                    <h1 id="final1" class="">Kilometros</h1>
                                 </div>
                                 <div class="info space">
-                                    <p class="d-inline px-3">10k</p>
-                                    <p class="d-inline px-3">21k</p>
-                                    <p class="d-inline px-3">42k</p>
+                                    <p   id="final2" class="d-inline px-3 ">10k</p>
+                                    <p  id="final3" class="d-inline px-3 ">21k</p>
+                                    <p  id="final4" class="d-inline px-3 ">42k</p>
                                 </div>
                             </li>
                         </ul>
