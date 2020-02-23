@@ -59,7 +59,7 @@
             </div>
         </div>
         <div class="d-flex flex-row-reverse">
-            <a href="{{ url()->current#bazinga">
+            <a href="{{ url()->current() }}#bazinga">
                 <div class="arrow ml-auto"></div>
             </a>
         </div>
