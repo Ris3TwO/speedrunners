@@ -1,7 +1,6 @@
 var app = angular.module("app", []);
 
-
-app.controller("controlador", function($scope, $http, $location) {
+app.controller("controlador", function($scope, $http) {
     var json = {};
 
     $scope.dataCheck = false;
@@ -18,18 +17,13 @@ app.controller("controlador", function($scope, $http, $location) {
     $scope.lastErr = false;
     $scope.cityErr = false;
     $scope.verify = function(value) {
-
-
         $scope.dataCheck = value;
         console.log($scope.adidasForm.inputNames.$viewValue);
     }
 
-
     $scope.selectGender = function(value) {
         $scope.gender = value;
     }
-
-
 
     $scope.selectShoes = function(value) {
         $scope.shoes = value;
@@ -111,7 +105,7 @@ app.controller("controlador", function($scope, $http, $location) {
     var obj1 = document.getElementById("obj1");
     var obj2 = document.getElementById("obj2");
     var obj3 = document.getElementById("obj3");
-    var absUrl = $location.absUrl();
+    var absUrl = "loca";
     console.log(absUrl);
     $scope.objetive1 = function() {
         console.log("testting");
