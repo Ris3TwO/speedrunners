@@ -120,10 +120,10 @@ app.controller("controlador", function($scope, $http, $location) {
         objetive3.classList.remove("active-img")
         if (width >= 360 && width <= 400) {
             objetive1.classList.add("active-img");
-            // objetive2.style.transform = "translate(-12px, 133px)"
-            // objetive1.style.transform = "translate(68px, -132px)"
-            // objetive1.style.maxWidth = "194px"
-            // objetive2.style.maxWidth = "305px"
+            objetive2.style.transform = "translate(-12px, 133px)"
+            objetive1.style.transform = "translate(68px, -132px)"
+            objetive1.style.maxWidth = "194px"
+            objetive2.style.maxWidth = "305px"
             console.log("mobile");
         }
 
@@ -148,6 +148,7 @@ app.controller("controlador", function($scope, $http, $location) {
             objetive1.style.maxWidth = "194px"
             objetive2.style.transform = "translate(-12px, 133px)"
             objetive2.style.maxWidth = "305px"
+            obj2.style.paddingTop = "5.5rem";
         }
         obj2.removeAttribute("style");
 
@@ -155,7 +156,7 @@ app.controller("controlador", function($scope, $http, $location) {
         objetive3.classList.add("filter");
         objetive3.removeAttribute("style")
         obj1.style.display = "none";
-        obj2.style.paddingTop = "4rem";
+
         obj3.style.display = "none"
     }
 
