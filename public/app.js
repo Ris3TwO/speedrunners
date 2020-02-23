@@ -160,6 +160,9 @@ app.controller("controlador", function($scope, $http, $location) {
     $scope.objetive3 = function() {
         console.log("testting");
         objetive3.classList.remove("filter")
+        objetive1.classList.remove("active-img")
+        objetive2.classList.remove("active-img")
+        objetive3.classList.add("active-img")
         obj3.removeAttribute("style");
 
         objetive2.classList.add("filter");
