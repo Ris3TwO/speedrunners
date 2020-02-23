@@ -11,15 +11,15 @@
     <title>{{ setting('site.title') }}</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="./vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
 
     <!-- Custom fonts for this template -->
-    <link href="./vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="{{ asset('vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="./css/landing-page.css" rel="stylesheet">
+    <link href="{{ asset('css/landing-page.css') }}" rel="stylesheet">
 
-    <script src="./vendor/smooth-scroll.js"></script>
+    <script src="{{ asset('vendor/smooth-scroll.js') }}"></script>
 
     <style>
         .filter{
@@ -32,7 +32,6 @@
 </head>
 
 <body ng-app="app" ng-controller="controlador">
-    <base href="/">
 
     <!-- Masthead -->
     <header id="header" class="masthead text-white text-center">
@@ -43,7 +42,7 @@
                     <div class="logo img-fluid slide-left"></div>
                     <div class="row justify-content-center">
                         <div class="container align-middle">
-                            <a href="colombia/#bazinga" class="btn btn-block btn-dark">INSCRIBIRME</a>
+                            <a href="{{ url()->current() }}#bazinga" class="btn btn-block btn-dark">INSCRIBIRME</a>
                         </div>
                     </div>
                 </div>
@@ -55,7 +54,7 @@
             </div>
         </div>
         <div class="d-flex flex-row-reverse">
-            <a href="colombia/#bazinga">
+            <a href="{{ url()->current() }}#bazinga">
                 <div class="arrow ml-auto"></div>
             </a>
         </div>
@@ -565,8 +564,8 @@
         </form>
     </section>
 
-    <script src="./vendor/jquery/jquery.min.js "></script>
-    <script src="./vendor/bootstrap/js/bootstrap.bundle.min.js "></script>
+    <script src="{{ asset('vendor/jquery/jquery.min.js') }}"></script>
+    <script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 
     <script src="<?= asset('angular.min.js') ?>"></script>
     <script src="<?= asset('app.js') ?>"></script>
