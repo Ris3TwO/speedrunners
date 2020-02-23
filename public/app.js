@@ -108,6 +108,9 @@ app.controller("controlador", function($scope, $http, $location) {
     var objetive1 = document.getElementById("objetive1");
     var objetive2 = document.getElementById("objetive2");
     var objetive3 = document.getElementById("objetive3");
+    var obj1 = document.getElementById("obj1");
+    var obj2 = document.getElementById("obj2");
+    var obj3 = document.getElementById("obj3");
     var absUrl = $location.absUrl();
     console.log(absUrl);
     $scope.objetive1 = function() {
@@ -115,9 +118,12 @@ app.controller("controlador", function($scope, $http, $location) {
         objetive1.classList.add("filter")
         objetive1.style.transform = "translate(30px,-235px)"
         objetive1.style.height = objetive1.clientHeigh + 100;
+        obj1.removeAttribute("style");
 
         objetive2.classList.remove("filter");
         objetive2.style.transform = "translate(-22px, 30px)"
+       obj2.style.display = "none";
+       obj3.style.display = "none"
         objetive3.classList.remove("filter");
 
     }
@@ -126,20 +132,27 @@ app.controller("controlador", function($scope, $http, $location) {
         console.log("testting");
         objetive2.classList.add("filter", )
         objetive2.style.transform = "translate(-103px, -206px)"
+        obj2.removeAttribute("style");
+
         objetive1.classList.remove("filter");
         objetive1.removeAttribute("style")
         objetive3.removeAttribute("style")
-
+        obj1.style.display = "none";
+        obj3.style.display = "none"
         objetive3.classList.remove("filter");
     }
 
     $scope.objetive3 = function() {
         console.log("testting");
         objetive3.classList.add("filter")
+        obj3.removeAttribute("style");
+
         objetive2.classList.remove("filter");
         objetive1.removeAttribute("style")
         objetive2.removeAttribute("style")
         objetive1.classList.remove("filter");
+        obj1.style.display = "none";
+        obj2.style.display = "none"
     }
 
     document.getElementById("header").clientHeight
