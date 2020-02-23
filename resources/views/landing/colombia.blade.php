@@ -29,6 +29,7 @@
         }
         .active-img {
             z-index: 6 !important;
+            border: 4px solid white;
         }
     </style>
 

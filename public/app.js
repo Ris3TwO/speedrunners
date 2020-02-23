@@ -118,12 +118,11 @@ app.controller("controlador", function($scope, $http, $location) {
         objetive1.classList.remove("filter")
         objetive2.classList.remove("active-img")
         objetive3.classList.remove("active-img")
-        if (width >= 360 && width <= 400) {
-            objetive1.classList.add("active-img");
-            objetive1.removeAttribute("style")
-            objetive2.removeAttribute("style")
-            console.log("mobile");
-        }
+
+        objetive1.classList.add("active-img");
+        objetive1.removeAttribute("style")
+        objetive2.removeAttribute("style")
+        console.log("mobile");
 
         objetive1.style.height = objetive1.clientHeigh + 100;
         obj1.removeAttribute("style");
@@ -146,6 +145,13 @@ app.controller("controlador", function($scope, $http, $location) {
             objetive1.style.maxWidth = "194px"
             objetive2.style.transform = "translate(-12px, 133px)"
             objetive2.style.maxWidth = "305px"
+        }
+        if (width >= 1200 && width <= 1440) {
+            objetive2.classList.add("active-img");
+            objetive1.style.transform = "translate(136px, -220px)"
+            objetive1.style.maxWidth = "317px"
+            objetive2.style.transform = "translate(14px, -11px)"
+            objetive2.style.maxWidth = "457px"
         }
         obj2.removeAttribute("style");
 
