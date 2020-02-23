@@ -32,6 +32,7 @@
 </head>
 
 <body ng-app="app" ng-controller="controlador">
+    <base href="/">
 
     <!-- Masthead -->
     <header id="header" class="masthead text-white text-center">
@@ -567,9 +568,9 @@
     <script src="./vendor/jquery/jquery.min.js "></script>
     <script src="./vendor/bootstrap/js/bootstrap.bundle.min.js "></script>
 
-    <script src="angular.min.js"></script>
-    <script src="angular-route.min.js"></script>
-    <script src="app.js"></script>
+    <script src="<?= asset('angular.min.js') ?>"></script>
+    <script src="<?= asset('app.js') ?>"></script>
+    <script src="<?= asset('angular-route.min.js') ?>"></script>
 
     <script>
         var scroll = new SmoothScroll('a[href*="#"]');

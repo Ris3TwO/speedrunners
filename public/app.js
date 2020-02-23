@@ -122,9 +122,9 @@ app.controller("controlador", function($scope, $http, $location) {
 
         objetive2.classList.add("filter");
         objetive2.style.transform = "translate(-22px, 30px)"
+        objetive3.classList.add("filter");
         obj2.style.display = "none";
         obj3.style.display = "none"
-        objetive3.classList.add("filter");
 
     }
 
@@ -136,10 +136,10 @@ app.controller("controlador", function($scope, $http, $location) {
 
         objetive1.classList.add("filter");
         objetive1.removeAttribute("style")
+        objetive3.classList.add("filter");
         objetive3.removeAttribute("style")
         obj1.style.display = "none";
         obj3.style.display = "none"
-        objetive3.classList.add("filter");
     }
 
     $scope.objetive3 = function() {
