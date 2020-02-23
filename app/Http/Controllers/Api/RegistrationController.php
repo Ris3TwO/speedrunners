@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Events\RegistrationWasStored;
 use App\Registration;
+use App\ColombiaRegistration;
 use Illuminate\Http\Request;
 use App\Http\Controllers\ApiController;
 use App\Http\Requests\StoreRegistrationRequest;
@@ -19,8 +20,16 @@ class RegistrationController extends ApiController
     public function store(StoreRegistrationRequest $request, Registration $registration)
     {
         try {
+            $url_parts = parse_url($request->url, PHP_URL_PATH);
+            dd($url_parts);
             // The data provided are saved.
             $registration->create($request->all());
+
+            if($url_parts === '/colombia') {
+                ColombiaRegistration::create($request->all());
+            }elseif($url_parts === '/brasil') {
+                BrasilRegistration::create($request->all());
+            }
 
             // The mail is sent with the saved information
             // RegistrationWasStored::dispatch($res);

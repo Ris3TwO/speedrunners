@@ -11,23 +11,15 @@
 |
 */
 
-Route::group(['domain' => Config::get('app.url')], function () {
-    Route::get('/', 'LandingController@index')->name('landing.home');
-});
+Route::get('/', 'LandingController@index')->name('landing.home');
+Route::get('argentina', 'LandingController@colombia')->name('landing.argentina');
+Route::get('brasil', 'LandingController@brasil')->name('landing.brasil');
+Route::get('colombia', 'LandingController@colombia')->name('landing.colombia');
+Route::get('chile', 'LandingController@chile')->name('landing.chile');
+Route::get('mexico', 'LandingController@mexico')->name('landing.mexico');
+Route::get('panama', 'LandingController@panama')->name('landing.panama');
+Route::get('peru', 'LandingController@peru')->name('landing.peru');
 
-
-Route::group(['domain' => Config::get('app.url'), 'middleware' => 'colombia.database'], function () {
-    Route::get('colombia', 'LandingController@colombia')->name('landing.colombia');
-});
-
-Route::group(['domain' => 'cp.' . Config::get('app.url')], function () {
-    Route::get('/', function () {
-        return redirect()->route('landing.colombia');
-    });
-    Route::group(['prefix' => 'admin', 'middleware' => 'colombia.database'], function () {
-    Voyager::routes();
-    });
-});
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
