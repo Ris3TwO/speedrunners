@@ -43,7 +43,7 @@
                     <div class="logo img-fluid slide-left"></div>
                     <div class="row justify-content-center">
                         <div class="container align-middle">
-                            <a href="#bazinga" class="btn btn-block btn-dark">INSCRIBIRME</a>
+                            <a href="colombia/#bazinga" class="btn btn-block btn-dark">INSCRIBIRME</a>
                         </div>
                     </div>
                 </div>
@@ -55,7 +55,7 @@
             </div>
         </div>
         <div class="d-flex flex-row-reverse">
-            <a href="#bazinga">
+            <a href="colombia/#bazinga">
                 <div class="arrow ml-auto"></div>
             </a>
         </div>
