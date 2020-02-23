@@ -352,8 +352,9 @@
                             </div>
                             <div class="form-row justify-content-around break">
                                 <div class="form-group form-radio col-md-6">
-                                    <label class="float-label-2">EDAD</label>
-                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                    <label class="float-label" for="inputAge">EDAD</label>
+                                    <input type="text" class="form-control" id="inputAge" placeholder="AAAA/MM/DD">
+                                    {{--  <div class="btn-group btn-group-toggle" data-toggle="buttons">
                                         <label class="btn btn-light active" ng-click="selectAge('18 - 25')">
                                             <input type="radio" name="options" id="18-25"> 18 - 25
                                         </label>
@@ -369,7 +370,7 @@
                                         <label class="btn btn-light" ng-click="selectAge('46 +')">
                                             <input type="radio" name="options" id="46+"> 46 +
                                         </label>
-                                    </div>
+                                    </div>  --}}
                                 </div>
                                 <div class="form-group form-radio col-md-6">
                                     <label class="float-label-2">ZAPATILLAS</label>
@@ -440,8 +441,7 @@
                                 <div class="form-group col-md-12">
                                     <div class="form-check">
                                         <input id="terms" type="checkbox">
-                                        <label class="terms_conditions" for="terms">Acepto <a href="#">términos</a> y <a
-                                                href="#">condiciones</a>.</label>
+                                        <label class="terms_conditions" for="terms">Acepto <a href="#">términos y condiciones</a>.</label>
                                         <span></span>
                                     </div>
                                     <div class="form-check">

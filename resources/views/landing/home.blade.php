@@ -11,15 +11,28 @@
     <title>{{ setting('site.title') }}</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="./vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
 
     <!-- Custom fonts for this template -->
-    <link href="./vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="{{ asset('vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="./css/landing-page.css" rel="stylesheet">
+    <link href="{{ asset('css/landing-page.css') }}" rel="stylesheet">
 
-    <script src="./vendor/smooth-scroll.js"></script>
+    <script src="{{ asset('vendor/smooth-scroll.js') }}"></script>
+
+    <style>
+        .filter {
+            -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
+            z-index: 1 !important;
+        }
+
+        .active-img {
+            z-index: 6 !important;
+            border: 4px solid white !important;
+        }
+    </style>
 
 </head>
 
@@ -34,7 +47,7 @@
                     <div class="logo img-fluid slide-left"></div>
                     <div class="row justify-content-center">
                         <div class="container align-middle">
-                            <a href="#bazinga" class="btn btn-block btn-dark">INSCRIBIRME</a>
+                            <a href="{{ url()->current() }}#bazinga" class="btn btn-block btn-dark">INSCRIBIRME</a>
                         </div>
                     </div>
                 </div>
@@ -46,7 +59,7 @@
             </div>
         </div>
         <div class="d-flex flex-row-reverse">
-            <a href="#bazinga">
+            <a href="{{ url()->current() }}#bazinga">
                 <div class="arrow ml-auto"></div>
             </a>
         </div>
@@ -54,7 +67,7 @@
     </header>
 
     <!-- Description grid -->
-    <section class="description bg-light text-center">
+    <section id="descrip" class="description bg-light text-center">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-7">
@@ -147,7 +160,7 @@
                     <div class="description-img objetives">
                         @if($section3_3->count() > 0)
                         @foreach ($section3_3 as $section)
-                        <div class="objetive-1">
+                        <div id="objetive1" class="objetive-1">
                             <img ng-click="objetive1()" id="objetive1" src="{{ asset('/storage/'.$section->image) }}"
                                 alt="">
                         </div>
@@ -171,13 +184,13 @@
                         @endif
                         @if($section3_1->count() > 0)
                         @foreach ($section3_1 as $section)
-                        <div class="objetive-3">
+                        <div id="objetive3" class="objetive-3 active-img">
                             <img ng-click="objetive3()" id="objetive3" src="{{ asset('/storage/'.$section->image) }}"
                                 alt="">
                         </div>
                         @endforeach
                         @else
-                        <div class="objetive-3">
+                        <div id="objetive3" class="objetive-3 active-img">
                             <img ng-click="objetive3()" id="objetive3" src="../img/group-12.png" alt="">
                         </div>
                         @endif
@@ -187,39 +200,39 @@
                             <div class="row justify-content-md-center">
                                 @if($section3_1->count() > 0)
                                 @foreach ($section3_1 as $section)
-                                <div class="col-md-12 align-self-end">
+                                <div id="obj1" style="display: none;" class="col-md-12 align-self-end filter">
                                     <h1>{{ $section->title }}</h1>
                                     <p class="lead mb-0">{{ $section->content }}</p>
                                 </div>
                                 @endforeach
                                 @else
-                                <div class="col-md-12 align-self-end">
+                                <div id="obj1" style="display: none;" class="col-md-12 align-self-end filter">
                                     <h1>OBJETIVOS</h1>
                                     <p class="lead mb-0">LOS GANADORES VIAJARÁN A LAS MEJORES CARRERAS DEL MUNDO.</p>
                                 </div>
                                 @endif
                                 @if($section3_2->count() > 0)
                                 @foreach ($section3_2 as $section)
-                                <div class="col-md-12 align-self-end">
+                                <div id="obj2" style="display: none;" class="col-md-12 align-self-end filter">
                                     <h1>{{ $section->title }}</h1>
                                     <p class="lead mb-0">{{ $section->content }}</p>
                                 </div>
                                 @endforeach
                                 @else
-                                <div class="col-md-12 align-self-end">
+                                <div id="obj2" style="display: none;" class="col-md-12 align-self-end filter">
                                     <h1>OBJETIVOS</h1>
                                     <p class="lead mb-0">LOS GANADORES VIAJARÁN A LAS MEJORES CARRERAS DEL MUNDO.</p>
                                 </div>
                                 @endif
                                 @if($section3_3->count() > 0)
                                 @foreach ($section3_3 as $section)
-                                <div class="col-md-12 align-self-end">
+                                <div id="obj3" class="col-md-12 align-self-end">
                                     <h1>{{ $section->title }}</h1>
                                     <p class="lead mb-0">{{ $section->content }}</p>
                                 </div>
                                 @endforeach
                                 @else
-                                <div class="col-md-12 align-self-end">
+                                <div id="obj3" class="col-md-12 align-self-end">
                                     <h1>OBJETIVOS</h1>
                                     <p class="lead mb-0">LOS GANADORES VIAJARÁN A LAS MEJORES CARRERAS DEL MUNDO.</p>
                                 </div>
@@ -240,41 +253,41 @@
         </div>
         <div class="map-image">
             <div class="container-fluid h-100">
-                <div class="row h-100 justify-content-center align-items-center">
-                    <div class="col-lg-12 col-md-12">
+                <div class="row h-100 justify-content-center align-items-center ">
+                    <div class="col-lg-12 col-md-12 ">
                         <ul class="timeline" id="timeline">
-                            <li class="li complete full">
-                                <div class="status">
-                                    <h1>Ciudad</h1>
+                            <li class="li complete full ">
+                                <div id="statuc" class="status ">
+                                    <h1 class="">Ciudad</h1>
                                 </div>
                                 <div class="info">
-                                    <p>Bogotá</p>
+                                    <p id="statud" class="">Bogotá</p>
                                 </div>
                             </li>
-                            <li class="li complete">
-                                <div class="status">
-                                    <h1>Lugar</h1>
+                            <li class="li complete ">
+                                <div id="statuf" class="status  ">
+                                    <h1 id="statug" class="">Lugar</h1>
+                                </div>
+                                <div class="info ">
+                                    <p id="statuh" class="site  ">Parque el virrey<br> Cra 15 #86a-50</p>
+                                </div>
+                            </li>
+                            <li class="li complete full ">
+                                <div id="statu1" class="status ">
+                                    <h1 id="statu2">Fecha</h1>
                                 </div>
                                 <div class="info">
-                                    <p class="site">Parque el virrey<br> Cra 15 #86a-50</p>
+                                    <p id="statu3">10/02/2020</p>
                                 </div>
                             </li>
-                            <li class="li complete full">
-                                <div class="status">
-                                    <h1>Fecha</h1>
-                                </div>
-                                <div class="info">
-                                    <p>10/02/2020</p>
-                                </div>
-                            </li>
-                            <li class="li complete full">
-                                <div class="status status-last">
-                                    <h1>Kilometros</h1>
+                            <li class="li complete full ">
+                                <div id="statu4" class="status  status-last">
+                                    <h1 id="final1" class="">Kilometros</h1>
                                 </div>
                                 <div class="info space">
-                                    <p class="d-inline px-3">10k</p>
-                                    <p class="d-inline px-3">21k</p>
-                                    <p class="d-inline px-3">42k</p>
+                                    <p id="final2" class="d-inline px-3 ">10k</p>
+                                    <p id="final3" class="d-inline px-3 ">21k</p>
+                                    <p id="final4" class="d-inline px-3 ">42k</p>
                                 </div>
                             </li>
                         </ul>
@@ -340,8 +353,9 @@
                             </div>
                             <div class="form-row justify-content-around break">
                                 <div class="form-group form-radio col-md-6">
-                                    <label class="float-label-2">EDAD</label>
-                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                    <label class="float-label" for="inputAge">EDAD</label>
+                                    <input type="text" class="form-control" id="inputAge" placeholder="AAAA/MM/DD">
+                                    {{--  <div class="btn-group btn-group-toggle" data-toggle="buttons">
                                         <label class="btn btn-light active" ng-click="selectAge('18 - 25')">
                                             <input type="radio" name="options" id="18-25"> 18 - 25
                                         </label>
@@ -357,7 +371,7 @@
                                         <label class="btn btn-light" ng-click="selectAge('46 +')">
                                             <input type="radio" name="options" id="46+"> 46 +
                                         </label>
-                                    </div>
+                                    </div>  --}}
                                 </div>
                                 <div class="form-group form-radio col-md-6">
                                     <label class="float-label-2">ZAPATILLAS</label>
@@ -428,8 +442,8 @@
                                 <div class="form-group col-md-12">
                                     <div class="form-check">
                                         <input id="terms" type="checkbox">
-                                        <label class="terms_conditions" for="terms">Acepto <a href="#">términos</a> y <a
-                                                href="#">condiciones</a>.</label>
+                                        <label class="terms_conditions" for="terms">Acepto <a href="#">términos y
+                                                condiciones</a>.</label>
                                         <span></span>
                                     </div>
                                     <div class="form-check">
@@ -556,12 +570,12 @@
         </form>
     </section>
 
-    <script src="./vendor/jquery/jquery.min.js "></script>
-    <script src="./vendor/bootstrap/js/bootstrap.bundle.min.js "></script>
+    <script src="{{ asset('vendor/jquery/jquery.min.js') }}"></script>
+    <script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 
-    <script src="angular.min.js"></script>
-    <script src="angular-route.min.js"></script>
-    <script src="app.js"></script>
+    <script src="<?= asset('angular.min.js') ?>"></script>
+    <script src="<?= asset('app.js') ?>"></script>
+    <script src="<?= asset('angular-route.min.js') ?>"></script>
 
     <script>
         var scroll = new SmoothScroll('a[href*="#"]');
