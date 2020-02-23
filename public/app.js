@@ -155,6 +155,7 @@ app.controller("controlador", function($scope, $http, $location) {
         objetive3.classList.add("filter");
         objetive3.removeAttribute("style")
         obj1.style.display = "none";
+        obj2.style.paddingTop = "4rem";
         obj3.style.display = "none"
     }
 
