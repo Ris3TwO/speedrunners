@@ -124,7 +124,7 @@ app.controller("controlador", function($scope, $http, $location) {
             // objetive1.style.transform = "translate(68px, -132px)"
             // objetive1.style.maxWidth = "194px"
             // objetive2.style.maxWidth = "305px"
-            // console.log("mobile");
+            console.log("mobile");
         }
 
         objetive1.style.height = objetive1.clientHeigh + 100;
@@ -152,7 +152,6 @@ app.controller("controlador", function($scope, $http, $location) {
         obj2.removeAttribute("style");
 
         objetive1.classList.add("filter");
-        objetive1.removeAttribute("style")
         objetive3.classList.add("filter");
         objetive3.removeAttribute("style")
         obj1.style.display = "none";
