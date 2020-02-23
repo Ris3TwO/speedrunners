@@ -20,7 +20,15 @@ Route::get('/mexico', 'LandingController@mexico')->name('landing.mexico');
 Route::get('/panama', 'LandingController@panama')->name('landing.panama');
 Route::get('/peru', 'LandingController@peru')->name('landing.peru');
 
-
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
+    // Exports routes
+    Route::get('export-global', 'RegistrationExport@export_global')->name('export.global');
+    Route::get('export-colombia', 'RegistrationExport@export_colombia')->name('export.colombia');
+    Route::get('export-chile', 'RegistrationExport@export_chile')->name('export.chile');
+    Route::get('export-brasil', 'RegistrationExport@export_brasil')->name('export.brasil');
+    Route::get('export-mexico', 'RegistrationExport@export_mexico')->name('export.mexico');
+    Route::get('export-peru', 'RegistrationExport@export_peru')->name('export.peru');
+    Route::get('export-panama', 'RegistrationExport@export_panama')->name('export.panama');
+    Route::get('export-argentina', 'RegistrationExport@export_argentina')->name('export.argentina');
 });
