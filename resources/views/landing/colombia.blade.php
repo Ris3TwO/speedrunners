@@ -47,7 +47,7 @@
                     <div class="logo img-fluid slide-left"></div>
                     <div class="row justify-content-center">
                         <div class="container align-middle">
-                            <a href="{{ url()->current#bazinga" class="btn btn-block btn-dark">INSCRIBIRME</a>
+                            <a href="{{ url()->current() }}#bazinga" class="btn btn-block btn-dark">INSCRIBIRME</a>
                         </div>
                     </div>
                 </div>
