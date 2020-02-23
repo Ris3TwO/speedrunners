@@ -17,7 +17,7 @@
     @endcan
     {{--  Button for export data  --}}
     <a href="{{ route('export.brasil') }}" class="btn btn-info btn-add-new">
-        <i class="voyager-cloud-download"></i> <span>Exportar</span>
+        <i class="voyager-cloud-download"></i> <span>Exportação</span>
     </a>
     @can('edit', app($dataType->model_name))
     @if(isset($dataType->order_column) && isset($dataType->order_display_column))

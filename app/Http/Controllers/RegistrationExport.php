@@ -22,36 +22,36 @@ class RegistrationExport extends Controller
 
     public function export_argentina()
     {
-        return Excel::download(new ArgentinaRegExport, 'registrations.xlsx');
+        return Excel::download(new ArgentinaRegExport, 'ar_registrations.xlsx');
     }
 
     public function export_colombia()
     {
-        return Excel::download(new ColombiaRegExport, 'registrations.xlsx');
+        return Excel::download(new ColombiaRegExport, 'co_registrations.xlsx');
     }
 
     public function export_chile()
     {
-        return Excel::download(new ChileRegExport, 'registrations.xlsx');
+        return Excel::download(new ChileRegExport, 'ch_registrations.xlsx');
     }
 
     public function export_brasil()
     {
-        return Excel::download(new BrasilRegExport, 'registrations.xlsx');
+        return Excel::download(new BrasilRegExport, 'br_registrations.xlsx');
     }
 
     public function export_peru()
     {
-        return Excel::download(new PeruRegExport, 'registrations.xlsx');
+        return Excel::download(new PeruRegExport, 'pe_registrations.xlsx');
     }
 
     public function export_panama()
     {
-        return Excel::download(new PanamaRegExport, 'registrations.xlsx');
+        return Excel::download(new PanamaRegExport, 'pa_registrations.xlsx');
     }
 
     public function export_mexico()
     {
-        return Excel::download(new MexicoRegExport, 'registrations.xlsx');
+        return Excel::download(new MexicoRegExport, 'mx_registrations.xlsx');
     }
 }
