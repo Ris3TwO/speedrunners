@@ -187,39 +187,39 @@
                             <div class="row justify-content-md-center">
                                 @if($section3_1->count() > 0)
                                 @foreach ($section3_1 as $section)
-                                <div class="col-md-12 align-self-end">
+                                <div id="obj1" class="col-md-12 align-self-end">
                                     <h1>{{ $section->title }}</h1>
                                     <p class="lead mb-0">{{ $section->content }}</p>
                                 </div>
                                 @endforeach
                                 @else
-                                <div class="col-md-12 align-self-end">
+                                <div id="obj1" class="col-md-12 align-self-end">
                                     <h1>OBJETIVOS</h1>
                                     <p class="lead mb-0">LOS GANADORES VIAJARÁN A LAS MEJORES CARRERAS DEL MUNDO.</p>
                                 </div>
                                 @endif
                                 @if($section3_2->count() > 0)
                                 @foreach ($section3_2 as $section)
-                                <div class="col-md-12 align-self-end">
+                                <div id="obj2" class="col-md-12 align-self-end">
                                     <h1>{{ $section->title }}</h1>
                                     <p class="lead mb-0">{{ $section->content }}</p>
                                 </div>
                                 @endforeach
                                 @else
-                                <div class="col-md-12 align-self-end">
+                                <div id="obj2" class="col-md-12 align-self-end">
                                     <h1>OBJETIVOS</h1>
                                     <p class="lead mb-0">LOS GANADORES VIAJARÁN A LAS MEJORES CARRERAS DEL MUNDO.</p>
                                 </div>
                                 @endif
                                 @if($section3_3->count() > 0)
                                 @foreach ($section3_3 as $section)
-                                <div class="col-md-12 align-self-end">
+                                <div id="obj3" class="col-md-12 align-self-end">
                                     <h1>{{ $section->title }}</h1>
                                     <p class="lead mb-0">{{ $section->content }}</p>
                                 </div>
                                 @endforeach
                                 @else
-                                <div class="col-md-12 align-self-end">
+                                <div id="obj3" class="col-md-12 align-self-end">
                                     <h1>OBJETIVOS</h1>
                                     <p class="lead mb-0">LOS GANADORES VIAJARÁN A LAS MEJORES CARRERAS DEL MUNDO.</p>
                                 </div>
