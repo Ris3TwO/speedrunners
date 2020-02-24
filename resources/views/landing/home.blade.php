@@ -338,7 +338,7 @@
                                     <label class="float-label" for="inputEmail">EMAIL</label>
                                     <input type="email" required ng-model="email" ng-class="emailErr ? 'form-control error' : 'form-control'" class="form-control" name="inputEmail"
                                         id="inputEmail" aria-describedby="emailHelp" placeholder="escriba su email">
-                                    <div ng-if="emailErr">
+                                    <div ng-show="emailErr">
                                         <small id="emailHelp" class="form-text">Falta registrar el email
                                             *</small>
                                     </div>
@@ -363,7 +363,7 @@
                                     <label class="float-label" for="inputAge">FECHA DE NACIMIENTO</label>
                                     <input type="text" name="inputAge" maxlengh="10" angular-mask="0000/00/00" ng-model="age" ng-class="ageErr ? 'form-control error' : 'form-control'" class="form-control"
                                         id="inputAge" placeholder="AAAA/MM/DD">
-                                    <div ng-if="ageErr">
+                                    <div ng-show="ageErr">
                                         <small id="emailHelp" class="form-text">Falta registrar la fecha de nacimiento
                                             *</small>
                                     </div>

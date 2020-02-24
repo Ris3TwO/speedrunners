@@ -19,8 +19,37 @@ app.controller("controlador", function($scope, $http, $location, $anchorScroll) 
     $scope.lastErr = false;
     $scope.cityErr = false;
     $scope.verify = function(value) {
-        $scope.dataCheck = value;
-        console.log($scope.adidasForm.inputNames.$viewValue);
+        if (!$scope.adidasForm.inputNames.$error.required && !$scope.adidasForm.inputLastnames.$error.required && $scope.adidasForm.inputAge.$viewValue.length < 9 && !$scope.adidasForm.inputEmail.$error.required) {
+            console.log("Error");
+            if (!$scope.adidasForm.inputAccept.$viewValue) {
+                alert("Acepta los terminos y condiciones")
+            }else{
+                $scope.dataCheck = true;
+            }
+
+        } else {
+            if ($scope.adidasForm.inputNames.$error.required) {
+                $scope.namesErr = true
+            }else{
+                $scope.namesErr = false
+            }
+            if ($scope.adidasForm.inputEmail.$error.required) {
+                $scope.emailErr = true
+            }else{
+                $scope.emailErr = false
+            }
+            if ($scope.adidasForm.inputAge.$viewValue.length < 9) {
+                $scope.ageErr = true
+            }else{
+                $scope.ageErr = false
+            }
+            if ($scope.adidasForm.inputLastnames.$error.required) {
+                $scope.lastErr = true
+            }else{
+                $scope.lastErr = false
+            }
+            document.getElementById('bazinga').scrollIntoView()
+        }
     }
 
     $scope.field = {
@@ -57,7 +86,7 @@ app.controller("controlador", function($scope, $http, $location, $anchorScroll) 
     }
 
     $scope.sendData = function() {
-        if (!$scope.adidasForm.inputEmail.$viewValue) {
+        if (!$scope.adidasForm.inputAccept.$viewValue) {
             alert("Acepta los terminos y condiciones")
         }
 
@@ -100,7 +129,7 @@ app.controller("controlador", function($scope, $http, $location, $anchorScroll) 
             if ($scope.adidasForm.inputEmail.$error.required) {
                 $scope.emailrErr = true
             }
-            if ($scope.adidasForm.inputAge.$error.required) {
+            if ($scope.adidasForm.inputAge.$error) {
                 $scope.ageErr = true
             }
             if ($scope.adidasForm.inputLastnames.$error.required) {
