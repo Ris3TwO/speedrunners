@@ -1270,9 +1270,9 @@ header.masthead .arrow {
         padding-bottom: 0rem;
     }
     .form::before {
-        width: 730px;
+        width: 660px;
         top: 7em;
-        left: -17.5em;
+        left: -19.5em;
         background-image: url("../img/aviones.png");
         opacity: 0.2;
     }
