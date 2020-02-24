@@ -571,13 +571,11 @@
     <script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 
     <script src="<?= asset('angular.min.js') ?>"></script>
-    <script src="<?= asset('angular-route.min.js') ?>"></script>
     <script src="<?= asset('app.js') ?>"></script>
+    <script src="<?= asset('angular-route.min.js') ?>"></script>
 
     <script>
-        var scroll = new SmoothScroll('a[href*="#"]', {
-            speed: 300
-        });
+        var scroll = new SmoothScroll('a[href*="#"]');
     </script>
 
     <script>
