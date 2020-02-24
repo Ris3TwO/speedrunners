@@ -1263,6 +1263,7 @@ header.masthead .arrow {
     /* Form */
     .form {
         padding-top: 11rem;
+        padding-bottom: 0rem;
     }
     .form::before {
         width: 730px;
@@ -1657,6 +1658,9 @@ header.masthead .arrow {
     .map .container h1 {
         font-size: 65px;
         line-height: 0.9;
+    }
+    .form {
+        padding-bottom: 5rem;
     }
     .form::before {
         width: 53em;
