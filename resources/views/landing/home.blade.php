@@ -178,7 +178,7 @@
                         </div>
                         @endforeach
                         @else
-                        <div id="objetive3" class="objetive-2 filter">
+                        <div id="objetive2" class="objetive-2 filter">
                             <img ng-click="objetive2()" id="objetive2" src="../img/group-11.png" alt="">
                         </div>
                         @endif
