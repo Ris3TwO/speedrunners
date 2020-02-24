@@ -539,6 +539,13 @@ header.masthead .arrow {
     transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.description .description-img .objetive-1 img,
+.description .description-img .objetive-2 img,
+.description .description-img .objetive-3 img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
 @media (min-width: 1280px) {
     .description .description-img .objetive-1 {
         height: 18em;
@@ -1073,6 +1080,7 @@ header.masthead .arrow {
         position: absolute;
         left: initial;
         margin: auto;
+        max-height: 178px;
         box-sizing: border-box;
         position: relative;
     }
@@ -1082,6 +1090,7 @@ header.masthead .arrow {
     }
     .description .description-img .objetive-2 {
         max-width: 193px;
+        max-height: 115px;
         right: 0;
         margin-right: 30px;
         top: 50px;
@@ -1092,6 +1101,7 @@ header.masthead .arrow {
     }
     .description .description-img .objetive-3 {
         max-width: 113px;
+        max-height: 190px;
         top: 24px;
         left: 26px;
     }
@@ -1311,8 +1321,16 @@ header.masthead .arrow {
 }
 
 @media only screen and (min-width: 414px) {
+    .description .description-img .objetive-1 {
+        max-height: 178px;
+    }
+    .description .description-img .objetive-2 {
+        max-width: 193px;
+        max-height: 115px;
+    }
     .description .description-img .objetive-3 {
         max-width: 140px;
+        max-height: 234px;
     }
     .form .container.container-incription::before,
     .form .container.container-success::before {
@@ -1389,13 +1407,15 @@ header.masthead .arrow {
     }
     .description .description-img .objetive-1 {
         max-width: 450px;
+        max-height: 270px;
     }
     .description .description-img .objetive-2 {
         max-width: 322px;
+        max-height: 192px;
     }
     .description .description-img .objetive-3 {
-        max-width: 240px;
-        z-index: 4;
+        max-width: 232px;
+        max-height: 389px;
     }
     .map .map-image {
         height: 360px;
@@ -1626,9 +1646,6 @@ header.masthead .arrow {
     .description .description-item p {
         font-size: 30px;
     }
-    .description .description-img .objetive-2 {
-        left: initial;
-    }
     .description .container-fluid .row {
         margin-right: 0;
         margin-left: 0;
@@ -1682,26 +1699,27 @@ header.masthead .arrow {
         padding-top: 0rem;
     }
     .description .description-img .objetive-1 {
-        height: auto;
         max-width: 457px;
+        max-height: 274px;
         margin-bottom: 0.2em;
-        z-index: 2;
         border: none;
         left: 0;
     }
     .description .description-img .objetive-2 {
         max-width: 317px;
+        max-height: 189px;
+        left: initial;
         right: 0;
         margin-right: 30px;
         top: 0;
         transform: translate(80px, -224px);
     }
     .description .description-img .objetive-3 {
-        max-width: 220px;
+        max-width: 212px;
+        max-height: 355px;
         top: 0;
         left: 10px;
         transform: translate(-25px, -276px);
-        z-index: 4;
     }
     .map {
         padding-top: 2.5rem;
@@ -1821,16 +1839,22 @@ header.masthead .arrow {
     .description .col-description.col-description-2 {
         transform: translate(0, -180px);
     }
-    .description .description-img .objetive-3 {
-        transform: translate(-54px, -343px);
-        max-width: 295px;
-    }
     .description .description-img.objetives {
         padding-top: 1rem;
     }
+    .description .description-img .objetive-1 {
+        max-width: 470px;
+        max-height: 300px;
+    }
     .description .description-img .objetive-2 {
         max-width: 356px;
+        max-height: 212px;
         transform: translate(68px, -232px);
+    }
+    .description .description-img .objetive-3 {
+        transform: translate(-54px, -343px);
+        max-width: 295px;
+        max-height: 494px;
     }
     .form .container.container-incription::before,
     .form .container.container-success::before {
