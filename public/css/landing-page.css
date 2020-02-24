@@ -337,6 +337,7 @@ header.masthead .video-thumbnail .youtube .play:before {
     border-style: solid;
     border-radius: 50%;
     background-color: rgba(216, 216, 216, 0.55);
+    -webkit-appearance: none;
 }
 
 header.masthead .video-thumbnail .youtube .play:hover::before {
@@ -1166,8 +1167,8 @@ header.masthead .arrow {
         width: 730px;
         top: 7em;
         left: -17.5em;
-        background-image: url("../img/aviones-form.png");
-        opacity: 1;
+        background-image: url("../img/aviones.png");
+        opacity: 0.2;
     }
     .form .container.container-incription::before,
     .form .container.container-success::before {
