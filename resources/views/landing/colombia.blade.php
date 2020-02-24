@@ -258,41 +258,41 @@
         </div>
         <div class="map-image">
             <div class="container-fluid h-100">
-                <div class="row h-100 justify-content-center align-items-center ">
+                <div class="row h-100 justify-content-center align-items-center">
                     <div class="col-lg-12 col-md-12 ">
                         <ul class="timeline" id="timeline">
-                            <li class="li complete full ">
-                                <div id="statuc" class="status ">
-                                    <h1 class="">Ciudad</h1>
+                            <li class="li complete full">
+                                <div id="statuc" class="status">
+                                    <h1>Ciudad</h1>
                                 </div>
                                 <div class="info">
-                                    <p id="statud" class="">Bogotá</p>
+                                    <p id="statud">Bogotá</p>
                                 </div>
                             </li>
                             <li class="li complete ">
-                                <div id="statuf" class="status  ">
-                                    <h1 id="statug" class="">Lugar</h1>
+                                <div id="statuf" class="status">
+                                    <h1 id="statug">Lugar</h1>
                                 </div>
                                 <div class="info ">
-                                    <p id="statuh" class="site  ">Parque el virrey<br> Cra 15 #86a-50</p>
+                                    <p id="statuh" class="site">Parque el virrey<br> Cra 15 #86a-50</p>
                                 </div>
                             </li>
-                            <li class="li complete full ">
-                                <div id="statu1" class="status ">
+                            <li class="li complete full">
+                                <div id="statu1" class="status">
                                     <h1 id="statu2">Fecha</h1>
                                 </div>
                                 <div class="info">
                                     <p id="statu3">10/02/2020</p>
                                 </div>
                             </li>
-                            <li class="li complete full ">
-                                <div id="statu4" class="status  status-last">
-                                    <h1 id="final1" class="">Kilometros</h1>
+                            <li class="li complete full">
+                                <div id="statu4" class="status status-last">
+                                    <h1 id="final1">Kilometros</h1>
                                 </div>
                                 <div class="info space">
-                                    <p id="final2" class="d-inline px-3 ">10k</p>
-                                    <p id="final3" class="d-inline px-3 ">21k</p>
-                                    <p id="final4" class="d-inline px-3 ">42k</p>
+                                    <p id="final2" class="d-inline px-3">10k</p>
+                                    <p id="final3" class="d-inline px-3">21k</p>
+                                    <p id="final4" class="d-inline px-3">42k</p>
                                 </div>
                             </li>
                         </ul>
@@ -317,7 +317,7 @@
                                     <label class="float-label" for="inputNames">NOMBRES</label>
                                     <input type="text" ng-model="names" required class="form-control" name="inputNames"
                                         id="inputNames" aria-describedby="namesHelp" placeholder="escriba sus nombres">
-                                    <div ng-show="namesErr" class="">
+                                    <div ng-show="namesErr">
                                         <small id="namesHelp" class="form-text">Falta registrar los nombres
                                             *</small>
                                     </div>
@@ -327,7 +327,7 @@
                                     <input type="text" required ng-model="lastnames" class="form-control"
                                         name="inputLastnames" id="inputLastnames" aria-describedby="lastnamesHelp"
                                         placeholder="escriba sus apellidos">
-                                    <div ng-show="lastErr" class="">
+                                    <div ng-show="lastErr">
                                         <small id="lastnamesHelp" class="form-text">Falta registrar los
                                             apellidos
                                             *</small>
@@ -339,7 +339,7 @@
                                     <label class="float-label" for="inputEmail">EMAIL</label>
                                     <input type="email" required ng-model="email" class="form-control" name="inputEmail"
                                         id="inputEmail" aria-describedby="emailHelp" placeholder="escriba su email">
-                                    <div ng-if="emailErr" class="">
+                                    <div ng-if="emailErr">
                                         <small id="emailHelp" class="form-text">Falta registrar el email
                                             *</small>
                                     </div>
@@ -364,7 +364,7 @@
                                     <label class="float-label" for="inputAge">FECHA DE NACIMIENTO</label>
                                     <input type="text" required name="inputAge" ng-model="age" class="form-control"
                                         id="inputAge" placeholder="AAAA/MM/DD">
-                                    <div ng-if="ageErr" class="">
+                                    <div ng-if="ageErr">
                                         <small id="emailHelp" class="form-text">Falta registrar la edad
                                             *</small>
                                     </div>
@@ -572,8 +572,8 @@
     <script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 
     <script src="<?= asset('angular.min.js') ?>"></script>
-    <script src="<?= asset('app.js') ?>"></script>
     <script src="<?= asset('angular-route.min.js') ?>"></script>
+    <script src="<?= asset('app.js') ?>"></script>
 
     <script>
         var scroll = new SmoothScroll('a[href*="#"]');
