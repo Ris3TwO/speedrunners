@@ -13,10 +13,11 @@ use App\Http\Requests\StoreRegistrationRequest;
 use App\MexicoRegistration;
 use App\PanamaRegistration;
 use App\PeruRegistration;
-use GuzzleHttp\Client;
+use App\Traits\adidasApi;
 
 class RegistrationController extends ApiController
 {
+    use adidasApi;
     /**
      * Store a new record in the database.
      *
@@ -26,6 +27,8 @@ class RegistrationController extends ApiController
     public function store(StoreRegistrationRequest $request, Registration $registration)
     {
         try {
+
+            
             $url_parts = parse_url($request->url, PHP_URL_PATH);
             // The data provided are saved.
             $registration->create($request->all());
@@ -45,17 +48,24 @@ class RegistrationController extends ApiController
             } elseif ($url_parts === '/panama') {
                 PanamaRegistration::create($request->all());
             }
+            
+            if (strtolower($request->gender) === "masculino")
+            {
+                $gender = "m";
+            }else{
+                $gender = "f";
+            }
 
-            // The mail is sent with the saved information
-            // RegistrationWasStored::dispatch($res);
+            $data = [
+                'firstName' => $request->names, 
+                'lastname' => $request->last_names, 
+                'gender' => $gender, 
+                'countryOfSite' => substr($url_parts, 1),
+                'dateOfBirth' => $request->age,
+            ];
 
-            // $client = new Client();
-            // $res = $client->request('POST', 'https://url_to_the_api', [
-            //     'form_params' => [
-            //         'client_id' => 'test_id',
-            //         'secret' => 'test_secret',
-            //     ]
-            // ]);
+            // Inyect data
+            // $this->createSubscription($data);
 
             return $this->successResponse(trans('messages.successful_registration'), 200);
         } catch (QueryException $ex) {

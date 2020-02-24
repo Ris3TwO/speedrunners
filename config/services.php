@@ -30,4 +30,9 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    'adidas'=>[
+        'endpoint'=>env('ADIDAS_API_URL'),
+        'client_id'=>env('ADIDAS_CLIENT_ID'),
+    ],
+
 ];
