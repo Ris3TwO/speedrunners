@@ -46,7 +46,7 @@
                     <div class="logo img-fluid slide-left"></div>
                     <div class="row justify-content-center">
                         <div class="container align-middle">
-                            <a href="#bazinga" class="btn btn-block btn-dark">INSCRIBIRME</a>
+                            <a data-scroll href="{{ url()->current() }}#bazinga" class="btn btn-block btn-dark">INSCRIBIRME</a>
                         </div>
                     </div>
                 </div>
@@ -58,7 +58,7 @@
             </div>
         </div>
         <div class="d-flex flex-row-reverse">
-            <a href="{{ url()->current() }}#bazinga">
+            <a data-scroll href="{{ url()->current() }}#bazinga">
                 <div class="arrow ml-auto"></div>
             </a>
         </div>
@@ -553,7 +553,7 @@
                             </div>
                             <div class="col-lg-8 d-flex align-items-center">
                                 <div>
-                                    <h1 class="success-title">Hola <p ng-bind="adidasForm.inputNames.$viewValue"></p>
+                                    <h1 class="success-title">Hola @{{ adidasForm.inputNames.$viewValue }}
                                     </h1>
                                     <p class="success-message">
                                         Pronto estaremos enviando más información al email registrado.
@@ -575,7 +575,9 @@
     <script src="<?= asset('app.js') ?>"></script>
 
     <script>
-        var scroll = new SmoothScroll('a[href*="#"]');
+        var scroll = new SmoothScroll('a[href*="#"]', {
+            speed: 300
+        });
     </script>
 
     <script>

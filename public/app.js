@@ -1,6 +1,6 @@
 var app = angular.module("app", []);
 
-app.controller("controlador", function($scope, $http, $location) {
+app.controller("controlador", function($scope, $http, $location, $anchorScroll) {
     var json = {};
     var height = screen.height;
     var width = screen.width;
@@ -19,18 +19,13 @@ app.controller("controlador", function($scope, $http, $location) {
     $scope.lastErr = false;
     $scope.cityErr = false;
     $scope.verify = function(value) {
-
-
         $scope.dataCheck = value;
         console.log($scope.adidasForm.inputNames.$viewValue);
     }
 
-
     $scope.selectGender = function(value) {
         $scope.gender = value;
     }
-
-
 
     $scope.selectShoes = function(value) {
         $scope.shoes = value;
@@ -50,6 +45,13 @@ app.controller("controlador", function($scope, $http, $location) {
 
     $scope.selectTime = function(value) {
         $scope.time = value;
+    }
+
+    $scope.scrollTo = function(id) {
+
+        // Pass the 'id' as the parameter here, the page will scroll
+        // to the correct place and the URL will remain intact.
+        $anchorScroll(id);
     }
 
     $scope.sendData = function() {
@@ -79,7 +81,6 @@ app.controller("controlador", function($scope, $http, $location) {
         }).catch((err) => {
             let a = err;
             console.log(document.getElementById('bazinga').scrollIntoView(), "leonardo");
-
             console.log(a);
 
             try {
@@ -135,7 +136,6 @@ app.controller("controlador", function($scope, $http, $location) {
         objetive3.classList.add("filter");
         obj2.style.display = "none";
         obj3.style.display = "none"
-
     }
 
     $scope.objetive2 = function() {
@@ -181,7 +181,9 @@ app.controller("controlador", function($scope, $http, $location) {
         objetive2.classList.remove("active-img")
         objetive3.classList.add("active-img")
         obj3.removeAttribute("style");
-        obj3.style.paddingTop = "5.5rem";
+        if (width >= 360 && width <= 414) {
+            obj3.style.paddingTop = "5.5rem";
+        }
 
         objetive2.classList.add("filter");
         // objetive1.removeAttribute("style")
@@ -208,9 +210,7 @@ app.controller("controlador", function($scope, $http, $location) {
         document.getElementById("final3").classList.add("tracking-in-expand4");
         document.getElementById("final4").classList.add("tracking-in-expand4");
 
-
         console.log("Test");
-
     }
     var t = 0;
     window.onscroll = function() {
