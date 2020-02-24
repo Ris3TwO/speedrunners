@@ -452,7 +452,7 @@
                                 </div>
                             </div>
                             <div class="col-lg-12 submit">
-                                <div class="col-md-8 offset-md-2">
+                                <div class="col-md-6 offset-md-3">
                                     <a type="button" ng-click="verify(true)" href="#info"
                                         class="btn btn-dark btn-lg btn-block">INSCRIBIRME</a>
                                 </div>
