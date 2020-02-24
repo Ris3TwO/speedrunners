@@ -384,7 +384,7 @@
                                 </div>
                             </div>
                             <div class="form-row justify-content-around break">
-                                <div class="form-group form-radio col-md-6">
+                                <div id="check" class="form-group form-radio col-md-6">
                                     <label class="float-label-2">TEAM</label>
                                     <div class="btn-group btn-group-toggle" data-toggle="buttons">
                                         <label class="btn btn-light active" ng-click="selectTeam('ADIDAS RUNNERS')">
