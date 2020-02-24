@@ -1,4 +1,4 @@
-var app = angular.module("app", ['angularMask']);
+var app = angular.module("app", []);
 
 app.controller("controlador", function($scope, $http, $location, $anchorScroll) {
     var json = {};
@@ -21,12 +21,7 @@ app.controller("controlador", function($scope, $http, $location, $anchorScroll) 
     $scope.verify = function(value) {
         if (!$scope.adidasForm.inputNames.$error.required && !$scope.adidasForm.inputLastnames.$error.required && $scope.adidasForm.inputAge.$viewValue.length < 9 && !$scope.adidasForm.inputEmail.$error.required) {
             console.log("Error");
-            if (!$scope.adidasForm.inputAccept.$viewValue) {
-                alert("Acepta los terminos y condiciones")
-            }else{
-                $scope.dataCheck = true;
-            }
-
+            $scope.dataCheck = true;
         } else {
             if ($scope.adidasForm.inputNames.$error.required) {
                 $scope.namesErr = true
@@ -87,7 +82,7 @@ app.controller("controlador", function($scope, $http, $location, $anchorScroll) 
 
     $scope.sendData = function() {
         if (!$scope.adidasForm.inputAccept.$viewValue) {
-            alert("Acepta los terminos y condiciones")
+          return  alert("Acepta los terminos y condiciones")
         }
 
         var data = {
