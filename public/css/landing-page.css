@@ -797,7 +797,7 @@ header.masthead .arrow {
     background-position: right;
     background-size: contain;
     position: absolute;
-    top: 0;
+    top: -15px;
     right: -6em;
 }
 
