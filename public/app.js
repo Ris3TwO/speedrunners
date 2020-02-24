@@ -181,7 +181,7 @@ app.controller("controlador", function($scope, $http, $location, $anchorScroll) 
             objetive1.style.maxWidth = "317px"
             objetive2.style.transform = "translate(14px, -11px)"
             objetive2.style.maxWidth = "457px"
-            obj2.style.paddingTop = "5.5rem";
+            obj2.style.paddingTop = ".5rem";
         }
         
 
