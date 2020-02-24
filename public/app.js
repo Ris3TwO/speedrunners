@@ -226,7 +226,7 @@ app.controller("controlador", function($scope, $http, $location, $anchorScroll) 
 
         if (width >= 1200 && width <= 1440) {
             if (objetive2.classList.contains('active-down')){
-                obj3.style.paddingTop = "5rem";
+                obj3.style.paddingTop = ".5rem";
             }else{
                 obj3.style.paddingTop = "1rem";
             }
