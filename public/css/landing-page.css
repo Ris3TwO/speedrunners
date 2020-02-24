@@ -1180,7 +1180,6 @@ header.masthead .arrow {
         background-position: right;
         background-size: contain;
         position: absolute;
-        top: 5px;
         right: 0;
     }
     .form .container .inputs {
@@ -1307,7 +1306,6 @@ header.masthead .arrow {
     .form .container.container-incription::before,
     .form .container.container-success::before {
         height: 200px;
-        top: 6px;
     }
 }
 
@@ -1458,7 +1456,6 @@ header.masthead .arrow {
     .form .container.container-incription::before,
     .form .container.container-success::before {
         height: 370px;
-        top: 8px;
     }
     .form .information .data .container .col-sm-3 .btn-block {
         max-width: 100%;
