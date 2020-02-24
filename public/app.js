@@ -1,6 +1,4 @@
-var app = angular.module("app", []).config(function($locationProvider) {
-    $locationProvider.hashPrefix('');
-});
+var app = angular.module("app", []);
 
 app.controller("controlador", function($scope, $http, $location) {
     var json = {};
