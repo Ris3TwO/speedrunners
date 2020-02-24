@@ -1067,11 +1067,6 @@ header.masthead .arrow {
     header.masthead .video-thumbnail {
         border: none;
     }
-    header.masthead .video-thumbnail .youtube .play {
-        margin-left: -38px;
-        margin-top: -36px;
-        background: url("../img/video-play.png") no-repeat;
-    }
     header.masthead .video-thumbnail .youtube .play::before {
         display: none;
     }
