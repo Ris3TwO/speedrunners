@@ -124,6 +124,7 @@ app.controller("controlador", function($scope, $http, $location, $anchorScroll) 
         console.log("testting");
         objetive1.classList.remove("filter")
         objetive2.classList.remove("active-img")
+        objetive2.classList.remove("active-down");
         objetive3.classList.remove("active-img")
 
         objetive1.classList.add("active-img");
@@ -145,34 +146,49 @@ app.controller("controlador", function($scope, $http, $location, $anchorScroll) 
         objetive2.classList.remove("filter")
         objetive1.classList.remove("active-img")
         objetive3.classList.remove("active-img")
-        if (width >= 360 && width <= 414) {
+        obj2.removeAttribute("style");
+        if (width >= 360 && width <= 374) {
             objetive2.classList.add("active-img");
-            objetive1.style.transform = "translate(68px, -132px)"
+            objetive2.classList.add("active-down");
+            objetive1.style.transform = "translate(69px, -93px)"
             objetive1.style.maxWidth = "194px"
-            objetive2.style.transform = "translate(-12px, 133px)"
+            objetive2.style.transform = "translate(-12px, 94px)"
             objetive2.style.maxWidth = "305px"
+            obj2.style.paddingTop = "5.5rem";
+        }
+        if (width >= 375 && width <= 414) {
+            objetive2.classList.add("active-img");
+            objetive2.classList.add("active-down");
+            objetive1.style.transform = "translate(76px, -93px)"
+            objetive1.style.maxWidth = "194px"
+            objetive2.style.transform = "translate(-20px, 94px)"
+            objetive2.style.maxWidth = "305px"
+            obj2.style.paddingTop = "5.5rem";
         }
         if (width >= 768 && width <= 1024) {
             objetive2.classList.add("active-img");
+            objetive2.classList.add("active-down");
             objetive1.style.transform = "translate(200px, -210px)"
             objetive1.style.maxWidth = "322px"
-            objetive2.style.transform = "translate(-136px, 203px)"
+            objetive2.style.transform = "translate(-144px, 174px)"
             objetive2.style.maxWidth = "450px"
+            obj2.style.paddingTop = "5.5rem";
         }
         if (width >= 1200 && width <= 1440) {
             objetive2.classList.add("active-img");
+            objetive2.classList.add("active-down");
             objetive1.style.transform = "translate(136px, -220px)"
             objetive1.style.maxWidth = "317px"
             objetive2.style.transform = "translate(14px, -11px)"
             objetive2.style.maxWidth = "457px"
         }
-        obj2.removeAttribute("style");
+        
 
         objetive1.classList.add("filter");
         objetive3.classList.add("filter");
         objetive3.removeAttribute("style")
         obj1.style.display = "none";
-        obj2.style.paddingTop = "5.5rem";
+        
         obj3.style.display = "none"
     }
 
@@ -183,8 +199,36 @@ app.controller("controlador", function($scope, $http, $location, $anchorScroll) 
         objetive2.classList.remove("active-img")
         objetive3.classList.add("active-img")
         obj3.removeAttribute("style");
-        if (width >= 360 && width <= 414) {
-            obj3.style.paddingTop = "5.5rem";
+        if (width >= 360 && width <= 374) {
+            if (objetive2.classList.contains('active-down')){
+                obj3.style.paddingTop = "5.5rem";
+            }else{
+                obj3.style.paddingTop = "1.5rem";
+            }
+        }
+
+        if (width >= 375 && width <= 414) {
+            if (objetive2.classList.contains('active-down')){
+                obj3.style.paddingTop = "5rem";
+            }else{
+                obj3.style.paddingTop = "1rem";
+            }
+        }
+
+        if (width >= 768 && width <= 1024) {
+            if (objetive2.classList.contains('active-down')){
+                obj3.style.paddingTop = "5rem";
+            }else{
+                obj3.style.paddingTop = "1rem";
+            }
+        }
+
+        if (width >= 1200 && width <= 1440) {
+            if (objetive2.classList.contains('active-down')){
+                obj3.style.paddingTop = "5rem";
+            }else{
+                obj3.style.paddingTop = "1rem";
+            }
         }
 
         objetive2.classList.add("filter");
