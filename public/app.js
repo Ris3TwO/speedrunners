@@ -33,10 +33,14 @@ app.controller("controlador", function($scope, $http, $location, $anchorScroll) 
             }else{
                 $scope.emailErr = false
             }
-            if ($scope.adidasForm.inputAge.$viewValue.length < 9) {
-                $scope.ageErr = true
-            }else{
-                $scope.ageErr = false
+            try {  
+                if ($scope.adidasForm.inputAge.$viewValue.length < 9) {
+                    $scope.ageErr = true
+                }else{
+                    $scope.ageErr = false
+                }
+            } catch (error) {
+                
             }
             if ($scope.adidasForm.inputLastnames.$error.required) {
                 $scope.lastErr = true
