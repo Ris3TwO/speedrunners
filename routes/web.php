@@ -12,7 +12,7 @@
 */
 
 Route::get('/', 'LandingController@index')->name('landing.home');
-Route::get('/argentina', 'LandingController@colombia')->name('landing.argentina');
+Route::get('/argentina', 'LandingController@argentina')->name('landing.argentina');
 Route::get('/brasil', 'LandingController@brasil')->name('landing.brasil');
 Route::get('/colombia', 'LandingController@colombia')->name('landing.colombia');
 Route::get('/chile', 'LandingController@chile')->name('landing.chile');
