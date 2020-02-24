@@ -47,11 +47,9 @@ app.controller("controlador", function($scope, $http, $location, $anchorScroll) 
         $scope.time = value;
     }
 
-    $scope.scrollTo = function(id) {
-
-        // Pass the 'id' as the parameter here, the page will scroll
-        // to the correct place and the URL will remain intact.
-        $anchorScroll(id);
+    $scope.toggle = function() {
+	    document.getElementById('check').classList.add("col-inactive");
+	    document.getElementById('check2').classList.remove("col-inactive");
     }
 
     $scope.sendData = function() {

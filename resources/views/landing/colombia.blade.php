@@ -314,7 +314,7 @@
                             <div class="form-row form-row-space justify-content-around">
                                 <div class="form-group col-md-6">
                                     <label class="float-label" for="inputNames">NOMBRES</label>
-                                    <input type="text" ng-model="names" required class="form-control" name="inputNames"
+                                    <input type="text" ng-model="names" required ng-class="namesErr ? 'form-control error' : 'form-control'" class="form-control" name="inputNames"
                                         id="inputNames" aria-describedby="namesHelp" placeholder="escriba sus nombres">
                                     <div ng-show="namesErr">
                                         <small id="namesHelp" class="form-text">Falta registrar los nombres
@@ -323,7 +323,7 @@
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label class="float-label" for="inputLastnames">APELLIDOS</label>
-                                    <input type="text" required ng-model="lastnames" class="form-control"
+                                    <input type="text" required ng-model="lastnames" ng-class="lastErr ? 'form-control error' : 'form-control'" class="form-control"
                                         name="inputLastnames" id="inputLastnames" aria-describedby="lastnamesHelp"
                                         placeholder="escriba sus apellidos">
                                     <div ng-show="lastErr">
@@ -336,7 +336,7 @@
                             <div class="form-row justify-content-around break">
                                 <div class="form-group col-md-6">
                                     <label class="float-label" for="inputEmail">EMAIL</label>
-                                    <input type="email" required ng-model="email" class="form-control" name="inputEmail"
+                                    <input type="email" required ng-model="email" ng-class="emailErr ? 'form-control error' : 'form-control'" class="form-control" name="inputEmail"
                                         id="inputEmail" aria-describedby="emailHelp" placeholder="escriba su email">
                                     <div ng-if="emailErr">
                                         <small id="emailHelp" class="form-text">Falta registrar el email
@@ -361,7 +361,7 @@
                             <div class="form-row justify-content-around break">
                                 <div class="form-group col-md-6">
                                     <label class="float-label" for="inputAge">FECHA DE NACIMIENTO</label>
-                                    <input type="text" required name="inputAge" ng-model="age" class="form-control"
+                                    <input type="text" required name="inputAge" ng-model="age" ng-class="ageErr ? 'form-control error' : 'form-control'" class="form-control"
                                         id="inputAge" placeholder="AAAA/MM/DD">
                                     <div ng-if="ageErr">
                                         <small id="emailHelp" class="form-text">Falta registrar la edad
@@ -391,12 +391,12 @@
                                             <input type="radio" name="options" id="team1" checked> ADIDAS
                                             RUNNERS
                                         </label>
-                                        <label class="btn btn-light" ng-click="selectTeam('OTRO')">
+                                        <label class="btn btn-light" ng-click="toggle()">
                                             <input type="radio" name="options" id="team2"> OTRO
                                         </label>
                                     </div>
                                 </div>
-                                <div class="form-group form-radio col-md-6 mt-auto col-inactive">
+                                <div id="check2" class="form-group form-radio col-md-6 mt-auto col-inactive">
                                     <label class="float-label" for="inputTeam">TEAM</label>
                                     <input type="text" class="form-control" id="inputTeam"
                                         placeholder="escriba a que equipo pertenece">
