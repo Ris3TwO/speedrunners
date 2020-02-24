@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -47,7 +46,7 @@
                     <div class="logo img-fluid slide-left"></div>
                     <div class="row justify-content-center">
                         <div class="container align-middle">
-                            <a href="{{ url()->current() }}#bazinga" class="btn btn-block btn-dark">INSCRIBIRME</a>
+                            <a data-scroll class="btn btn-block btn-dark">INSCRIBIRME</a>
                         </div>
                     </div>
                 </div>
@@ -59,7 +58,7 @@
             </div>
         </div>
         <div class="d-flex flex-row-reverse">
-            <a href="{{ url()->current() }}#bazinga">
+            <a data-scroll href="{{ url()->current() }}#bazinga">
                 <div class="arrow ml-auto"></div>
             </a>
         </div>
@@ -96,7 +95,7 @@
                     @endforeach
                     <div class="description-text">
                         <h1>{{ $section->title }}</h1>
-                        <p class="lead mb-0">{{ $section->content }}</p>
+                        <p class=" lead mb-0">{{ $section->content }}</p>
                     </div>
                 </div>
 
@@ -147,7 +146,8 @@
 
                         <div class="description-text">
                             <h1>TRAINING</h1>
-                            <p class="lead mb-0">TENDRÁS ENTRENAMIENTOS ESPECIALES DE ADIDAS RUNNERS PARA QUE LLEGUES DE
+                            <p class="lead mb-0">TENDRÁS ENTRENAMIENTOS ESPECIALES DE ADIDAS RUNNERS PARA QUE
+                                LLEGUES DE
                                 LA
                                 MEJOR MANERA A LA COMPETENCIA.</p>
                         </div>
@@ -160,25 +160,25 @@
                     <div class="description-img objetives">
                         @if($section3_3->count() > 0)
                         @foreach ($section3_3 as $section)
-                        <div id="objetive1" class="objetive-1">
+                        <div id="objetive1" class="objetive-1 filter">
                             <img ng-click="objetive1()" id="objetive1" src="{{ asset('/storage/'.$section->image) }}"
                                 alt="">
                         </div>
                         @endforeach
                         @else
-                        <div id="objetive1" class="objetive-1">
+                        <div id="objetive1" class="objetive-1 filter">
                             <img ng-click="objetive1()" id="objetive1" src="../img/group-10.png" alt="">
                         </div>
                         @endif
                         @if($section3_2->count() > 0)
                         @foreach ($section3_2 as $section)
-                        <div id="objetive2" class="objetive-2">
+                        <div id="objetive2" class="objetive-2 filter">
                             <img ng-click="objetive2()" id="objetive2" src="{{ asset('/storage/'.$section->image) }}"
                                 alt="">
                         </div>
                         @endforeach
                         @else
-                        <div id="objetive3" class="objetive-2">
+                        <div id="objetive3" class="objetive-2 filter">
                             <img ng-click="objetive2()" id="objetive2" src="../img/group-11.png" alt="">
                         </div>
                         @endif
@@ -208,7 +208,8 @@
                                 @else
                                 <div id="obj1" style="display: none;" class="col-md-12 align-self-end filter">
                                     <h1>OBJETIVOS</h1>
-                                    <p class="lead mb-0">LOS GANADORES VIAJARÁN A LAS MEJORES CARRERAS DEL MUNDO.</p>
+                                    <p class="lead mb-0">LOS GANADORES VIAJARÁN A LAS MEJORES CARRERAS DEL MUNDO.
+                                    </p>
                                 </div>
                                 @endif
                                 @if($section3_2->count() > 0)
@@ -221,7 +222,8 @@
                                 @else
                                 <div id="obj2" style="display: none;" class="col-md-12 align-self-end filter">
                                     <h1>OBJETIVOS</h1>
-                                    <p class="lead mb-0">LOS GANADORES VIAJARÁN A LAS MEJORES CARRERAS DEL MUNDO.</p>
+                                    <p class="lead mb-0">LOS GANADORES VIAJARÁN A LAS MEJORES CARRERAS DEL MUNDO.
+                                    </p>
                                 </div>
                                 @endif
                                 @if($section3_3->count() > 0)
@@ -234,7 +236,8 @@
                                 @else
                                 <div id="obj3" class="col-md-12 align-self-end">
                                     <h1>OBJETIVOS</h1>
-                                    <p class="lead mb-0">LOS GANADORES VIAJARÁN A LAS MEJORES CARRERAS DEL MUNDO.</p>
+                                    <p class="lead mb-0">LOS GANADORES VIAJARÁN A LAS MEJORES CARRERAS DEL MUNDO.
+                                    </p>
                                 </div>
                                 @endif
 
@@ -249,45 +252,46 @@
     <!-- Map -->
     <section class="map text-center">
         <div class="container">
-            <h1>SPEED RUNNERS 2020, una carrera para romper marcas, hecha para los que entrenan duro y corren mas</h1>
+            <h1>SPEED RUNNERS 2020, una carrera para romper marcas, hecha para los que entrenan duro y corren
+                mas</h1>
         </div>
         <div class="map-image">
             <div class="container-fluid h-100">
-                <div class="row h-100 justify-content-center align-items-center ">
+                <div class="row h-100 justify-content-center align-items-center">
                     <div class="col-lg-12 col-md-12 ">
                         <ul class="timeline" id="timeline">
-                            <li class="li complete full ">
-                                <div id="statuc" class="status ">
-                                    <h1 class="">Ciudad</h1>
+                            <li class="li complete full">
+                                <div id="statuc" class="status">
+                                    <h1>Ciudad</h1>
                                 </div>
                                 <div class="info">
-                                    <p id="statud" class="">Bogotá</p>
+                                    <p id="statud">Bogotá</p>
                                 </div>
                             </li>
                             <li class="li complete ">
-                                <div id="statuf" class="status  ">
-                                    <h1 id="statug" class="">Lugar</h1>
+                                <div id="statuf" class="status">
+                                    <h1 id="statug">Lugar</h1>
                                 </div>
                                 <div class="info ">
-                                    <p id="statuh" class="site  ">Parque el virrey<br> Cra 15 #86a-50</p>
+                                    <p id="statuh" class="site">Parque el virrey<br> Cra 15 #86a-50</p>
                                 </div>
                             </li>
-                            <li class="li complete full ">
-                                <div id="statu1" class="status ">
+                            <li class="li complete full">
+                                <div id="statu1" class="status">
                                     <h1 id="statu2">Fecha</h1>
                                 </div>
                                 <div class="info">
                                     <p id="statu3">10/02/2020</p>
                                 </div>
                             </li>
-                            <li class="li complete full ">
-                                <div id="statu4" class="status  status-last">
-                                    <h1 id="final1" class="">Kilometros</h1>
+                            <li class="li complete full">
+                                <div id="statu4" class="status status-last">
+                                    <h1 id="final1">Kilometros</h1>
                                 </div>
                                 <div class="info space">
-                                    <p id="final2" class="d-inline px-3 ">10k</p>
-                                    <p id="final3" class="d-inline px-3 ">21k</p>
-                                    <p id="final4" class="d-inline px-3 ">42k</p>
+                                    <p id="final2" class="d-inline px-3">10k</p>
+                                    <p id="final3" class="d-inline px-3">21k</p>
+                                    <p id="final4" class="d-inline px-3">42k</p>
                                 </div>
                             </li>
                         </ul>
@@ -310,19 +314,21 @@
                             <div class="form-row form-row-space justify-content-around">
                                 <div class="form-group col-md-6">
                                     <label class="float-label" for="inputNames">NOMBRES</label>
-                                    <input type="text" ng-model="names" class="form-control" name="inputNames"
+                                    <input type="text" ng-model="names" required class="form-control" name="inputNames"
                                         id="inputNames" aria-describedby="namesHelp" placeholder="escriba sus nombres">
-                                    <div ng-show="namesErr" class="invalid-feedback">
-                                        <small id="namesHelp" class="form-text">Falta registrar los nombres *</small>
+                                    <div ng-show="namesErr">
+                                        <small id="namesHelp" class="form-text">Falta registrar los nombres
+                                            *</small>
                                     </div>
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label class="float-label" for="inputLastnames">APELLIDOS</label>
-                                    <input type="text" ng-model="lastnames" class="form-control" name="inputLastnames"
-                                        id="inputLastnames" aria-describedby="lastnamesHelp"
+                                    <input type="text" required ng-model="lastnames" class="form-control"
+                                        name="inputLastnames" id="inputLastnames" aria-describedby="lastnamesHelp"
                                         placeholder="escriba sus apellidos">
-                                    <div ng-show="lastErr" class="invalid-feedback">
-                                        <small id="lastnamesHelp" class="form-text">Falta registrar los apellidos
+                                    <div ng-show="lastErr">
+                                        <small id="lastnamesHelp" class="form-text">Falta registrar los
+                                            apellidos
                                             *</small>
                                     </div>
                                 </div>
@@ -330,10 +336,11 @@
                             <div class="form-row justify-content-around break">
                                 <div class="form-group col-md-6">
                                     <label class="float-label" for="inputEmail">EMAIL</label>
-                                    <input type="email" ng-model="email" class="form-control" name="inputEmail"
+                                    <input type="email" required ng-model="email" class="form-control" name="inputEmail"
                                         id="inputEmail" aria-describedby="emailHelp" placeholder="escriba su email">
-                                    <div ng-if="emailErr" class="invalid-feedback">
-                                        <small id="emailHelp" class="form-text">Falta registrar el email *</small>
+                                    <div ng-if="emailErr">
+                                        <small id="emailHelp" class="form-text">Falta registrar el email
+                                            *</small>
                                     </div>
                                 </div>
                                 <div class="form-group form-radio col-md-6">
@@ -352,26 +359,14 @@
                                 </div>
                             </div>
                             <div class="form-row justify-content-around break">
-                                <div class="form-group form-radio col-md-6">
-                                    <label class="float-label" for="inputAge">EDAD</label>
-                                    <input type="text" class="form-control" id="inputAge" placeholder="AAAA/MM/DD">
-                                    {{--  <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                                        <label class="btn btn-light active" ng-click="selectAge('18 - 25')">
-                                            <input type="radio" name="options" id="18-25"> 18 - 25
-                                        </label>
-                                        <label class="btn btn-light" ng-click="selectAge('24 - 34')">
-                                            <input type="radio" name="options" id="24-34"> 24 - 34
-                                        </label>
-                                        <label class="btn btn-light" ng-click="selectAge('35 - 40')">
-                                            <input type="radio" name="options" id="35-40" checked> 35 - 40
-                                        </label>
-                                        <label class="btn btn-light" ng-click="selectAge('41 - 45')">
-                                            <input type="radio" name="options" id="41-45"> 41 - 45
-                                        </label>
-                                        <label class="btn btn-light" ng-click="selectAge('46 +')">
-                                            <input type="radio" name="options" id="46+"> 46 +
-                                        </label>
-                                    </div>  --}}
+                                <div class="form-group col-md-6">
+                                    <label class="float-label" for="inputAge">FECHA DE NACIMIENTO</label>
+                                    <input type="text" required name="inputAge" ng-model="age" class="form-control"
+                                        id="inputAge" placeholder="AAAA/MM/DD">
+                                    <div ng-if="ageErr">
+                                        <small id="emailHelp" class="form-text">Falta registrar la edad
+                                            *</small>
+                                    </div>
                                 </div>
                                 <div class="form-group form-radio col-md-6">
                                     <label class="float-label-2">ZAPATILLAS</label>
@@ -393,7 +388,8 @@
                                     <label class="float-label-2">TEAM</label>
                                     <div class="btn-group btn-group-toggle" data-toggle="buttons">
                                         <label class="btn btn-light active" ng-click="selectTeam('ADIDAS RUNNERS')">
-                                            <input type="radio" name="options" id="team1" checked> ADIDAS RUNNERS
+                                            <input type="radio" name="options" id="team1" checked> ADIDAS
+                                            RUNNERS
                                         </label>
                                         <label class="btn btn-light" ng-click="selectTeam('OTRO')">
                                             <input type="radio" name="options" id="team2"> OTRO
@@ -441,21 +437,22 @@
                             <div class="form-row">
                                 <div class="form-group col-md-12">
                                     <div class="form-check">
-                                        <input id="terms" type="checkbox">
-                                        <label class="terms_conditions" for="terms">Acepto <a href="#">términos y
-                                                condiciones</a>.</label>
+                                        <input ng-model="accept" name="inputAccept" id="terms" type="checkbox">
+                                        <label class="terms_conditions" for="terms">Acepto <a href="#">términos
+                                                y condiciones</a>.</label>
                                         <span></span>
                                     </div>
                                     <div class="form-check">
                                         <input id="newsletter" type="checkbox">
-                                        <label for="newsletter">Quiero recibir noticias sobre productos y servicios de
+                                        <label for="newsletter">Quiero recibir noticias sobre productos y
+                                            servicios de
                                             adidas. <a href="#">¿Qué significa esto?</a></label>
                                         <span></span>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-12 submit">
-                                <div class="col-md-8 offset-md-2">
+                                <div class="col-md-6 offset-md-3">
                                     <a type="button" ng-click="verify(true)" href="#info"
                                         class="btn btn-dark btn-lg btn-block">INSCRIBIRME</a>
                                 </div>
@@ -464,7 +461,7 @@
                     </div>
                     <div class="col-lg-8 data-table" ng-if="dataCheck == true">
                         <div class="col-lg-12 information">
-                            <div class="col-lg-12 title title-data">
+                            <div id="info" class="col-lg-12 title title-data">
                                 <h1>Información registrada</h1>
                             </div>
                             <div class="col-lg-12 data">
@@ -497,7 +494,7 @@
 
                                         </div>
                                         <div class="col-sm-6 col-md-1 form-title">
-                                            Edad:
+                                            Fecha:
                                         </div>
                                         <div class="col-sm-6 col-md-5 form-data" ng-bind="age">
 
@@ -556,7 +553,7 @@
                             </div>
                             <div class="col-lg-8 d-flex align-items-center">
                                 <div>
-                                    <h1 class="success-title">Hola <p ng-bind="adidasForm.inputNames.$viewValue"></p>
+                                    <h1 class="success-title">Hola @{{ adidasForm.inputNames.$viewValue }}
                                     </h1>
                                     <p class="success-message">
                                         Pronto estaremos enviando más información al email registrado.
@@ -578,7 +575,7 @@
     <script src="<?= asset('angular-route.min.js') ?>"></script>
 
     <script>
-        var scroll = new SmoothScroll('a[href*="#"]');
+        var scroll = new SmoothScroll('a[href*="#"], [data-scroll]');
     </script>
 
     <script>
