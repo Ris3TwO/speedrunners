@@ -1054,9 +1054,9 @@ header.masthead .arrow {
         background-size: contain;
     }
     header.masthead .col-xl-3 .container {
-        -webkit-transform: translateY(280px);
-            -ms-transform: translateY(280px);
-                transform: translateY(280px);
+        -webkit-transform: translateY(242px);
+        -ms-transform: translateY(242px);
+        transform: translateY(242px);
         padding-left: 4rem;
         padding-right: 4rem;
     }
@@ -1408,6 +1408,14 @@ header.masthead .arrow {
             -webkit-transform: translateX(0px);
             transform: translateX(0px);
         }
+    }
+}
+
+@media only screen and (min-width: 360px) {
+    header.masthead .col-xl-3 .container {
+        -webkit-transform: translateY(280px);
+            -ms-transform: translateY(280px);
+                transform: translateY(280px);
     }
 }
 
