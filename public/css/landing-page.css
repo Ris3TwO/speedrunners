@@ -1256,6 +1256,10 @@ header.masthead .arrow {
         padding: 2em;
         margin-top: -3em;
     }
+    .form .terms .submit .col-md-6 {
+        padding-right: 0;
+        padding-left: 0;
+    }
     .form .container-success .logo-bottom {
         width: 100%;
         height: 109px;
@@ -1469,6 +1473,10 @@ header.masthead .arrow {
     .form .container .data .row.datatable .col-md-5,
     .form .container .data .row.datatable .col-md-11 {
         padding-left: 3rem;
+    }
+    .form .terms .submit .col-md-6 {
+        padding-right: initial;
+        padding-left: initial;
     }
     @-webkit-keyframes slide-left {
         0% {

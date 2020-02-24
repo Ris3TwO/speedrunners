@@ -1,4 +1,6 @@
-var app = angular.module("app", []);
+var app = angular.module("app", []).config(function($locationProvider) {
+    $locationProvider.hashPrefix('');
+});
 
 app.controller("controlador", function($scope, $http, $location) {
     var json = {};
@@ -53,10 +55,10 @@ app.controller("controlador", function($scope, $http, $location) {
     }
 
     $scope.sendData = function() {
-      if (!$scope.adidasForm.inputEmail.$viewValue) {
-          alert("Acepta los terminos y condiciones")
-      }
-        
+        if (!$scope.adidasForm.inputEmail.$viewValue) {
+            alert("Acepta los terminos y condiciones")
+        }
+
         var data = {
             names: $scope.adidasForm.inputNames.$viewValue,
             last_names: $scope.adidasForm.inputLastnames.$viewValue,
@@ -73,7 +75,7 @@ app.controller("controlador", function($scope, $http, $location) {
 
 
         $http.post("http://www.speedrunners.ml/api/v1/registration", JSON.stringify(data)).then((result) => {
-            console.log(result,"Resuto 72");
+            console.log(result, "Resuto 72");
             console.log("Aja");
             $scope.dataSend = true;
         }).catch((err) => {
@@ -81,7 +83,7 @@ app.controller("controlador", function($scope, $http, $location) {
             console.log(document.getElementById('bazinga').scrollIntoView(), "leonardo");
 
             console.log(a);
-           
+
             try {
                 if (a.data.errors.email) {
                     console.log("activo el error");
