@@ -361,10 +361,10 @@
                             <div class="form-row justify-content-around break">
                                 <div class="form-group col-md-6">
                                     <label class="float-label" for="inputAge">FECHA DE NACIMIENTO</label>
-                                    <input type="text" required name="inputAge" ng-model="age" ng-class="ageErr ? 'form-control error' : 'form-control'" class="form-control"
+                                    <input type="text" name="inputAge" maxlengh="10" angular-mask="0000/00/00" ng-model="age" ng-class="ageErr ? 'form-control error' : 'form-control'" class="form-control"
                                         id="inputAge" placeholder="AAAA/MM/DD">
                                     <div ng-if="ageErr">
-                                        <small id="emailHelp" class="form-text">Falta registrar la edad
+                                        <small id="emailHelp" class="form-text">Falta registrar la fecha de nacimiento
                                             *</small>
                                     </div>
                                 </div>
@@ -573,6 +573,8 @@
     <script src="<?= asset('angular.min.js') ?>"></script>
     <script src="<?= asset('app.js') ?>"></script>
     <script src="<?= asset('angular-route.min.js') ?>"></script>
+
+    <script src="<?= asset('vendor/mask/angular-simple-mask.js') ?>"></script>
 
     <script>
         var scroll = new SmoothScroll('a[href*="#"], [data-scroll]');

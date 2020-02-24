@@ -1,4 +1,4 @@
-var app = angular.module("app", []);
+var app = angular.module("app", ['angularMask']);
 
 app.controller("controlador", function($scope, $http, $location, $anchorScroll) {
     var json = {};
@@ -22,6 +22,10 @@ app.controller("controlador", function($scope, $http, $location, $anchorScroll) 
         $scope.dataCheck = value;
         console.log($scope.adidasForm.inputNames.$viewValue);
     }
+
+    $scope.field = {
+        inputAge: null,
+    };
 
     $scope.selectGender = function(value) {
         $scope.gender = value;
