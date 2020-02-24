@@ -1,3 +1,5 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+
 /*
  * Adidas Speed Runners 2020 - Landing Page v1.0.0
  * Copyright 2020 Ris3TwO
@@ -73,7 +75,8 @@ h6 {
 }
 
 .btn-light.focus {
-    box-shadow: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
 }
 
 .form-row-space {
@@ -87,8 +90,6 @@ h6 {
     text-transform: uppercase;
     height: calc(1.5em + .75rem + 10px);
     -webkit-transition: all .2s ease-in;
-    -moz-transition: all .2s ease-in;
-    -ms-transition: all .2s ease-in;
     -o-transition: all .2s ease-in;
     transition: all .2s ease-in;
 }
@@ -99,7 +100,8 @@ h6 {
     border-color: #101010;
     border-width: 2px;
     outline: 0;
-    box-shadow: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
 }
 
 .form-control.error {
@@ -126,7 +128,9 @@ h6 {
 }
 
 .form-group>.float-label-2 {
-    transform: translate(1rem, 0.6rem);
+    -webkit-transform: translate(1rem, 0.6rem);
+        -ms-transform: translate(1rem, 0.6rem);
+            transform: translate(1rem, 0.6rem);
 }
 
 .form-group small {
@@ -157,14 +161,20 @@ input[type="checkbox"] {
     width: 0;
     height: 0.2rem;
     position: absolute;
-    transform-origin: 0% 0%;
+    -webkit-transform-origin: 0% 0%;
+        -ms-transform-origin: 0% 0%;
+            transform-origin: 0% 0%;
 }
 
 .form-check {
     position: relative;
     height: 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .form-check input:checked~span {
@@ -175,15 +185,23 @@ input[type="checkbox"] {
 .form-check input:checked~span:before {
     width: 1rem;
     height: 0.15rem;
+    -webkit-transition: width 0.1s;
+    -o-transition: width 0.1s;
     transition: width 0.1s;
-    transition-delay: 0.3s;
+    -webkit-transition-delay: 0.3s;
+         -o-transition-delay: 0.3s;
+            transition-delay: 0.3s;
 }
 
 .form-check input:checked~span:after {
     width: 0.4rem;
     height: 0.15rem;
+    -webkit-transition: width 0.1s;
+    -o-transition: width 0.1s;
     transition: width 0.1s;
-    transition-delay: 0.2s;
+    -webkit-transition-delay: 0.2s;
+         -o-transition-delay: 0.2s;
+            transition-delay: 0.2s;
 }
 
 .form-check input:disabled~span {
@@ -220,19 +238,26 @@ input[type="checkbox"] {
     height: 1.2rem;
     border: 2px solid #101010;
     position: absolute;
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
     transition: all 0.2s;
     z-index: 1;
-    box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+            box-sizing: content-box;
 }
 
 .form-check span:before {
-    transform: rotate(-55deg);
+    -webkit-transform: rotate(-55deg);
+        -ms-transform: rotate(-55deg);
+            transform: rotate(-55deg);
     top: 1rem;
     left: 0.37rem;
 }
 
 .form-check span:after {
-    transform: rotate(35deg);
+    -webkit-transform: rotate(35deg);
+        -ms-transform: rotate(35deg);
+            transform: rotate(35deg);
     bottom: 0.35rem;
     left: 0.2rem;
 }
@@ -308,7 +333,9 @@ header.masthead .col-xl-3 .container .btn-dark {
 header.masthead .col-xl-7 {
     padding-top: 4rem;
     padding-right: 0;
-    transform: none;
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
 }
 
 header.masthead .video-thumbnail {
@@ -371,7 +398,9 @@ header.masthead .arrow {
     height: 50px;
     position: absolute;
     z-index: 200;
-    transform: translate(0, 50%);
+    -webkit-transform: translate(0, 50%);
+        -ms-transform: translate(0, 50%);
+            transform: translate(0, 50%);
     cursor: pointer;
 }
 
@@ -443,11 +472,15 @@ header.masthead .arrow {
 }
 
 .description .col-description.col-description-2 {
-    transform: translate(0, -220px);
+    -webkit-transform: translate(0, -220px);
+        -ms-transform: translate(0, -220px);
+            transform: translate(0, -220px);
 }
 
 .description .col-description.col-description-3 {
-    transform: translate(0, -420px);
+    -webkit-transform: translate(0, -420px);
+        -ms-transform: translate(0, -420px);
+            transform: translate(0, -420px);
 }
 
 .description .description-text {
@@ -528,12 +561,16 @@ header.masthead .arrow {
 .description .description-img .objetive-2 {
     position: absolute;
     top: 0;
+    -webkit-transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    -o-transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 2;
 }
 
 .description .description-img .objetive-3 {
     position: absolute;
+    -webkit-transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    -o-transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -600,9 +637,15 @@ header.masthead .arrow {
 
 .map .map-image .timeline {
     list-style-type: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     vertical-align: middle;
     border-top: 3px solid #f26b32;
     padding-left: 3em;
@@ -610,6 +653,8 @@ header.masthead .arrow {
 }
 
 .map .map-image .li {
+    -webkit-transition: all 200ms ease-in;
+    -o-transition: all 200ms ease-in;
     transition: all 200ms ease-in;
 }
 
@@ -619,8 +664,12 @@ header.masthead .arrow {
 
 .map .map-image .status {
     padding: 0px 6em;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     position: relative;
+    -webkit-transition: all 200ms ease-in;
+    -o-transition: all 200ms ease-in;
     transition: all 200ms ease-in;
 }
 
@@ -640,7 +689,9 @@ header.masthead .arrow {
 }
 
 .map .map-image .info.space {
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 
 .map .map-image .info .site {
@@ -676,12 +727,16 @@ header.masthead .arrow {
     position: absolute;
     top: -16px;
     left: 45%;
+    -webkit-transition: all 200ms ease-in;
+    -o-transition: all 200ms ease-in;
     transition: all 200ms ease-in;
 }
 
 .map .map-image .li.complete .status:before {
     background-color: #fff;
     border: 0.2rem solid #f26b32;
+    -webkit-transition: all 200ms ease-in;
+    -o-transition: all 200ms ease-in;
     transition: all 200ms ease-in;
 }
 
@@ -695,12 +750,16 @@ header.masthead .arrow {
         display: block;
     }
     .map .map-image .li {
+        -webkit-transition: all 200ms ease-in;
+        -o-transition: all 200ms ease-in;
         transition: all 200ms ease-in;
         display: inline;
     }
     .map .map-image .status:before {
         left: -8%;
         top: 30%;
+        -webkit-transition: all 200ms ease-in;
+        -o-transition: all 200ms ease-in;
         transition: all 200ms ease-in;
     }
 }
@@ -766,12 +825,16 @@ header.masthead .arrow {
 }
 
 .form .container .inputs .btn-group {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     border: solid 1px #101010;
 }
 
 .form .container .inputs .btn-group .btn {
-    flex: 1;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
     font-size: 16px;
     font-weight: normal;
     font-stretch: normal;
@@ -964,7 +1027,9 @@ header.masthead .arrow {
     }
     header.masthead .arrow {
         right: .2rem;
-        transform: translate(0, 80%);
+        -webkit-transform: translate(0, 80%);
+            -ms-transform: translate(0, 80%);
+                transform: translate(0, 80%);
     }
     header.masthead .col-xl-3 {
         padding-top: 3rem;
@@ -982,7 +1047,9 @@ header.masthead .arrow {
         background-size: contain;
     }
     header.masthead .col-xl-3 .container {
-        transform: translateY(280px);
+        -webkit-transform: translateY(280px);
+            -ms-transform: translateY(280px);
+                transform: translateY(280px);
         padding-left: 4rem;
         padding-right: 4rem;
     }
@@ -993,7 +1060,9 @@ header.masthead .arrow {
         padding-top: 4rem;
         padding-right: 0;
         padding-left: 0;
-        transform: translateY(-80px);
+        -webkit-transform: translateY(-80px);
+            -ms-transform: translateY(-80px);
+                transform: translateY(-80px);
     }
     header.masthead .video-thumbnail {
         border: none;
@@ -1051,7 +1120,9 @@ header.masthead .arrow {
         padding-top: 1rem;
     }
     .description .col-description.col-description-2 {
-        transform: none;
+        -webkit-transform: none;
+            -ms-transform: none;
+                transform: none;
     }
     .description .description-img .k {
         max-width: 136px;
@@ -1069,7 +1140,9 @@ header.masthead .arrow {
         font-size: 22px;
     }
     .description .col-description.col-description-3 {
-        transform: none;
+        -webkit-transform: none;
+            -ms-transform: none;
+                transform: none;
     }
     .description .description-img.objetives {
         padding-top: 9rem;
@@ -1079,7 +1152,8 @@ header.masthead .arrow {
         left: initial;
         margin: auto;
         max-height: 178px;
-        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
         position: relative;
     }
     .description .description-img .objetive-1 img {
@@ -1223,7 +1297,9 @@ header.masthead .arrow {
         margin-top: -2rem;
     }
     .form .form-group>.float-label-2 {
-        transform: translate(1.2rem, 0.6rem);
+        -webkit-transform: translate(1.2rem, 0.6rem);
+            -ms-transform: translate(1.2rem, 0.6rem);
+                transform: translate(1.2rem, 0.6rem);
     }
     .form .container .terms {
         margin-top: -50px;
@@ -1367,7 +1443,9 @@ header.masthead .arrow {
         margin-right: 0;
     }
     header.masthead .col-xl-3 .container {
-        transform: translateY(510px);
+        -webkit-transform: translateY(510px);
+            -ms-transform: translateY(510px);
+                transform: translateY(510px);
     }
     header.masthead .col-xl-3 .container .btn-dark {
         margin-top: 4.5rem;
@@ -1375,7 +1453,9 @@ header.masthead .arrow {
     }
     header.masthead .arrow {
         right: 1.2rem;
-        transform: translate(0, 50%);
+        -webkit-transform: translate(0, 50%);
+            -ms-transform: translate(0, 50%);
+                transform: translate(0, 50%);
     }
     .description::before {
         content: "LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA/ / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA/ / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA/ / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA/ / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA/ / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA/ / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA/ / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA/ / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA/ / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD";
@@ -1599,7 +1679,9 @@ header.masthead .arrow {
         padding-top: 0;
     }
     header.masthead .col-xl-3 .container {
-        transform: none;
+        -webkit-transform: none;
+            -ms-transform: none;
+                transform: none;
         padding: 0;
         width: 286px;
     }
@@ -1610,14 +1692,17 @@ header.masthead .arrow {
         padding-top: 0;
         padding-right: 0;
         margin-top: -2rem;
-        transform: none;
+        -webkit-transform: none;
+            -ms-transform: none;
+                transform: none;
     }
     header.masthead .video-thumbnail {
         height: 424px;
         max-width: 100%;
         border: solid 5px #fafafa;
         border-right: none;
-        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
     }
     header.masthead .video-thumbnail iframe,
     header.masthead .video-thumbnail object,
@@ -1628,7 +1713,9 @@ header.masthead .arrow {
     }
     header.masthead .arrow {
         right: 4.7rem;
-        transform: translate(0, 50%);
+        -webkit-transform: translate(0, 50%);
+            -ms-transform: translate(0, 50%);
+                transform: translate(0, 50%);
     }
     /* Description */
     .description {
@@ -1671,7 +1758,9 @@ header.masthead .arrow {
         padding-left: 3em;
     }
     .description .col-description.col-description-2 {
-        transform: translate(-50px, -180px);
+        -webkit-transform: translate(-50px, -180px);
+            -ms-transform: translate(-50px, -180px);
+                transform: translate(-50px, -180px);
     }
     .description .col-description.col-description-3 {
         padding-top: 10rem;
@@ -1690,7 +1779,9 @@ header.masthead .arrow {
         height: auto
     }
     .description .container-fluid .last-description {
-        transform: translateY(-200px);
+        -webkit-transform: translateY(-200px);
+            -ms-transform: translateY(-200px);
+                transform: translateY(-200px);
         margin-bottom: -172px;
     }
     .description .description-img.objetives {
@@ -1710,14 +1801,18 @@ header.masthead .arrow {
         right: 0;
         margin-right: 30px;
         top: 0;
-        transform: translate(80px, -224px);
+        -webkit-transform: translate(80px, -224px);
+            -ms-transform: translate(80px, -224px);
+                transform: translate(80px, -224px);
     }
     .description .description-img .objetive-3 {
         max-width: 212px;
         max-height: 355px;
         top: 0;
         left: 10px;
-        transform: translate(-25px, -276px);
+        -webkit-transform: translate(-25px, -276px);
+            -ms-transform: translate(-25px, -276px);
+                transform: translate(-25px, -276px);
     }
     .map {
         padding-top: 2.5rem;
@@ -1835,7 +1930,9 @@ header.masthead .arrow {
         padding-left: 5rem;
     }
     .description .col-description.col-description-2 {
-        transform: translate(0, -180px);
+        -webkit-transform: translate(0, -180px);
+            -ms-transform: translate(0, -180px);
+                transform: translate(0, -180px);
     }
     .description .description-img.objetives {
         padding-top: 1rem;
@@ -1847,10 +1944,14 @@ header.masthead .arrow {
     .description .description-img .objetive-2 {
         max-width: 356px;
         max-height: 212px;
-        transform: translate(68px, -232px);
+        -webkit-transform: translate(68px, -232px);
+            -ms-transform: translate(68px, -232px);
+                transform: translate(68px, -232px);
     }
     .description .description-img .objetive-3 {
-        transform: translate(-54px, -343px);
+        -webkit-transform: translate(-54px, -343px);
+            -ms-transform: translate(-54px, -343px);
+                transform: translate(-54px, -343px);
         max-width: 295px;
         max-height: 494px;
     }

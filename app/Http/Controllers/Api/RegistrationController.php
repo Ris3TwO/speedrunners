@@ -65,7 +65,7 @@ class RegistrationController extends ApiController
             ];
 
             // Inyect data
-            // $this->createSubscription($data);
+            $this->createSubscription($data);
 
             return $this->successResponse(trans('messages.successful_registration'), 200);
         } catch (QueryException $ex) {
