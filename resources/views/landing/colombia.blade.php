@@ -46,7 +46,7 @@
                     <div class="logo img-fluid slide-left"></div>
                     <div class="row justify-content-center">
                         <div class="container align-middle">
-                            <a data-scroll href="{{ url()->current() }}#bazinga" class="btn btn-block btn-dark">INSCRIBIRME</a>
+                            <a data-scroll class="btn btn-block btn-dark">INSCRIBIRME</a>
                         </div>
                     </div>
                 </div>
@@ -575,7 +575,7 @@
     <script src="<?= asset('angular-route.min.js') ?>"></script>
 
     <script>
-        var scroll = new SmoothScroll('a[href*="#"]');
+        var scroll = new SmoothScroll('a[href*="#"], [data-scroll]');
     </script>
 
     <script>
