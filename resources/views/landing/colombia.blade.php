@@ -494,7 +494,7 @@
 
                                         </div>
                                         <div class="col-sm-6 col-md-1 form-title">
-                                            Fecha de Nacimiento:
+                                            Fecha:
                                         </div>
                                         <div class="col-sm-6 col-md-5 form-data" ng-bind="age">
 
