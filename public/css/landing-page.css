@@ -1059,8 +1059,8 @@ header.masthead .arrow {
         -webkit-transform: translateY(242px);
         -ms-transform: translateY(242px);
         transform: translateY(242px);
-        padding-left: 4rem;
-        padding-right: 4rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
     }
     header.masthead .col-xl-3 .container .btn-dark {
         margin-top: 1rem;
