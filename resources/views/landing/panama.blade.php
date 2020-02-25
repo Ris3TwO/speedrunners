@@ -396,7 +396,7 @@
                                 <div id="check2" class="form-group form-radio col-md-6 mt-auto col-inactive">
                                     <label class="float-label" for="inputTeam">TEAM</label>
                                     <input type="text" class="form-control" id="inputTeam"
-                                        placeholder="escriba a que equipo pertenece">
+                                        placeholder="escriba a qué equipo pertenece">
                                 </div>
                                 <div class="form-group form-radio col-md-6">
                                     <label class="float-label-2">DISTANCIA</label>
