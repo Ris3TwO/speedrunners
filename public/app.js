@@ -145,7 +145,7 @@ app.controller("controlador", function($scope, $http, $location, smoothScroll) {
         console.log(data);
 
 
-        $http.post("http://www.speedrunners.ml/api/v1/registration", JSON.stringify(data)).then((result) => {
+        $http.post("https://speedrunnersadidas.com/api/v1/registration", JSON.stringify(data)).then((result) => {
             console.log(result, "Resuto 72");
             console.log("Aja");
             $scope.dataSend = true;
