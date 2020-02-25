@@ -601,6 +601,7 @@
             y.appendChild(i);
             y.appendChild(c);
             y.onclick = function() {
+                console.log('Work well!');
                 var t = document.createElement("iframe");
                 t.setAttribute("src", "https://www.youtube.com/embed/" + this.id + param(this));
                 t.style.width = this.style.width;
