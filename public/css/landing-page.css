@@ -2178,8 +2178,8 @@ header.masthead .arrow {
         padding-left: 6rem;
     }
     .form {
-        padding-top: 8rem;
-        padding-bottom: 8rem;
+        padding-top: 4rem;
+        padding-bottom: 5rem;
     }
     .form .form-row-space {
         padding-bottom: 1rem;
@@ -2214,7 +2214,7 @@ header.masthead .arrow {
     }
     .form .container-success {
         padding: 6em;
-        padding-top: 2em;
+        padding-top: 5em;
         margin-top: 0;
     }
     .form .container-success .logo-bottom {
