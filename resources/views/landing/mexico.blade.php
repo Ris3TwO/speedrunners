@@ -56,7 +56,7 @@
             </div>
         </div>
         <div class="d-flex flex-row-reverse">
-            <a href="#" scroll-to="bazinga" duration="1800">
+            <a href="#" scroll-to="descrip" duration="1800">
                 <div class="arrow ml-auto"></div>
             </a>
         </div>

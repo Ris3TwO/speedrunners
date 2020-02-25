@@ -56,7 +56,7 @@
             </div>
         </div>
         <div class="d-flex flex-row-reverse">
-            <a href="#" scroll-to="bazinga" duration="1800">
+            <a href="#" scroll-to="descrip" duration="1800">
                 <div class="arrow ml-auto"></div>
             </a>
         </div>
@@ -601,7 +601,6 @@
             y.appendChild(i);
             y.appendChild(c);
             y.onclick = function() {
-                console.log('Work well!');
                 var t = document.createElement("iframe");
                 t.setAttribute("src", "https://www.youtube.com/embed/" + this.id + param(this));
                 t.style.width = this.style.width;
