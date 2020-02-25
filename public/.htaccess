@@ -1,4 +1,4 @@
-Header edit Set-Cookie ^(.*)$ $1;HttpOnly;Secure;SameSite=strict
+Header edit Set-Cookie ^(.*)$ $1;HttpOnly;Secure;SameSite=None
 
 <IfModule mod_rewrite.c>
     <IfModule mod_negotiation.c>
