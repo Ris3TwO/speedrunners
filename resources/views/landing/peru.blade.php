@@ -325,8 +325,7 @@
                                         name="inputLastnames" id="inputLastnames" aria-describedby="lastnamesHelp"
                                         placeholder="escriba sus apellidos">
                                     <div ng-show="lastErr">
-                                        <small id="lastnamesHelp" class="form-text">Falta registrar los
-                                            apellidos
+                                        <small id="lastnamesHelp" class="form-text">Falta registrar los apellidos
                                             *</small>
                                     </div>
                                 </div>
@@ -337,7 +336,7 @@
                                     <input type="email" required ng-model="email" ng-class="emailErr ? 'form-control error' : 'form-control'" class="form-control" name="inputEmail"
                                         id="inputEmail" aria-describedby="emailHelp" placeholder="escriba su email">
                                     <div ng-show="emailErr">
-                                        <small id="emailHelp" class="form-text">Falta registrar el email
+                                        <small id="emailHelp" class="form-text">El email es inválido
                                             *</small>
                                     </div>
                                 </div>
@@ -362,7 +361,7 @@
                                     <input type="text" name="inputAge" maxlengh="10" angular-mask="0000/00/00" ng-model="age" ng-class="ageErr ? 'form-control error' : 'form-control'" class="form-control"
                                         id="inputAge" placeholder="AAAA/MM/DD">
                                     <div ng-show="ageErr">
-                                        <small id="emailHelp" class="form-text">Falta registrar la fecha de nacimiento
+                                        <small id="emailHelp" class="form-text">La fecha de nacimiento es inválida
                                             *</small>
                                     </div>
                                 </div>
@@ -494,8 +493,8 @@
                                         <div class="col-sm-6 col-md-1 form-title">
                                             Fecha:
                                         </div>
-                                        <div class="col-sm-6 col-md-5 form-data" ng-bind="age">
-
+                                        <div class="col-sm-6 col-md-5 form-data">
+                                            @{{ ageFull }}
                                         </div>
                                         <div class="col-sm-6 col-md-1 form-title">
                                             Zapatillas:
@@ -551,7 +550,7 @@
                             </div>
                             <div class="col-lg-8 d-flex align-items-center">
                                 <div>
-                                    <h1 class="success-title">Hola @{{ adidasForm.inputNames.$viewValue }}
+                                    <h1 class="success-title">Hola @{{ namesFull }}
                                     </h1>
                                     <p class="success-message">
                                         Pronto estaremos enviando más información al email registrado.

@@ -12,6 +12,8 @@ app.controller("controlador", function($scope, $http, $location) {
     $scope.distance = "10 K";
     $scope.team = "ADIDAS RUNNERS";
     $scope.time = "30 MIN";
+    $scope.namesFull = "";
+    $scope.ageFull = "";
     $scope.emailErr = false;
     $scope.namesErr = false;
     $scope.emailrErr = false;
@@ -19,13 +21,16 @@ app.controller("controlador", function($scope, $http, $location) {
     $scope.lastErr = false;
     $scope.cityErr = false;
     $scope.verify = function(value) {
-        if (!$scope.adidasForm.inputNames.$error.required && !$scope.adidasForm.inputLastnames.$error.required && $scope.adidasForm.inputAge.$viewValue.length < 9 && !$scope.adidasForm.inputEmail.$error.required) {
-            console.log("Error");
+        console.log($scope.adidasForm.inputAge.$viewValue)
+        if (!$scope.adidasForm.inputNames.$error.required && !$scope.adidasForm.inputLastnames.$error.required && $scope.adidasForm.inputAge.$viewValue != "" || $scope.adidasForm.inputAge.$viewValue.length < 9 && !$scope.adidasForm.inputEmail.$error.required) {
+            
+            console.log($scope.ageFull)
             $scope.dataCheck = true;
         } else {
             if ($scope.adidasForm.inputNames.$error.required) {
                 $scope.namesErr = true
             }else{
+                $scope.namesFull = $scope.adidasForm.inputNames.$viewValue
                 $scope.namesErr = false
             }
             if ($scope.adidasForm.inputEmail.$error.required) {
@@ -34,11 +39,40 @@ app.controller("controlador", function($scope, $http, $location) {
                 $scope.emailErr = false
             }
             
-                if ($scope.adidasForm.inputAge.$viewValue.length < 9) {
+            if ($scope.adidasForm.inputAge.$viewValue == "" || $scope.adidasForm.inputAge.$viewValue.length < 9) {
+                $scope.ageErr = true
+            }else{
+                var year = $scope.adidasForm.inputAge.$viewValue.substr(0, 4);
+                var month = $scope.adidasForm.inputAge.$viewValue.substr(5, 2);
+                var day = $scope.adidasForm.inputAge.$viewValue.substr(8, 2);
+                var maxDay = "";
+                var month31 = ["01", "03", "05", "07", "08", "10", "12"];
+                var month28 = "02";
+
+                if (month31.includes(month)) {
+                    maxDay = "31"
+                }else if (month == "02"){
+                    maxDay = "28"
+                }else {
+                    maxDay = "30"
+                }
+                $scope.ageFull = year+"/"+month+"/"+day
+                console.log("Dia: "+day+" mes: "+month+" año: "+year)
+
+                if (year > "2007" || year < "1940") {
                     $scope.ageErr = true
+                    console.log("hay problema de año")
+                }else if (month < "01" || month > "12"){
+                    $scope.ageErr = true
+                    console.log(maxDay)
+                    console.log("hay problema de mes")
+                }else if (day > maxDay || day < "01"){
+                    $scope.ageErr = true
+                    console.log("hay problema de día")
                 }else{
                     $scope.ageErr = false
                 }
+            }
             
             if ($scope.adidasForm.inputLastnames.$error.required) {
                 $scope.lastErr = true
@@ -297,8 +331,6 @@ app.controller("controlador", function($scope, $http, $location) {
         document.getElementById("statu4").classList.add("tracking-in-expand4");
         document.getElementById("final1").classList.add("tracking-in-expand4");
         document.getElementById("final2").classList.add("tracking-in-expand4");
-        document.getElementById("final3").classList.add("tracking-in-expand4");
-        document.getElementById("final4").classList.add("tracking-in-expand4");
 
         console.log("Test");
     }
