@@ -1,6 +1,6 @@
-var app = angular.module("app", []);
+var app = angular.module("app", ['angularMask', 'smoothScroll']);
 
-app.controller("controlador", function($scope, $http, $location, $anchorScroll) {
+app.controller("controlador", function($scope, $http, $location) {
     var json = {};
     var height = screen.height;
     var width = screen.width;
@@ -33,15 +33,13 @@ app.controller("controlador", function($scope, $http, $location, $anchorScroll) 
             }else{
                 $scope.emailErr = false
             }
-            try {  
+            
                 if ($scope.adidasForm.inputAge.$viewValue.length < 9) {
                     $scope.ageErr = true
                 }else{
                     $scope.ageErr = false
                 }
-            } catch (error) {
-                
-            }
+            
             if ($scope.adidasForm.inputLastnames.$error.required) {
                 $scope.lastErr = true
             }else{

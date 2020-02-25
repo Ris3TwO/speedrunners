@@ -18,8 +18,6 @@
     <!-- Custom styles for this template -->
     <link href="{{ asset('css/landing-page.css') }}" rel="stylesheet">
 
-    <script src="{{ asset('vendor/smooth-scroll.js') }}"></script>
-
     <style>
         .filter {
             -webkit-filter: grayscale(100%);
@@ -46,7 +44,7 @@
                     <div class="logo img-fluid slide-left"></div>
                     <div class="row justify-content-center">
                         <div class="container align-middle">
-                            <a data-scroll class="btn btn-block btn-dark">INSCRIBIRME</a>
+                            <a href="#" scroll-to="bazinga" duration="1800" class="btn btn-block btn-dark">INSCRIBIRME</a>
                         </div>
                     </div>
                 </div>
@@ -58,7 +56,7 @@
             </div>
         </div>
         <div class="d-flex flex-row-reverse">
-            <a data-scroll href="{{ url()->current() }}#bazinga">
+            <a href="#" scroll-to="bazinga" duration="1800">
                 <div class="arrow ml-auto"></div>
             </a>
         </div>
@@ -302,12 +300,12 @@
     </section>
 
     <!-- Form -->
-    <section class="form">
+    <section class="form" id="bazinga">
         <form name="adidasForm">
             <div class="container container-incription" ng-if="!dataSend">
                 <div class="row justify-content-center">
                     <div class="col-lg-8 title">
-                        <h1 id="bazinga">Inscripción</h1>
+                        <h1>Inscripción</h1>
                     </div>
                     <div class="row justify-content-center">
                         <div class="col-lg-9 inputs">
@@ -453,7 +451,7 @@
                             </div>
                             <div class="col-lg-12 submit">
                                 <div class="col-md-6 offset-md-3">
-                                    <a type="button" ng-click="verify(true)" href="#info"
+                                    <a type="button" ng-click="verify(true)" href="#" scroll-to="info" duration="1800"
                                         class="btn btn-dark btn-lg btn-block">INSCRIBIRME</a>
                                 </div>
                             </div>
@@ -528,7 +526,7 @@
                                 <div class="container">
                                     <div class="row justify-content-center">
                                         <div class="col-sm-3 col-md-5">
-                                            <button type="button" href="#bazinga" ng-click="verify(false)"
+                                            <button type="button" href="#" scroll-to="bazinga" duration="1800" ng-click="verify(false)"
                                                 class="btn btn-light btn-lg btn-block">Modificar</button>
                                         </div>
                                         <div class="col-sm-3 col-md-5">
@@ -575,10 +573,7 @@
     <script src="<?= asset('angular-route.min.js') ?>"></script>
 
     <script src="<?= asset('vendor/mask/angular-simple-mask.js') ?>"></script>
-
-    <script>
-        var scroll = new SmoothScroll('a[href*="#"], [data-scroll]');
-    </script>
+    <script src="<?= asset('vendor/angular-smooth-scroll.js') ?>"></script>
 
     <script>
         var i, c, y, v, s, n;
