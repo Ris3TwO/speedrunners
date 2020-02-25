@@ -1119,15 +1119,12 @@ header.masthead .arrow {
         max-width: 100%;
     }
     .description .description-text {
-        padding-left: 2rem;
-        padding-right: 2rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
         padding-bottom: 1rem;
     }
     .description .description-text h1 {
         font-size: 30px;
-    }
-    .description .description-text p {
-        font-size: 18px;
     }
     .description .col-description {
         padding: 0;
