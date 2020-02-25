@@ -2210,6 +2210,7 @@ header.masthead .arrow {
     .form .container-success {
         padding: 6em;
         padding-top: 2em;
+        margin-top: 0;
     }
     .form .container-success .logo-bottom {
         width: 100%;

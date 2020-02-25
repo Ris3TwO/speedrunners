@@ -1,6 +1,6 @@
 var app = angular.module("app", ['angularMask', 'smoothScroll']);
 
-app.controller("controlador", function($scope, $http, $location) {
+app.controller("controlador", function($scope, $http, $location, smoothScroll) {
     var json = {};
     var height = screen.height;
     var width = screen.width;
@@ -20,12 +20,20 @@ app.controller("controlador", function($scope, $http, $location) {
     $scope.ageErr = false;
     $scope.lastErr = false;
     $scope.cityErr = false;
-    $scope.verify = function(value) {
-        console.log($scope.adidasForm.inputAge.$viewValue)
+    $scope.verify = function (value) {
         if (!$scope.adidasForm.inputNames.$error.required && !$scope.adidasForm.inputLastnames.$error.required && $scope.adidasForm.inputAge.$viewValue != "" || $scope.adidasForm.inputAge.$viewValue.length < 9 && !$scope.adidasForm.inputEmail.$error.required) {
             
+            var year = $scope.adidasForm.inputAge.$viewValue.substr(0, 4);
+            var month = $scope.adidasForm.inputAge.$viewValue.substr(5, 2);
+            var day = $scope.adidasForm.inputAge.$viewValue.substr(8, 2);
+            $scope.ageFull = year+"/"+month+"/"+day
+            $scope.namesFull = $scope.adidasForm.inputNames.$viewValue;
+
             console.log($scope.ageFull)
+            console.log($scope.namesFull)
             $scope.dataCheck = true;
+
+            smoothScroll(document.getElementById('info'));
         } else {
             if ($scope.adidasForm.inputNames.$error.required) {
                 $scope.namesErr = true
@@ -56,7 +64,6 @@ app.controller("controlador", function($scope, $http, $location) {
                 }else {
                     maxDay = "30"
                 }
-                $scope.ageFull = year+"/"+month+"/"+day
                 console.log("Dia: "+day+" mes: "+month+" año: "+year)
 
                 if (year > "2007" || year < "1940") {
@@ -79,7 +86,9 @@ app.controller("controlador", function($scope, $http, $location) {
             }else{
                 $scope.lastErr = false
             }
-            document.getElementById('bazinga').scrollIntoView()
+            // var element = document.getElementById('info');
+            // smoothScroll(element);
+            // document.getElementById('bazinga').scrollIntoView()
         }
     }
 
@@ -140,6 +149,7 @@ app.controller("controlador", function($scope, $http, $location) {
             console.log(result, "Resuto 72");
             console.log("Aja");
             $scope.dataSend = true;
+            smoothScroll(document.getElementById('bazinga'));
         }).catch((err) => {
             let a = err;
             console.log(document.getElementById('bazinga').scrollIntoView(), "leonardo");
@@ -152,19 +162,6 @@ app.controller("controlador", function($scope, $http, $location) {
                 }
             } catch (error) {
 
-            }
-
-            if ($scope.adidasForm.inputNames.$error.required) {
-                $scope.namesErr = true
-            }
-            if ($scope.adidasForm.inputEmail.$error.required) {
-                $scope.emailrErr = true
-            }
-            if ($scope.adidasForm.inputAge.$error) {
-                $scope.ageErr = true
-            }
-            if ($scope.adidasForm.inputLastnames.$error.required) {
-                $scope.lastErr = true
             }
 
             console.log($scope.adidasForm);
@@ -349,4 +346,4 @@ app.controller("controlador", function($scope, $http, $location) {
         }
     }
 
-})
+});

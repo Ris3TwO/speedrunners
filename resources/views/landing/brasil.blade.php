@@ -300,7 +300,7 @@
     </section>
 
     <!-- Form -->
-    <section class="form" id="bazinga">
+    <section class="form" id="bazinga" smooth-scroll scroll-if="@{{verify == false}}">
         <form name="adidasForm">
             <div class="container container-incription" ng-if="!dataSend">
                 <div class="row justify-content-center">
@@ -450,15 +450,16 @@
                             </div>
                             <div class="col-lg-12 submit">
                                 <div class="col-md-6 offset-md-3">
-                                    <a type="button" ng-click="verify(true)" href="#" scroll-to="info" duration="1800"
+                                    <a type="button" ng-click="verify(true)"
                                         class="btn btn-dark btn-lg btn-block">INSCRIBIRME</a>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    
                     <div class="col-lg-8 data-table" ng-if="dataCheck == true">
                         <div class="col-lg-12 information">
-                            <div id="info" class="col-lg-12 title title-data">
+                            <div class="col-lg-12 title title-data">
                                 <h1>Información registrada</h1>
                             </div>
                             <div class="col-lg-12 data">
@@ -538,7 +539,7 @@
                             </div>
                         </div>
                     </div>
-
+                    <div id="info"></div>
                 </div>
             </div>
             <div class="container container-success" ng-if="dataSend">

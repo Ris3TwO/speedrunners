@@ -58,8 +58,9 @@ class RegistrationController extends ApiController
 
             $data = [
                 'firstName' => $request->names, 
-                'lastname' => $request->last_names, 
+                'lastName' => $request->last_names, 
                 'gender' => $gender, 
+                'email' => $request->email,
                 'countryOfSite' => substr($url_parts, 1),
                 'dateOfBirth' => $request->age,
             ];
