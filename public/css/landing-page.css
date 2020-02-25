@@ -1166,6 +1166,7 @@ header.masthead .arrow {
         left: initial;
         margin: auto;
         max-height: 178px;
+        max-width: 284px;
         -webkit-box-sizing: border-box;
                 box-sizing: border-box;
         position: relative;
@@ -1175,10 +1176,10 @@ header.masthead .arrow {
         display: block;
     }
     .description .description-img .objetive-2 {
-        max-width: 193px;
+        max-width: 178px;
         max-height: 115px;
         right: 0;
-        margin-right: 30px;
+        margin-right: 7px;
         top: 50px;
     }
     .description .description-img .objetive-2 img {
@@ -1186,10 +1187,10 @@ header.masthead .arrow {
         display: block;
     }
     .description .description-img .objetive-3 {
-        max-width: 113px;
-        max-height: 190px;
+        max-width: 120px;
+        max-height: 198px;
         top: 24px;
-        left: 26px;
+        left: 7px;
     }
     .description .description-img .objetive-3 img {
         max-width: 100%;
@@ -1519,6 +1520,9 @@ header.masthead .arrow {
     .description::before {
         content: "LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA/ / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA/ / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA/ / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA/ / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN";
         font-size: 30px;
+    }
+    .description .description-img .objetive-2 {
+        margin-right: 12px;
     }
 }
 
