@@ -1086,7 +1086,7 @@ header.masthead .arrow {
     header.masthead .video-thumbnail embed {
         max-width: 100%;
         display: block;
-        height: inherit;
+        height: 194px;
     }
     /* Description */
     .description::before {
