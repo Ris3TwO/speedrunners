@@ -264,18 +264,18 @@ app.controller("controlador", function($scope, $http, $location) {
         obj2.style.display = "none"
     }
     $scope.animacion = function() {
-        document.getElementById("timeline").classList.add("slidelerlu");
         document.getElementById("statuc").classList.add("tracking-in-expand");
         document.getElementById("statud").classList.add("tracking-in-expand");
-        document.getElementById("statuf").classList.add("tracking-in-expand");
+        document.getElementById("statuf").classList.add("tracking-in-expand2");
         document.getElementById("statug").classList.add("tracking-in-expand2");
         document.getElementById("statuh").classList.add("tracking-in-expand2");
+        document.getElementById("timeline").classList.add("slidelerlu");
         /*
                 document.getElementById("statu4").classList.add("tracking-in-expand4");*/
-        document.getElementById("statu1").classList.add("tracking-in-expand");
+        document.getElementById("statu1").classList.add("tracking-in-expand3");
         document.getElementById("statu2").classList.add("tracking-in-expand3");
         document.getElementById("statu3").classList.add("tracking-in-expand3");
-        document.getElementById("statu4").classList.add("tracking-in-expand");
+        document.getElementById("statu4").classList.add("tracking-in-expand4");
         document.getElementById("final1").classList.add("tracking-in-expand4");
         document.getElementById("final2").classList.add("tracking-in-expand4");
         document.getElementById("final3").classList.add("tracking-in-expand4");

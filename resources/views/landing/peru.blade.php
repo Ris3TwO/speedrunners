@@ -286,10 +286,10 @@
                                 <div id="statu4" class="status status-last">
                                     <h1 id="final1">Kilometros</h1>
                                 </div>
-                                <div class="info space">
-                                    <p id="final2" class="d-inline px-3">10k</p>
-                                    <p id="final3" class="d-inline px-3">21k</p>
-                                    <p id="final4" class="d-inline px-3">42k</p>
+                                <div class="info space" id="final2">
+                                    <p class="d-inline px-3">10k</p>
+                                    <p class="d-inline px-3">21k</p>
+                                    <p class="d-inline px-3">42k</p>
                                 </div>
                             </li>
                         </ul>
