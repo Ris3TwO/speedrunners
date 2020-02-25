@@ -1488,6 +1488,9 @@ header.masthead .arrow {
         margin-top: 4.5rem;
         height: 50px;
     }
+    header.masthead .video-thumbnail iframe, header.masthead .video-thumbnail object, header.masthead .video-thumbnail embed {
+        height: 432px;
+    }
     header.masthead .arrow {
         right: 1.2rem;
         -webkit-transform: translate(0, 50%);
