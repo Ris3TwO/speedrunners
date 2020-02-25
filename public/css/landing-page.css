@@ -342,7 +342,7 @@ header.masthead .col-xl-7 {
 
 header.masthead .video-thumbnail {
     position: relative;
-    padding-bottom: 56.25%;
+    padding-bottom: 60.25%;
     /* IE6 workaround*/
     height: 0;
     overflow: hidden;
@@ -1528,6 +1528,11 @@ header.masthead .arrow {
 }
 
 @media only screen and (min-width: 414px) {
+    header.masthead .col-xl-3 .container {
+        -webkit-transform: translateY(305px);
+        -ms-transform: translateY(305px);
+        transform: translateY(305px);
+    }
     .description .description-img .objetive-1 {
         max-height: 178px;
     }
