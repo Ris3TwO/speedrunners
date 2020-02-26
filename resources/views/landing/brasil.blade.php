@@ -270,8 +270,8 @@
                                 <div id="statuf" class="status">
                                     <h1 id="statug">LOCAL</h1>
                                 </div>
-                                <div class="info ">
-                                    <p id="statuh" class="site">Praça Charles Miller s/n - Pacaembu</p>
+                                <div class="info">
+                                    <p id="statuh" class="site">Praça CharlesMiller <br>s/n - Pacaembu</p>
                                 </div>
                             </li>
                             <li class="li complete full">
