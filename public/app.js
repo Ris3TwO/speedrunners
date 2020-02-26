@@ -153,7 +153,7 @@ app.controller("controlador", function($scope, $http, $location, smoothScroll) {
             smoothScroll(document.getElementById('bazinga'));
         }).catch((err) => {
             let a = err;
-            console.log(document.getElementById('bazinga').scrollIntoView(), "leonardo");
+            smoothScroll(document.getElementById('bazinga'));
             console.log(a);
 
             try {
@@ -162,7 +162,7 @@ app.controller("controlador", function($scope, $http, $location, smoothScroll) {
                     $scope.emailErr = true
                 }
             } catch (error) {
-
+                console.log("error activo en el catch", error)
             }
 
             console.log($scope.adidasForm);
