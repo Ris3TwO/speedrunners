@@ -251,7 +251,7 @@ app.controller("controlador", function($scope, $http, $location, smoothScroll) {
             objetive1.style.maxWidth = "317px"
             objetive2.style.transform = "translate(14px, -11px)"
             objetive2.style.maxWidth = "457px"
-            obj2.style.paddingTop = ".5rem";
+            obj2.style.paddingTop = "2.5rem";
         }
 
 
@@ -303,7 +303,7 @@ app.controller("controlador", function($scope, $http, $location, smoothScroll) {
 
         if (width >= 1200 && width <= 1440) {
             if (objetive2.classList.contains('active-down')) {
-                obj3.style.paddingTop = ".5rem";
+                obj3.style.paddingTop = "2.5rem";
             } else {
                 obj3.style.paddingTop = "1rem";
             }
