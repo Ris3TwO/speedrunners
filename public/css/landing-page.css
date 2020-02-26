@@ -1,6 +1,8 @@
 /* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
 
+
 /* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+
 
 /*
  * Adidas Speed Runners 2020 - Landing Page v1.0.0
@@ -78,7 +80,7 @@ h6 {
 
 .btn-light.focus {
     -webkit-box-shadow: none;
-            box-shadow: none;
+    box-shadow: none;
 }
 
 .form-row-space {
@@ -103,7 +105,7 @@ h6 {
     border-width: 2px;
     outline: 0;
     -webkit-box-shadow: none;
-            box-shadow: none;
+    box-shadow: none;
 }
 
 .form-control.error {
@@ -131,8 +133,8 @@ h6 {
 
 .form-group>.float-label-2 {
     -webkit-transform: translate(1rem, 0.6rem);
-        -ms-transform: translate(1rem, 0.6rem);
-            transform: translate(1rem, 0.6rem);
+    -ms-transform: translate(1rem, 0.6rem);
+    transform: translate(1rem, 0.6rem);
 }
 
 .form-group small {
@@ -164,8 +166,8 @@ input[type="checkbox"] {
     height: 0.2rem;
     position: absolute;
     -webkit-transform-origin: 0% 0%;
-        -ms-transform-origin: 0% 0%;
-            transform-origin: 0% 0%;
+    -ms-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
 }
 
 .form-check {
@@ -175,8 +177,8 @@ input[type="checkbox"] {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
 }
 
 .form-check input:checked~span {
@@ -191,8 +193,8 @@ input[type="checkbox"] {
     -o-transition: width 0.1s;
     transition: width 0.1s;
     -webkit-transition-delay: 0.3s;
-         -o-transition-delay: 0.3s;
-            transition-delay: 0.3s;
+    -o-transition-delay: 0.3s;
+    transition-delay: 0.3s;
 }
 
 .form-check input:checked~span:after {
@@ -202,8 +204,8 @@ input[type="checkbox"] {
     -o-transition: width 0.1s;
     transition: width 0.1s;
     -webkit-transition-delay: 0.2s;
-         -o-transition-delay: 0.2s;
-            transition-delay: 0.2s;
+    -o-transition-delay: 0.2s;
+    transition-delay: 0.2s;
 }
 
 .form-check input:disabled~span {
@@ -245,21 +247,21 @@ input[type="checkbox"] {
     transition: all 0.2s;
     z-index: 1;
     -webkit-box-sizing: content-box;
-            box-sizing: content-box;
+    box-sizing: content-box;
 }
 
 .form-check span:before {
     -webkit-transform: rotate(-55deg);
-        -ms-transform: rotate(-55deg);
-            transform: rotate(-55deg);
+    -ms-transform: rotate(-55deg);
+    transform: rotate(-55deg);
     top: 1rem;
     left: 0.37rem;
 }
 
 .form-check span:after {
     -webkit-transform: rotate(35deg);
-        -ms-transform: rotate(35deg);
-            transform: rotate(35deg);
+    -ms-transform: rotate(35deg);
+    transform: rotate(35deg);
     bottom: 0.35rem;
     left: 0.2rem;
 }
@@ -336,8 +338,8 @@ header.masthead .col-xl-7 {
     padding-top: 4rem;
     padding-right: 0;
     -webkit-transform: none;
-        -ms-transform: none;
-            transform: none;
+    -ms-transform: none;
+    transform: none;
 }
 
 header.masthead .video-thumbnail {
@@ -400,8 +402,8 @@ header.masthead .arrow {
     position: absolute;
     z-index: 200;
     -webkit-transform: translate(0, 50%);
-        -ms-transform: translate(0, 50%);
-            transform: translate(0, 50%);
+    -ms-transform: translate(0, 50%);
+    transform: translate(0, 50%);
     cursor: pointer;
 }
 
@@ -474,14 +476,14 @@ header.masthead .arrow {
 
 .description .col-description.col-description-2 {
     -webkit-transform: translate(0, -220px);
-        -ms-transform: translate(0, -220px);
-            transform: translate(0, -220px);
+    -ms-transform: translate(0, -220px);
+    transform: translate(0, -220px);
 }
 
 .description .col-description.col-description-3 {
     -webkit-transform: translate(0, -420px);
-        -ms-transform: translate(0, -420px);
-            transform: translate(0, -420px);
+    -ms-transform: translate(0, -420px);
+    transform: translate(0, -420px);
 }
 
 .description .description-text {
@@ -584,7 +586,6 @@ header.masthead .arrow {
 
 @media (min-width: 1280px) {
     .description .description-img .objetive-1 {
-        height: 18em;
         margin-bottom: 0.2em;
     }
     .description .description-img .objetive-2 {
@@ -642,11 +643,11 @@ header.masthead .arrow {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     vertical-align: middle;
     border-top: 3px solid #f26b32;
     padding-left: 3em;
@@ -691,8 +692,8 @@ header.masthead .arrow {
 
 .map .map-image .info.space {
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
 }
 
 .map .map-image .info .site {
@@ -834,8 +835,8 @@ header.masthead .arrow {
 
 .form .container .inputs .btn-group .btn {
     -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    -ms-flex: 1;
+    flex: 1;
     font-size: 16px;
     font-weight: normal;
     font-stretch: normal;
@@ -1033,8 +1034,8 @@ header.masthead .arrow {
     header.masthead .arrow {
         right: .2rem;
         -webkit-transform: translate(0, 80%);
-            -ms-transform: translate(0, 80%);
-                transform: translate(0, 80%);
+        -ms-transform: translate(0, 80%);
+        transform: translate(0, 80%);
     }
     header.masthead .col-xl-3 {
         padding-top: 3rem;
@@ -1070,8 +1071,8 @@ header.masthead .arrow {
         padding-right: 0;
         padding-left: 0;
         -webkit-transform: translateY(-80px);
-            -ms-transform: translateY(-80px);
-                transform: translateY(-80px);
+        -ms-transform: translateY(-80px);
+        transform: translateY(-80px);
     }
     header.masthead .video-thumbnail {
         border: none;
@@ -1133,8 +1134,8 @@ header.masthead .arrow {
     }
     .description .col-description.col-description-2 {
         -webkit-transform: none;
-            -ms-transform: none;
-                transform: none;
+        -ms-transform: none;
+        transform: none;
     }
     .description .description-img .k {
         max-width: 136px;
@@ -1153,8 +1154,8 @@ header.masthead .arrow {
     }
     .description .col-description.col-description-3 {
         -webkit-transform: none;
-            -ms-transform: none;
-                transform: none;
+        -ms-transform: none;
+        transform: none;
     }
     .description .description-img.objetives {
         padding-top: 9rem;
@@ -1166,7 +1167,7 @@ header.masthead .arrow {
         max-height: 178px;
         max-width: 284px;
         -webkit-box-sizing: border-box;
-                box-sizing: border-box;
+        box-sizing: border-box;
         position: relative;
     }
     .description .description-img .objetive-1 img {
@@ -1316,8 +1317,8 @@ header.masthead .arrow {
     }
     .form .form-group>.float-label-2 {
         -webkit-transform: translate(1.2rem, 0.6rem);
-            -ms-transform: translate(1.2rem, 0.6rem);
-                transform: translate(1.2rem, 0.6rem);
+        -ms-transform: translate(1.2rem, 0.6rem);
+        transform: translate(1.2rem, 0.6rem);
     }
     .form .container .terms {
         margin-top: -50px;
@@ -1417,106 +1418,92 @@ header.masthead .arrow {
     /* ----------------------------------------------
  * Generated by Animista on 2020-2-23 12:2:9
  * Licensed under FreeBSD License.
- * See http://animista.net/license for more info. 
+ * See http://animista.net/license for more info.
  * w: http://animista.net, t: @cssanimista
  * ---------------------------------------------- */
-
-
-/**
+    /**
  * ----------------------------------------
  * animation slide-left
  * ----------------------------------------
  */
-
-.slidelerlu {
-    -webkit-animation: slidelerlu 7s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-    animation: slidelerlu 7s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-}
-
-@-webkit-keyframes slidelerlu {
-    0% {
-        opacity: 0;
+    .slidelerlu {
+        -webkit-animation: slidelerlu 7s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+        animation: slidelerlu 7s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
     }
-    100% {
-        opacity: 1;
+    @-webkit-keyframes slidelerlu {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
     }
-}
-
-@keyframes slidelerlu {
-    0% {
-        opacity: 0;
+    @keyframes slidelerlu {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
     }
-    100% {
-        opacity: 1;
+    .tracking-in-expand {
+        -webkit-animation: slide-in-top 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s both;
+        animation: slide-in-top 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s both;
     }
-}
-
-.tracking-in-expand {
-    -webkit-animation: slide-in-top 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s both;
-    animation: slide-in-top 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s both;
-}
-
-.tracking-in-expand2 {
-    -webkit-animation: slide-in-top 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2s both;
-    animation: slide-in-top 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2s both;
-}
-
-.tracking-in-expand3 {
-    -webkit-animation: slide-in-top 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2.5s both;
-    animation: slide-in-top 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2.5s both;
-}
-
-.tracking-in-expand4 {
-    -webkit-animation: slide-in-top 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) 3s both;
-    animation: slide-in-top 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) 3s both;
-}
-
-
-/* ----------------------------------------------
+    .tracking-in-expand2 {
+        -webkit-animation: slide-in-top 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2s both;
+        animation: slide-in-top 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2s both;
+    }
+    .tracking-in-expand3 {
+        -webkit-animation: slide-in-top 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2.5s both;
+        animation: slide-in-top 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2.5s both;
+    }
+    .tracking-in-expand4 {
+        -webkit-animation: slide-in-top 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) 3s both;
+        animation: slide-in-top 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) 3s both;
+    }
+    /* ----------------------------------------------
  * Generated by Animista on 2020-2-23 12:31:15
  * Licensed under FreeBSD License.
- * See http://animista.net/license for more info. 
+ * See http://animista.net/license for more info.
  * w: http://animista.net, t: @cssanimista
  * ---------------------------------------------- */
-
-
-/**
+    /**
  * ----------------------------------------
  * animation slide-in-top
  * ----------------------------------------
  */
-
- @-webkit-keyframes slide-in-top {
-  0% {
-    -webkit-transform: translateY(-1000px);
+    @-webkit-keyframes slide-in-top {
+        0% {
+            -webkit-transform: translateY(-1000px);
             transform: translateY(-1000px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateY(0);
+            opacity: 0;
+        }
+        100% {
+            -webkit-transform: translateY(0);
             transform: translateY(0);
-    opacity: 1;
-  }
-}
-@keyframes slide-in-top {
-  0% {
-    -webkit-transform: translateY(-1000px);
+            opacity: 1;
+        }
+    }
+    @keyframes slide-in-top {
+        0% {
+            -webkit-transform: translateY(-1000px);
             transform: translateY(-1000px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateY(0);
+            opacity: 0;
+        }
+        100% {
+            -webkit-transform: translateY(0);
             transform: translateY(0);
-    opacity: 1;
-  }
-}
+            opacity: 1;
+        }
+    }
 }
 
 @media only screen and (min-width: 360px) {
     header.masthead .col-xl-3 .container {
         -webkit-transform: translateY(280px);
-            -ms-transform: translateY(280px);
-                transform: translateY(280px);
+        -ms-transform: translateY(280px);
+        transform: translateY(280px);
     }
     /* Description */
     .description::before {
@@ -1588,21 +1575,23 @@ header.masthead .arrow {
     }
     header.masthead .col-xl-3 .container {
         -webkit-transform: translateY(510px);
-            -ms-transform: translateY(510px);
-                transform: translateY(510px);
+        -ms-transform: translateY(510px);
+        transform: translateY(510px);
     }
     header.masthead .col-xl-3 .container .btn-dark {
         margin-top: 4.5rem;
         height: 50px;
     }
-    header.masthead .video-thumbnail iframe, header.masthead .video-thumbnail object, header.masthead .video-thumbnail embed {
+    header.masthead .video-thumbnail iframe,
+    header.masthead .video-thumbnail object,
+    header.masthead .video-thumbnail embed {
         height: 432px;
     }
     header.masthead .arrow {
         right: 1.2rem;
         -webkit-transform: translate(0, 50%);
-            -ms-transform: translate(0, 50%);
-                transform: translate(0, 50%);
+        -ms-transform: translate(0, 50%);
+        transform: translate(0, 50%);
     }
     header.masthead .video-thumbnail {
         margin-left: initial;
@@ -1836,142 +1825,121 @@ header.masthead .arrow {
     /* ----------------------------------------------
  * Generated by Animista on 2020-2-23 12:2:9
  * Licensed under FreeBSD License.
- * See http://animista.net/license for more info. 
+ * See http://animista.net/license for more info.
  * w: http://animista.net, t: @cssanimista
  * ---------------------------------------------- */
-
-
-/**
+    /**
  * ----------------------------------------
  * animation slide-left
  * ----------------------------------------
  */
-
-.slidelerlu {
-    -webkit-animation: slidelerlu 7s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-    animation: slidelerlu 7s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-}
-
-.slideler {
-    -webkit-animation: slideler 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-    animation: slideler 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-}
-
-.slideler1 {
-    -webkit-animation: slideler 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-    animation: slideler 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-}
-
-.slideler2 {
-    -webkit-animation: slideler 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-    animation: slideler 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-}
-
-.slideler3 {
-    -webkit-animation: slideler 2.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-    animation: slideler 2.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-}
-
-@-webkit-keyframes slideler {
-    0% {
-        -webkit-transform: translateX(0);
-        transform: translateX(0);
+    .slidelerlu {
+        -webkit-animation: slidelerlu 7s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+        animation: slidelerlu 7s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
     }
-    100% {
-        -webkit-transform: translateX(-100px);
-        transform: translateX(-100px);
+    .slideler {
+        -webkit-animation: slideler 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        animation: slideler 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     }
-}
-
-@keyframes slideler {
-    0% {
-        -webkit-transform: translateX(0);
-        transform: translateX(0);
+    .slideler1 {
+        -webkit-animation: slideler 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        animation: slideler 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     }
-    100% {
-        -webkit-transform: translateX(-100px);
-        transform: translateX(-100px);
+    .slideler2 {
+        -webkit-animation: slideler 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        animation: slideler 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     }
-}
-
-@-webkit-keyframes slidelerlu {
-    0% {
-        opacity: 0;
+    .slideler3 {
+        -webkit-animation: slideler 2.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        animation: slideler 2.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     }
-    100% {
-        opacity: 1;
+    @-webkit-keyframes slideler {
+        0% {
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+        }
+        100% {
+            -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
+        }
     }
-}
-
-@keyframes slidelerlu {
-    0% {
-        opacity: 0;
+    @keyframes slideler {
+        0% {
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+        }
+        100% {
+            -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
+        }
     }
-    100% {
-        opacity: 1;
+    @-webkit-keyframes slidelerlu {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
     }
-}
-
-.tracking-in-expand {
-    -webkit-animation: tracking-in-expand 1.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) 1.5s both;
-    animation: tracking-in-expand 1.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) 1.5s both;
-}
-
-.tracking-in-expand2 {
-    -webkit-animation: tracking-in-expand 1.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) 2s both;
-    animation: tracking-in-expand 1.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) 2s both;
-}
-
-.tracking-in-expand3 {
-    -webkit-animation: tracking-in-expand 1.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) 2.5s both;
-    animation: tracking-in-expand 1.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) 2.5s both;
-}
-
-.tracking-in-expand4 {
-    -webkit-animation: tracking-in-expand 1.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) 3s both;
-    animation: tracking-in-expand 1.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) 3s both;
-}
-
-
-/* ----------------------------------------------
+    @keyframes slidelerlu {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    .tracking-in-expand {
+        -webkit-animation: tracking-in-expand 1.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) 1.5s both;
+        animation: tracking-in-expand 1.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) 1.5s both;
+    }
+    .tracking-in-expand2 {
+        -webkit-animation: tracking-in-expand 1.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) 2s both;
+        animation: tracking-in-expand 1.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) 2s both;
+    }
+    .tracking-in-expand3 {
+        -webkit-animation: tracking-in-expand 1.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) 2.5s both;
+        animation: tracking-in-expand 1.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) 2.5s both;
+    }
+    .tracking-in-expand4 {
+        -webkit-animation: tracking-in-expand 1.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) 3s both;
+        animation: tracking-in-expand 1.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) 3s both;
+    }
+    /* ----------------------------------------------
  * Generated by Animista on 2020-2-23 12:31:15
  * Licensed under FreeBSD License.
- * See http://animista.net/license for more info. 
+ * See http://animista.net/license for more info.
  * w: http://animista.net, t: @cssanimista
  * ---------------------------------------------- */
-
-
-/**
+    /**
  * ----------------------------------------
  * animation tracking-in-expand
  * ----------------------------------------
  */
-
-@-webkit-keyframes tracking-in-expand {
-    0% {
-        letter-spacing: -0.5em;
-        opacity: 0;
+    @-webkit-keyframes tracking-in-expand {
+        0% {
+            letter-spacing: -0.5em;
+            opacity: 0;
+        }
+        40% {
+            opacity: 0.6;
+        }
+        100% {
+            opacity: 1;
+        }
     }
-    40% {
-        opacity: 0.6;
+    @keyframes tracking-in-expand {
+        0% {
+            letter-spacing: -0.5em;
+            opacity: 0;
+        }
+        40% {
+            opacity: 0.6;
+        }
+        100% {
+            opacity: 1;
+        }
     }
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes tracking-in-expand {
-    0% {
-        letter-spacing: -0.5em;
-        opacity: 0;
-    }
-    40% {
-        opacity: 0.6;
-    }
-    100% {
-        opacity: 1;
-    }
-}
 }
 
 
@@ -1990,8 +1958,8 @@ header.masthead .arrow {
     }
     header.masthead .col-xl-3 .container {
         -webkit-transform: none;
-            -ms-transform: none;
-                transform: none;
+        -ms-transform: none;
+        transform: none;
         padding: 0;
         width: 286px;
     }
@@ -2003,8 +1971,8 @@ header.masthead .arrow {
         padding-right: 0;
         margin-top: -2rem;
         -webkit-transform: none;
-            -ms-transform: none;
-                transform: none;
+        -ms-transform: none;
+        transform: none;
     }
     header.masthead .video-thumbnail {
         height: 424px;
@@ -2012,7 +1980,7 @@ header.masthead .arrow {
         border: solid 5px #fafafa;
         border-right: none;
         -webkit-box-sizing: border-box;
-                box-sizing: border-box;
+        box-sizing: border-box;
     }
     header.masthead .video-thumbnail iframe,
     header.masthead .video-thumbnail object,
@@ -2024,8 +1992,8 @@ header.masthead .arrow {
     header.masthead .arrow {
         right: 4.7rem;
         -webkit-transform: translate(0, 50%);
-            -ms-transform: translate(0, 50%);
-                transform: translate(0, 50%);
+        -ms-transform: translate(0, 50%);
+        transform: translate(0, 50%);
     }
     /* Description */
     .description {
@@ -2069,8 +2037,8 @@ header.masthead .arrow {
     }
     .description .col-description.col-description-2 {
         -webkit-transform: translate(-50px, -180px);
-            -ms-transform: translate(-50px, -180px);
-                transform: translate(-50px, -180px);
+        -ms-transform: translate(-50px, -180px);
+        transform: translate(-50px, -180px);
     }
     .description .col-description.col-description-3 {
         padding-top: 10rem;
@@ -2090,8 +2058,8 @@ header.masthead .arrow {
     }
     .description .container-fluid .last-description {
         -webkit-transform: translateY(-200px);
-            -ms-transform: translateY(-200px);
-                transform: translateY(-200px);
+        -ms-transform: translateY(-200px);
+        transform: translateY(-200px);
         margin-bottom: -172px;
     }
     .description .description-img.objetives {
@@ -2112,8 +2080,8 @@ header.masthead .arrow {
         margin-right: 30px;
         top: 0;
         -webkit-transform: translate(80px, -224px);
-            -ms-transform: translate(80px, -224px);
-                transform: translate(80px, -224px);
+        -ms-transform: translate(80px, -224px);
+        transform: translate(80px, -224px);
     }
     .description .description-img .objetive-3 {
         max-width: 212px;
@@ -2121,8 +2089,8 @@ header.masthead .arrow {
         top: 0;
         left: 10px;
         -webkit-transform: translate(-25px, -276px);
-            -ms-transform: translate(-25px, -276px);
-                transform: translate(-25px, -276px);
+        -ms-transform: translate(-25px, -276px);
+        transform: translate(-25px, -276px);
     }
     .map {
         padding-top: 2.5rem;
@@ -2250,8 +2218,8 @@ header.masthead .arrow {
     }
     .description .col-description.col-description-2 {
         -webkit-transform: translate(0, -180px);
-            -ms-transform: translate(0, -180px);
-                transform: translate(0, -180px);
+        -ms-transform: translate(0, -180px);
+        transform: translate(0, -180px);
     }
     .description .description-img.objetives {
         padding-top: 1rem;
@@ -2264,13 +2232,13 @@ header.masthead .arrow {
         max-width: 356px;
         max-height: 212px;
         -webkit-transform: translate(68px, -232px);
-            -ms-transform: translate(68px, -232px);
-                transform: translate(68px, -232px);
+        -ms-transform: translate(68px, -232px);
+        transform: translate(68px, -232px);
     }
     .description .description-img .objetive-3 {
         -webkit-transform: translate(-54px, -343px);
-            -ms-transform: translate(-54px, -343px);
-                transform: translate(-54px, -343px);
+        -ms-transform: translate(-54px, -343px);
+        transform: translate(-54px, -343px);
         max-width: 295px;
         max-height: 494px;
     }
