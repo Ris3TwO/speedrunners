@@ -44,7 +44,8 @@
                     <div class="logo img-fluid slide-left"></div>
                     <div class="row justify-content-center">
                         <div class="container align-middle">
-                            <a href="#" scroll-to="bazinga" duration="1800" class="btn btn-block btn-dark">INSCRIBIRME</a>
+                            <a href="#" scroll-to="bazinga" duration="1800"
+                                class="btn btn-block btn-dark">INSCRIBIRME</a>
                         </div>
                     </div>
                 </div>
@@ -312,8 +313,10 @@
                             <div class="form-row form-row-space justify-content-around">
                                 <div class="form-group col-md-6">
                                     <label class="float-label" for="inputNames">NOMBRES</label>
-                                    <input type="text" ng-model="names" required ng-class="namesErr ? 'form-control error' : 'form-control'" class="form-control" name="inputNames"
-                                        id="inputNames" aria-describedby="namesHelp" placeholder="escriba sus nombres">
+                                    <input type="text" ng-model="names" required
+                                        ng-class="namesErr ? 'form-control error' : 'form-control'" class="form-control"
+                                        name="inputNames" id="inputNames" aria-describedby="namesHelp"
+                                        placeholder="escriba sus nombres">
                                     <div ng-show="namesErr">
                                         <small id="namesHelp" class="form-text">Falta registrar los nombres
                                             *</small>
@@ -321,7 +324,8 @@
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label class="float-label" for="inputLastnames">APELLIDOS</label>
-                                    <input type="text" required ng-model="lastnames" ng-class="lastErr ? 'form-control error' : 'form-control'" class="form-control"
+                                    <input type="text" required ng-model="lastnames"
+                                        ng-class="lastErr ? 'form-control error' : 'form-control'" class="form-control"
                                         name="inputLastnames" id="inputLastnames" aria-describedby="lastnamesHelp"
                                         placeholder="escriba sus apellidos">
                                     <div ng-show="lastErr">
@@ -333,8 +337,10 @@
                             <div class="form-row justify-content-around break">
                                 <div class="form-group col-md-6">
                                     <label class="float-label" for="inputEmail">EMAIL</label>
-                                    <input type="email" required ng-model="email" ng-class="emailErr ? 'form-control error' : 'form-control'" class="form-control" name="inputEmail"
-                                        id="inputEmail" aria-describedby="emailHelp" placeholder="escriba su email">
+                                    <input type="email" required ng-model="email"
+                                        ng-class="emailErr ? 'form-control error' : 'form-control'" class="form-control"
+                                        name="inputEmail" id="inputEmail" aria-describedby="emailHelp"
+                                        placeholder="escriba su email">
                                     <div ng-show="emailErr">
                                         <small id="emailHelp" class="form-text">El email es inválido
                                             *</small>
@@ -358,8 +364,9 @@
                             <div class="form-row justify-content-around break">
                                 <div class="form-group col-md-6">
                                     <label class="float-label" for="inputAge">FECHA DE NACIMIENTO</label>
-                                    <input type="text" name="inputAge" maxlengh="10" angular-mask="0000/00/00" ng-model="age" ng-class="ageErr ? 'form-control error' : 'form-control'" class="form-control"
-                                        id="inputAge" placeholder="AAAA/MM/DD">
+                                    <input type="text" name="inputAge" maxlengh="10" angular-mask="0000/00/00"
+                                        ng-model="age" ng-class="ageErr ? 'form-control error' : 'form-control'"
+                                        class="form-control" id="inputAge" placeholder="AAAA/MM/DD">
                                     <div ng-show="ageErr">
                                         <small id="emailHelp" class="form-text">La fecha de nacimiento es inválida
                                             *</small>
@@ -440,7 +447,8 @@
                                         <span></span>
                                     </div>
                                     <div class="form-check">
-                                        <input id="newsletter" type="checkbox">
+                                        <input id="newsletter" ng-model="newsletter" name="inputNewsletter"
+                                            type="checkbox">
                                         <label for="newsletter">Quiero recibir noticias sobre productos y
                                             servicios de
                                             adidas. <a href="#">¿Qué significa esto?</a></label>
@@ -456,7 +464,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="col-lg-8 data-table" ng-if="dataCheck == true">
                         <div class="col-lg-12 information">
                             <div class="col-lg-12 title title-data">
@@ -526,7 +534,8 @@
                                 <div class="container">
                                     <div class="row justify-content-center">
                                         <div class="col-sm-3 col-md-5">
-                                            <button type="button" href="#" scroll-to="bazinga" duration="1800" ng-click="verify(false)"
+                                            <button type="button" href="#" scroll-to="bazinga" duration="1800"
+                                                ng-click="verify(false)"
                                                 class="btn btn-light btn-lg btn-block">Modificar</button>
                                         </div>
                                         <div class="col-sm-3 col-md-5">

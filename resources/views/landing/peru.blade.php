@@ -440,7 +440,7 @@
                                         <span></span>
                                     </div>
                                     <div class="form-check">
-                                        <input id="newsletter" type="checkbox">
+                                        <input id="newsletter" ng-model="newsletter" name="inputNewsletter" type="checkbox">
                                         <label for="newsletter">Quiero recibir noticias sobre productos y
                                             servicios de
                                             adidas. <a href="#">¿Qué significa esto?</a></label>
@@ -456,7 +456,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="col-lg-8 data-table" ng-if="dataCheck == true">
                         <div class="col-lg-12 information">
                             <div class="col-lg-12 title title-data">

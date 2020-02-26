@@ -28,7 +28,7 @@ class RegistrationController extends ApiController
     {
         try {
 
-            
+
             $url_parts = parse_url($request->url, PHP_URL_PATH);
             // The data provided are saved.
             $registration->create($request->all());
@@ -48,7 +48,7 @@ class RegistrationController extends ApiController
             } elseif ($url_parts === '/panama') {
                 PanamaRegistration::create($request->all());
             }
-            
+
             if (strtolower($request->gender) === "masculino")
             {
                 $gender = "m";
@@ -57,12 +57,13 @@ class RegistrationController extends ApiController
             }
 
             $data = [
-                'firstName' => $request->names, 
-                'lastName' => $request->last_names, 
-                'gender' => $gender, 
+                'firstName' => $request->names,
+                'lastName' => $request->last_names,
+                'gender' => $gender,
                 'email' => $request->email,
                 'countryOfSite' => substr($url_parts, 1),
                 'dateOfBirth' => $request->age,
+                'receive_notification' => $request->email_notices,
             ];
 
             // Inyect data

@@ -8,6 +8,7 @@ app.controller("controlador", function($scope, $http, $location, smoothScroll) {
     $scope.dataSend = false;
     $scope.gender = "HOMBRE";
     $scope.accept = false;
+    $scope.newsletter = false;
     $scope.shoes = "ADIDAS";
     $scope.distance = "10 K";
     $scope.team = "ADIDAS RUNNERS";
@@ -20,36 +21,38 @@ app.controller("controlador", function($scope, $http, $location, smoothScroll) {
     $scope.ageErr = false;
     $scope.lastErr = false;
     $scope.cityErr = false;
-    $scope.verify = function (value) {
+    $scope.verify = function(value) {
         if (!$scope.adidasForm.inputNames.$error.required && !$scope.adidasForm.inputLastnames.$error.required && $scope.adidasForm.inputAge.$viewValue != "" || $scope.adidasForm.inputAge.$viewValue.length < 9 && !$scope.adidasForm.inputEmail.$error.required) {
-            
+
             var year = $scope.adidasForm.inputAge.$viewValue.substr(0, 4);
             var month = $scope.adidasForm.inputAge.$viewValue.substr(5, 2);
             var day = $scope.adidasForm.inputAge.$viewValue.substr(8, 2);
-            $scope.ageFull = year+"/"+month+"/"+day
+            $scope.ageFull = year + "/" + month + "/" + day
             $scope.namesFull = $scope.adidasForm.inputNames.$viewValue;
+            $scope.newsletter = $scope.adidasForm.inputNewsletter.$viewValue;
 
             console.log($scope.ageFull)
             console.log($scope.namesFull)
+            console.log($scope.newsletter)
             $scope.dataCheck = true;
 
             smoothScroll(document.getElementById('info'));
         } else {
             if ($scope.adidasForm.inputNames.$error.required) {
                 $scope.namesErr = true
-            }else{
+            } else {
                 $scope.namesFull = $scope.adidasForm.inputNames.$viewValue
                 $scope.namesErr = false
             }
             if ($scope.adidasForm.inputEmail.$error.required) {
                 $scope.emailErr = true
-            }else{
+            } else {
                 $scope.emailErr = false
             }
-            
+
             if ($scope.adidasForm.inputAge.$viewValue == "" || $scope.adidasForm.inputAge.$viewValue.length < 9) {
                 $scope.ageErr = true
-            }else{
+            } else {
                 var year = $scope.adidasForm.inputAge.$viewValue.substr(0, 4);
                 var month = $scope.adidasForm.inputAge.$viewValue.substr(5, 2);
                 var day = $scope.adidasForm.inputAge.$viewValue.substr(8, 2);
@@ -59,36 +62,33 @@ app.controller("controlador", function($scope, $http, $location, smoothScroll) {
 
                 if (month31.includes(month)) {
                     maxDay = "31"
-                }else if (month == "02"){
+                } else if (month == "02") {
                     maxDay = "28"
-                }else {
+                } else {
                     maxDay = "30"
                 }
-                console.log("Dia: "+day+" mes: "+month+" año: "+year)
+                console.log("Dia: " + day + " mes: " + month + " año: " + year)
 
                 if (year > "2007" || year < "1940") {
                     $scope.ageErr = true
                     console.log("hay problema de año")
-                }else if (month < "01" || month > "12"){
+                } else if (month < "01" || month > "12") {
                     $scope.ageErr = true
                     console.log(maxDay)
                     console.log("hay problema de mes")
-                }else if (day > maxDay || day < "01"){
+                } else if (day > maxDay || day < "01") {
                     $scope.ageErr = true
                     console.log("hay problema de día")
-                }else{
+                } else {
                     $scope.ageErr = false
                 }
             }
-            
+
             if ($scope.adidasForm.inputLastnames.$error.required) {
                 $scope.lastErr = true
-            }else{
+            } else {
                 $scope.lastErr = false
             }
-            // var element = document.getElementById('info');
-            // smoothScroll(element);
-            // document.getElementById('bazinga').scrollIntoView()
         }
     }
 
@@ -121,13 +121,13 @@ app.controller("controlador", function($scope, $http, $location, smoothScroll) {
     }
 
     $scope.toggle = function() {
-	    document.getElementById('check').classList.add("col-inactive");
-	    document.getElementById('check2').classList.remove("col-inactive");
+        document.getElementById('check').classList.add("col-inactive");
+        document.getElementById('check2').classList.remove("col-inactive");
     }
 
     $scope.sendData = function() {
         if (!$scope.adidasForm.inputAccept.$viewValue) {
-          return  alert("Acepta los terminos y condiciones")
+            return alert("Acepta los terminos y condiciones")
         }
 
         var data = {
@@ -140,6 +140,7 @@ app.controller("controlador", function($scope, $http, $location, smoothScroll) {
             team: $scope.team,
             best_time: $scope.time,
             distance: $scope.distance,
+            email_notices: $scope.newsletter,
             url: absUrl
         }
         console.log(data);
@@ -252,13 +253,13 @@ app.controller("controlador", function($scope, $http, $location, smoothScroll) {
             objetive2.style.maxWidth = "457px"
             obj2.style.paddingTop = ".5rem";
         }
-        
+
 
         objetive1.classList.add("filter");
         objetive3.classList.add("filter");
         objetive3.removeAttribute("style")
         obj1.style.display = "none";
-        
+
         obj3.style.display = "none"
     }
 
@@ -270,40 +271,40 @@ app.controller("controlador", function($scope, $http, $location, smoothScroll) {
         objetive3.classList.add("active-img")
         obj3.removeAttribute("style");
         if (width >= 320 && width <= 359) {
-            if (objetive2.classList.contains('active-down')){
+            if (objetive2.classList.contains('active-down')) {
                 obj3.style.paddingTop = "4.5rem";
-            }else{
+            } else {
                 obj3.style.paddingTop = "1rem";
             }
         }
         if (width >= 360 && width <= 374) {
-            if (objetive2.classList.contains('active-down')){
+            if (objetive2.classList.contains('active-down')) {
                 obj3.style.paddingTop = "5.5rem";
-            }else{
+            } else {
                 obj3.style.paddingTop = "1rem";
             }
         }
 
         if (width >= 375 && width <= 414) {
-            if (objetive2.classList.contains('active-down')){
+            if (objetive2.classList.contains('active-down')) {
                 obj3.style.paddingTop = "5rem";
-            }else{
+            } else {
                 obj3.style.paddingTop = "1rem";
             }
         }
 
         if (width >= 768 && width <= 1024) {
-            if (objetive2.classList.contains('active-down')){
+            if (objetive2.classList.contains('active-down')) {
                 obj3.style.paddingTop = "5rem";
-            }else{
+            } else {
                 obj3.style.paddingTop = "1rem";
             }
         }
 
         if (width >= 1200 && width <= 1440) {
-            if (objetive2.classList.contains('active-down')){
+            if (objetive2.classList.contains('active-down')) {
                 obj3.style.paddingTop = ".5rem";
-            }else{
+            } else {
                 obj3.style.paddingTop = "1rem";
             }
         }
