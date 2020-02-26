@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\ArgentinaRegistration;
+use App\BrasilRegistration;
 use App\ChileRegistration;
 use App\Events\RegistrationWasStored;
 use App\Registration;
