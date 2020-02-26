@@ -45,13 +45,13 @@
                     <div class="row justify-content-center">
                         <div class="container align-middle">
                             <a href="#" scroll-to="bazinga" duration="1800"
-                                class="btn btn-block btn-dark">INSCRIBIRME</a>
+                                class="btn btn-block btn-dark">INSCREVA-SE</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-xl-7 ml-auto">
                     <div class="video-thumbnail">
-                        <div class="youtube" id="m6ciWfZt5JQ" src="./img/video-player.png"></div>
+                        <div class="youtube" id="BHZ8bBvTsF8" src="./img/video-player.png"></div>
                     </div>
                 </div>
             </div>
@@ -251,8 +251,7 @@
     <!-- Map -->
     <section class="map text-center">
         <div class="container">
-            <h1>SPEED RUNNERS 2020, una carrera para romper marcas, hecha para los que entrenan duro y corren
-                mas</h1>
+            <h1>SPEED RUNNERS 2020. PARA OS QUE TREINAM DURO E BUSCAM SER MAIS RÁPIDOS QUE ONTEM.</h1>
         </div>
         <div class="map-image">
             <div class="container-fluid h-100">
@@ -261,23 +260,23 @@
                         <ul class="timeline" id="timeline">
                             <li class="li complete full">
                                 <div id="statuc" class="status">
-                                    <h1>Ciudad</h1>
+                                    <h1>CIDADE</h1>
                                 </div>
                                 <div class="info">
-                                    <p id="statud">Bogotá</p>
+                                    <p id="statud">SÃO PAULO</p>
                                 </div>
                             </li>
                             <li class="li complete ">
                                 <div id="statuf" class="status">
-                                    <h1 id="statug">Lugar</h1>
+                                    <h1 id="statug">LOCAL</h1>
                                 </div>
                                 <div class="info ">
-                                    <p id="statuh" class="site">Parque el virrey<br> Cra 15 #86a-50</p>
+                                    <p id="statuh" class="site">Praça Charles Miller s/n - Pacaembu</p>
                                 </div>
                             </li>
                             <li class="li complete full">
                                 <div id="statu1" class="status">
-                                    <h1 id="statu2">Fecha</h1>
+                                    <h1 id="statu2">DATA</h1>
                                 </div>
                                 <div class="info">
                                     <p id="statu3">10/02/2020</p>
@@ -285,7 +284,7 @@
                             </li>
                             <li class="li complete full">
                                 <div id="statu4" class="status status-last">
-                                    <h1 id="final1">Kilometros</h1>
+                                    <h1 id="final1">Quilômetros</h1>
                                 </div>
                                 <div class="info space" id="final2">
                                     <p class="d-inline px-3">10k</p>
@@ -306,74 +305,74 @@
             <div class="container container-incription" ng-if="!dataSend">
                 <div class="row justify-content-center">
                     <div class="col-lg-8 title">
-                        <h1>Inscripción</h1>
+                        <h1>Inscrição</h1>
                     </div>
                     <div class="row justify-content-center">
                         <div class="col-lg-9 inputs">
                             <div class="form-row form-row-space justify-content-around">
                                 <div class="form-group col-md-6">
-                                    <label class="float-label" for="inputNames">NOMBRES</label>
+                                    <label class="float-label" for="inputNames">NOME</label>
                                     <input type="text" ng-model="names" required
                                         ng-class="namesErr ? 'form-control error' : 'form-control'" class="form-control"
                                         name="inputNames" id="inputNames" aria-describedby="namesHelp"
                                         placeholder="escriba sus nombres">
                                     <div ng-show="namesErr">
-                                        <small id="namesHelp" class="form-text">Falta registrar los nombres
+                                        <small id="namesHelp" class="form-text">Os nomes não foram registrados
                                             *</small>
                                     </div>
                                 </div>
                                 <div class="form-group col-md-6">
-                                    <label class="float-label" for="inputLastnames">APELLIDOS</label>
+                                    <label class="float-label" for="inputLastnames">SOBRENOME</label>
                                     <input type="text" required ng-model="lastnames"
                                         ng-class="lastErr ? 'form-control error' : 'form-control'" class="form-control"
                                         name="inputLastnames" id="inputLastnames" aria-describedby="lastnamesHelp"
                                         placeholder="escriba sus apellidos">
                                     <div ng-show="lastErr">
-                                        <small id="lastnamesHelp" class="form-text">Falta registrar los apellidos
+                                        <small id="lastnamesHelp" class="form-text">Os sobrenomes não foram registrados
                                             *</small>
                                     </div>
                                 </div>
                             </div>
                             <div class="form-row justify-content-around break">
                                 <div class="form-group col-md-6">
-                                    <label class="float-label" for="inputEmail">EMAIL</label>
+                                    <label class="float-label" for="inputEmail">E-MAIL</label>
                                     <input type="email" required ng-model="email"
                                         ng-class="emailErr ? 'form-control error' : 'form-control'" class="form-control"
                                         name="inputEmail" id="inputEmail" aria-describedby="emailHelp"
                                         placeholder="escriba su email">
                                     <div ng-show="emailErr">
-                                        <small id="emailHelp" class="form-text">El email es inválido
+                                        <small id="emailHelp" class="form-text">O e-mail é inválido
                                             *</small>
                                     </div>
                                 </div>
                                 <div class="form-group form-radio col-md-6">
-                                    <label class="float-label-2">GÉNERO</label>
+                                    <label class="float-label-2">GÊNERO</label>
                                     <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                                        <label class="btn btn-light active" ng-click="selectGender('MASCULINO')">
-                                            <input type="radio" name="options" id="male" checked> MASCULINO
+                                        <label class="btn btn-light active" ng-click="selectGender('HOMEM')">
+                                            <input type="radio" name="options" id="male" checked> HOMEM
                                         </label>
-                                        <label class="btn btn-light" ng-click="selectGender('FEMENINO')">
-                                            <input type="radio" name="options" id="female"> FEMENINO
+                                        <label class="btn btn-light" ng-click="selectGender('MULHER')">
+                                            <input type="radio" name="options" id="female"> MULHER
                                         </label>
-                                        <label class="btn btn-light" ng-click="selectGender('OTRO')">
-                                            <input type="radio" name="options" id="other"> OTRO
+                                        <label class="btn btn-light" ng-click="selectGender('PREFERE NÃO')">
+                                            <input type="radio" name="options" id="other"> PREFERE NÃO
                                         </label>
                                     </div>
                                 </div>
                             </div>
                             <div class="form-row justify-content-around break">
                                 <div class="form-group col-md-6">
-                                    <label class="float-label" for="inputAge">FECHA DE NACIMIENTO</label>
+                                    <label class="float-label" for="inputAge">DATA DE NASCIMIENTO</label>
                                     <input type="text" name="inputAge" maxlengh="10" angular-mask="0000/00/00"
                                         ng-model="age" ng-class="ageErr ? 'form-control error' : 'form-control'"
                                         class="form-control" id="inputAge" placeholder="AAAA/MM/DD">
                                     <div ng-show="ageErr">
-                                        <small id="emailHelp" class="form-text">La fecha de nacimiento es inválida
+                                        <small id="emailHelp" class="form-text">A data de nascimento é inválida
                                             *</small>
                                     </div>
                                 </div>
                                 <div class="form-group form-radio col-md-6">
-                                    <label class="float-label-2">ZAPATILLAS</label>
+                                    <label class="float-label-2">MARCA DE CALÇADO</label>
                                     <div class="btn-group btn-group-toggle" data-toggle="buttons">
                                         <label class="btn btn-light active" ng-click="selectShoes('ADIDAS')">
                                             <input type="radio" name="options" id="shoes1" checked> ADIDAS
@@ -381,8 +380,8 @@
                                         <label class="btn btn-light" ng-click="selectShoes('REEBOK')">
                                             <input type="radio" name="options" id="shoes2"> REEBOK
                                         </label>
-                                        <label class="btn btn-light" ng-click="selectShoes('OTRAS')">
-                                            <input type="radio" name="options" id="shoes3"> OTRAS
+                                        <label class="btn btn-light" ng-click="selectShoes('OUTROS')">
+                                            <input type="radio" name="options" id="shoes3"> OUTROS
                                         </label>
                                     </div>
                                 </div>
@@ -396,7 +395,7 @@
                                             RUNNERS
                                         </label>
                                         <label class="btn btn-light" ng-click="toggle()">
-                                            <input type="radio" name="options" id="team2"> OTRO
+                                            <input type="radio" name="options" id="team2"> OUTROS
                                         </label>
                                     </div>
                                 </div>
@@ -406,7 +405,7 @@
                                         placeholder="escriba a qué equipo pertenece">
                                 </div>
                                 <div class="form-group form-radio col-md-6">
-                                    <label class="float-label-2">DISTANCIA</label>
+                                    <label class="float-label-2">DISTÂNCIA</label>
                                     <div class="btn-group btn-group-toggle" data-toggle="buttons">
                                         <label class="btn btn-light active" ng-click="selectDistance('10 K')">
                                             <input type="radio" name="options" id="distance1" checked> 10 K
@@ -422,7 +421,7 @@
                             </div>
                             <div class="form-row justify-content-around">
                                 <div class="form-group form-radio col-md-12">
-                                    <label class="float-label-2">MI MEJOR TIEMPO</label>
+                                    <label class="float-label-2">MEHU MELHOR TEMPO</label>
                                     <div class="btn-group btn-group-toggle" data-toggle="buttons">
                                         <label class="btn btn-light active" ng-click="selectTime('30 MIN')">
                                             <input type="radio" name="options" id="time1"> 30 MIN
@@ -442,16 +441,13 @@
                                 <div class="form-group col-md-12">
                                     <div class="form-check">
                                         <input ng-model="accept" name="inputAccept" id="terms" type="checkbox">
-                                        <label class="terms_conditions" for="terms">Acepto <a href="#">términos
-                                                y condiciones</a>.</label>
+                                        <label class="terms_conditions" for="terms">Aceito <a href="#">termos e condições</a>.</label>
                                         <span></span>
                                     </div>
                                     <div class="form-check">
                                         <input id="newsletter" ng-model="newsletter" name="inputNewsletter"
                                             type="checkbox">
-                                        <label for="newsletter">Quiero recibir noticias sobre productos y
-                                            servicios de
-                                            adidas. <a href="#">¿Qué significa esto?</a></label>
+                                        <label for="newsletter">Desejo receber noticias sobre productos e ofertas da adidas. <a href="#">O que significa isso?</a></label>
                                         <span></span>
                                     </div>
                                 </div>
@@ -459,7 +455,7 @@
                             <div class="col-lg-12 submit">
                                 <div class="col-md-6 offset-md-3">
                                     <a type="button" ng-click="verify(true)"
-                                        class="btn btn-dark btn-lg btn-block">INSCRIBIRME</a>
+                                        class="btn btn-dark btn-lg btn-block">CONFIRMAR INSCRIÇÃO</a>
                                 </div>
                             </div>
                         </div>
@@ -468,45 +464,45 @@
                     <div class="col-lg-8 data-table" ng-if="dataCheck == true">
                         <div class="col-lg-12 information">
                             <div class="col-lg-12 title title-data">
-                                <h1>Información registrada</h1>
+                                <h1>Informações registradas</h1>
                             </div>
                             <div class="col-lg-12 data">
                                 <div class="container">
                                     <div class="row datatable">
                                         <div class="col-sm-6 col-md-1 form-title">
-                                            Nombres:
+                                            Nome:
                                         </div>
                                         <div class="col-sm-6 col-md-5 form-data"
                                             ng-bind="adidasForm.inputNames.$viewValue">
                                         </div>
                                         <div class="col-sm-6 col-md-1 form-title">
-                                            Apellidos:
+                                            Sobrenome:
                                         </div>
                                         <div class="col-sm-6 col-md-5 form-data"
                                             ng-bind="adidasForm.inputLastnames.$viewValue">
 
                                         </div>
                                         <div class="col-sm-6 col-md-1 form-title">
-                                            Email:
+                                            E-mail:
                                         </div>
                                         <div class="col-sm-6 col-md-5 form-data"
                                             ng-bind="adidasForm.inputEmail.$viewValue">
 
                                         </div>
                                         <div class="col-sm-6 col-md-1 form-title">
-                                            Género:
+                                            Gênero:
                                         </div>
                                         <div class="col-sm-6 col-md-5 form-data" ng-bind="gender">
 
                                         </div>
                                         <div class="col-sm-6 col-md-1 form-title">
-                                            Fecha:
+                                            Data:
                                         </div>
                                         <div class="col-sm-6 col-md-5 form-data">
                                             @{{ ageFull }}
                                         </div>
                                         <div class="col-sm-6 col-md-1 form-title">
-                                            Zapatillas:
+                                            Calçado:
                                         </div>
                                         <div class="col-sm-6 col-md-5 form-data" ng-bind="shoes">
 
@@ -518,13 +514,13 @@
 
                                         </div>
                                         <div class="col-sm-6 col-md-1 form-title">
-                                            Distancia:
+                                            Distância:
                                         </div>
                                         <div class="col-sm-6 col-md-5 form-data" ng-bind="distance">
 
                                         </div>
                                         <div class="col-sm-6 col-md-1 form-title form-last">
-                                            Tiempo:
+                                            Tempo:
                                         </div>
                                         <div class="col-sm-6 col-md-11 form-data form-last" ng-bind="time">
 
@@ -540,7 +536,7 @@
                                         </div>
                                         <div class="col-sm-3 col-md-5">
                                             <button type="button" ng-click="sendData()"
-                                                class="btn btn-dark btn-lg btn-block">Guardar</button>
+                                                class="btn btn-dark btn-lg btn-block">Salvar inscripción</button>
                                         </div>
                                     </div>
                                 </div>
@@ -560,10 +556,10 @@
                             </div>
                             <div class="col-lg-8 d-flex align-items-center">
                                 <div>
-                                    <h1 class="success-title">Hola @{{ namesFull }}
+                                    <h1 class="success-title">Olá @{{ namesFull }}
                                     </h1>
                                     <p class="success-message">
-                                        Pronto estaremos enviando más información al email registrado.
+                                        Em breve enviaremos os dados de inscrição ao email registrado.
                                     </p>
                                 </div>
                             </div>
