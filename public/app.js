@@ -6,13 +6,13 @@ app.controller("controlador", function($scope, $http, $location, smoothScroll) {
     var width = screen.width;
     $scope.dataCheck = false;
     $scope.dataSend = false;
-    $scope.gender = "HOMBRE";
+    $scope.gender = "";
     $scope.accept = false;
     $scope.newsletter = false;
-    $scope.shoes = "ADIDAS";
-    $scope.distance = "10 K";
-    $scope.team = "ADIDAS RUNNERS";
-    $scope.time = "30 MIN";
+    $scope.shoes = "";
+    $scope.distance = "";
+    $scope.team = "";
+    $scope.time = "";
     $scope.namesFull = "";
     $scope.ageFull = "";
     $scope.emailErr = false;
@@ -21,8 +21,14 @@ app.controller("controlador", function($scope, $http, $location, smoothScroll) {
     $scope.ageErr = false;
     $scope.lastErr = false;
     $scope.cityErr = false;
-    $scope.verify = function(value) {
-        if (!$scope.adidasForm.inputNames.$error.required && !$scope.adidasForm.inputLastnames.$error.required && $scope.adidasForm.inputAge.$viewValue != "" || $scope.adidasForm.inputAge.$viewValue.length < 9 && !$scope.adidasForm.inputEmail.$error.required) {
+    $scope.genderErr = false;
+    $scope.shoesErr = false;
+    $scope.teamErr = false;
+    $scope.distanceErr = false;
+    $scope.timeErr = false;
+    $scope.verify = function(value) {        
+        console.log($scope.adidasForm.inputAge.$viewValue.length)
+        if (!$scope.adidasForm.inputNames.$error.required && !$scope.adidasForm.inputLastnames.$error.required && $scope.adidasForm.inputAge.$viewValue.length > 9 && $scope.adidasForm.inputAge.$viewValue.length < 11 && !$scope.adidasForm.inputEmail.$error.required && $scope.gender != "" && $scope.shoes != "" && $scope.time != "" && $scope.distance != "") {
 
             var year = $scope.adidasForm.inputAge.$viewValue.substr(0, 4);
             var month = $scope.adidasForm.inputAge.$viewValue.substr(5, 2);
@@ -31,10 +37,31 @@ app.controller("controlador", function($scope, $http, $location, smoothScroll) {
             $scope.namesFull = $scope.adidasForm.inputNames.$viewValue;
             $scope.newsletter = $scope.adidasForm.inputNewsletter.$viewValue;
 
+            if ($scope.team == "") {
+                $scope.team = $scope.adidasForm.inputTeam.$viewValue
+            } else {
+                $scope.team = "ADIDAS RUNNERS"
+            }
+
+            console.log($scope.team)
             console.log($scope.ageFull)
             console.log($scope.namesFull)
             console.log($scope.newsletter)
+            // muestra la tabla
             $scope.dataCheck = true;
+
+            // oculta los mensaje de error
+            $scope.emailErr = false;
+            $scope.namesErr = false;
+            $scope.emailrErr = false;
+            $scope.ageErr = false;
+            $scope.lastErr = false;
+            $scope.cityErr = false;
+            $scope.genderErr = false;
+            $scope.shoesErr = false;
+            $scope.teamErr = false;
+            $scope.distanceErr = false;
+            $scope.timeErr = false;
 
             smoothScroll(document.getElementById('info'));
         } else {
@@ -50,7 +77,34 @@ app.controller("controlador", function($scope, $http, $location, smoothScroll) {
                 $scope.emailErr = false
             }
 
-            if ($scope.adidasForm.inputAge.$viewValue == "" || $scope.adidasForm.inputAge.$viewValue.length < 9) {
+            if ($scope.gender == "") {
+                $scope.genderErr = true
+            } else {
+                $scope.genderErr = false
+            }
+            if ($scope.time == "") {
+                $scope.timeErr = true
+            } else {
+                $scope.timeErr = false
+            }
+            if ($scope.distance == "") {
+                $scope.distanceErr = true
+            } else {
+                $scope.distanceErr = false
+            }
+            if ($scope.team == "") {
+                $scope.teamErr = true
+            } else {
+                $scope.teamErr = false
+            }
+
+            if ($scope.shoes == "") {
+                $scope.shoesErr = true
+            } else {
+                $scope.shoesErr = false
+            }
+
+            if ($scope.adidasForm.inputAge.$viewValue.length > 9 || $scope.adidasForm.inputAge.$viewValue.length < 11) {
                 $scope.ageErr = true
             } else {
                 var year = $scope.adidasForm.inputAge.$viewValue.substr(0, 4);
@@ -89,6 +143,7 @@ app.controller("controlador", function($scope, $http, $location, smoothScroll) {
             } else {
                 $scope.lastErr = false
             }
+            smoothScroll(document.getElementById('bazinga'));
         }
     }
 

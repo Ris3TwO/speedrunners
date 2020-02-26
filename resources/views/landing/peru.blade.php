@@ -343,8 +343,8 @@
                                 <div class="form-group form-radio col-md-6">
                                     <label class="float-label-2">GÉNERO</label>
                                     <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                                        <label class="btn btn-light active" ng-click="selectGender('MASCULINO')">
-                                            <input type="radio" name="options" id="male" checked> MASCULINO
+                                        <label class="btn btn-light" ng-click="selectGender('MASCULINO')">
+                                            <input type="radio" name="options" id="male"> MASCULINO
                                         </label>
                                         <label class="btn btn-light" ng-click="selectGender('FEMENINO')">
                                             <input type="radio" name="options" id="female"> FEMENINO
@@ -352,6 +352,10 @@
                                         <label class="btn btn-light" ng-click="selectGender('OTRO')">
                                             <input type="radio" name="options" id="other"> OTRO
                                         </label>
+                                    </div>
+                                    <div ng-show="genderErr">
+                                        <small id="genderHelp" class="form-text">Debe seleccionar un género
+                                            *</small>
                                     </div>
                                 </div>
                             </div>
@@ -368,8 +372,8 @@
                                 <div class="form-group form-radio col-md-6">
                                     <label class="float-label-2">ZAPATILLAS</label>
                                     <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                                        <label class="btn btn-light active" ng-click="selectShoes('ADIDAS')">
-                                            <input type="radio" name="options" id="shoes1" checked> ADIDAS
+                                        <label class="btn btn-light" ng-click="selectShoes('ADIDAS')">
+                                            <input type="radio" name="options" id="shoes1"> ADIDAS
                                         </label>
                                         <label class="btn btn-light" ng-click="selectShoes('REEBOK')">
                                             <input type="radio" name="options" id="shoes2"> REEBOK
@@ -378,31 +382,39 @@
                                             <input type="radio" name="options" id="shoes3"> OTRAS
                                         </label>
                                     </div>
+                                    <div ng-show="shoesErr">
+                                        <small id="shoesHelp" class="form-text">Debe seleccionar unas zapatillas
+                                            *</small>
+                                    </div>
                                 </div>
                             </div>
                             <div class="form-row justify-content-around break">
                                 <div id="check" class="form-group form-radio col-md-6">
                                     <label class="float-label-2">TEAM</label>
                                     <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                                        <label class="btn btn-light active" ng-click="selectTeam('ADIDAS RUNNERS')">
-                                            <input type="radio" name="options" id="team1" checked> ADIDAS
+                                        <label class="btn btn-light" ng-click="selectTeam('ADIDAS RUNNERS')">
+                                            <input type="radio" name="options" id="team1"> ADIDAS
                                             RUNNERS
                                         </label>
                                         <label class="btn btn-light" ng-click="toggle()">
                                             <input type="radio" name="options" id="team2"> OTRO
                                         </label>
                                     </div>
+                                    <div ng-show="teamErr">
+                                        <small id="teamHelp" class="form-text">Debe seleccionar un team
+                                            *</small>
+                                    </div>
                                 </div>
-                                <div id="check2" class="form-group form-radio col-md-6 mt-auto col-inactive">
+                                <div id="check2" class="form-group col-md-6 col-inactive">
                                     <label class="float-label" for="inputTeam">TEAM</label>
-                                    <input type="text" class="form-control" id="inputTeam"
+                                    <input type="text" ng-model="team" name="inputTeam" class="form-control" id="inputTeam"
                                         placeholder="escriba a qué equipo pertenece">
                                 </div>
                                 <div class="form-group form-radio col-md-6">
                                     <label class="float-label-2">DISTANCIA</label>
                                     <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                                        <label class="btn btn-light active" ng-click="selectDistance('10 K')">
-                                            <input type="radio" name="options" id="distance1" checked> 10 K
+                                        <label class="btn btn-light" ng-click="selectDistance('10 K')">
+                                            <input type="radio" name="options" id="distance1"> 10 K
                                         </label>
                                         <label class="btn btn-light" ng-click="selectDistance('21 K')">
                                             <input type="radio" name="options" id="distance2"> 21 K
@@ -411,13 +423,17 @@
                                             <input type="radio" name="options" id="distance3"> 42 K
                                         </label>
                                     </div>
+                                    <div ng-show="distanceErr">
+                                        <small id="distanceHelp" class="form-text">Debe seleccionar una distancia
+                                            *</small>
+                                    </div>
                                 </div>
                             </div>
                             <div class="form-row justify-content-around">
                                 <div class="form-group form-radio col-md-12">
                                     <label class="float-label-2">MI MEJOR TIEMPO</label>
                                     <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                                        <label class="btn btn-light active" ng-click="selectTime('30 MIN')">
+                                        <label class="btn btn-light" ng-click="selectTime('30 MIN')">
                                             <input type="radio" name="options" id="time1"> 30 MIN
                                         </label>
                                         <label class="btn btn-light" ng-click="selectTime('60 MIN')">
@@ -426,6 +442,10 @@
                                         <label class="btn btn-light" ng-click="selectTime('90 MIN')">
                                             <input type="radio" name="options" id="time3"> 90 MIN
                                         </label>
+                                    </div>
+                                    <div ng-show="timeErr">
+                                        <small id="timeHelp" class="form-text">Debe seleccionar su mejor tiempo
+                                            *</small>
                                     </div>
                                 </div>
                             </div>
