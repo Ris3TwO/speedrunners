@@ -920,11 +920,11 @@ header.masthead .arrow {
 }
 
 .form .container .data .row .col-sm-6.form-title {
-    width: 30% !important;
+    width: 35% !important;
 }
 
 .form .container .data .row .col-sm-6.form-data {
-    width: 70% !important;
+    width: 65% !important;
 }
 
 .form .container .data .table td {
@@ -1403,6 +1403,7 @@ header.masthead .arrow {
     .form .container-success .row {
         margin-left: -15px;
         margin-right: -15px;
+        padding-bottom: 2rem;
     }
     .form .container-success .d-flex .success-title,
     .form .container-success .d-flex .success-message {
@@ -1763,6 +1764,11 @@ header.masthead .arrow {
     .form .container .data .btn-dark,
     .form .container .data .btn-light {
         font-size: 22px;
+    }
+    .form .container-success .row {
+        margin-left: -15px;
+        margin-right: -15px;
+        padding-bottom: initial;
     }
     @-webkit-keyframes slide-left {
         0% {

@@ -449,10 +449,10 @@
                                             <input type="radio" name="options" id="time3"> 90 MIN
                                         </label>
                                     </div>
-                                </div>
-                                <div ng-show="timeErr">
-                                    <small id="timeHelp" class="form-text">Você deve selecionar mehi melhor tempo
-                                        *</small>
+                                    <div ng-show="timeErr">
+                                        <small id="timeHelp" class="form-text">Você deve selecionar mehu melhor tempo
+                                            *</small>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -556,7 +556,7 @@
                                         </div>
                                         <div class="col-sm-3 col-md-5">
                                             <button type="button" ng-click="sendData()"
-                                                class="btn btn-dark btn-lg btn-block">Salvar inscripción</button>
+                                                class="btn btn-dark btn-lg btn-block">Salvar</button>
                                         </div>
                                     </div>
                                 </div>
