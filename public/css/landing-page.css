@@ -1389,6 +1389,9 @@ header.masthead .arrow {
     .form .container .data .btn-light {
         font-size: 18px;
     }
+    .form .container .inputs .btn-group .btn {
+        font-size: 15px;
+    }
     .form .container-success .d-flex {
         padding-top: 3em;
         padding-left: 2em;
@@ -1522,6 +1525,9 @@ header.masthead .arrow {
     }
     .description .description-img .objetive-2 {
         margin-right: 12px;
+    }
+    .form .container .inputs .btn-group .btn {
+        font-size: 16px;
     }
 }
 
